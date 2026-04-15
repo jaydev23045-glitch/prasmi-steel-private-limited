@@ -28,7 +28,9 @@ export function Footer() {
                 ].map((social) => (
                   <a
                     key={social.name}
-                    href="#"
+                    href="https://www.linkedin.com/company/prasmisteel-private-limited/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-none bg-white/5 border border-white/10 hover:bg-white hover:border-white transition-all duration-300 group flex items-center justify-center"
                   >
                     <span className="sr-only">{social.name}</span>
