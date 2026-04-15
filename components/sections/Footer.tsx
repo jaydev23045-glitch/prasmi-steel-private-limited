@@ -15,7 +15,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-slate-500 max-w-sm leading-relaxed mb-10 text-lg font-light">
-              Your Trusted Partner for High-Quality Castings and Machining Solutions. Supplying international industry with premium ferrous and non-ferrous materials since 2024.
+              Your Trusted Partner for Best-Quality Metal Scrap Solutions. Supplying international industry with premium ferrous and non-ferrous materials since 2024.
             </p>
             <div className="flex gap-5">
               {[
