@@ -138,6 +138,17 @@ export function BlogPost() {
       script.text = JSON.stringify(articleSchema);
       document.head.appendChild(script);
 
+      // 2. Update Meta Description
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute('content', post.meta);
+      } else {
+        metaDesc = document.createElement('meta');
+        metaDesc.setAttribute('name', 'description');
+        metaDesc.setAttribute('content', post.meta);
+        document.head.appendChild(metaDesc);
+      }
+
       return () => {
         const script = document.getElementById('dynamic-article-schema');
         if (script) script.remove();

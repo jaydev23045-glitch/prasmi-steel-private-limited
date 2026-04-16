@@ -18,15 +18,9 @@ export function CorporateDetails() {
         />
 
         {/* Authoritative Headline */}
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-[42px] font-bold text-slate-900 mb-16 leading-[1.2] tracking-tight max-w-none w-full"
-        >
+        <h2 className="text-3xl md:text-[42px] font-bold text-slate-900 mb-16 leading-[1.2] tracking-tight max-w-none w-full"> 
           Prasmi Steel Private Limited  <br className="hidden md:block" /> One of the Leading Ferrous & Non-Ferrous Scrap Supplier
-        </motion.h2>
+        </h2>
 
         {/* Narrative Content */}
         <motion.div 

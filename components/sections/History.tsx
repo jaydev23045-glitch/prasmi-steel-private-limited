@@ -78,7 +78,7 @@ export function History() {
               >
                 <div className="flex items-center gap-4">
                   <div className="h-px w-12 bg-slate-200" />
-                  <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">The Vision</h2>
+                  <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Our Strategic Global Vision</h2>
                 </div>
                 <p className="text-2xl text-slate-900 font-bold leading-tight tracking-tight">
                   To become a globally recognized leader in the scrap metal industry by delivering sustainable, high-quality, and innovative metal recycling solutions that support industrial growth and environmental responsibility.
@@ -94,7 +94,7 @@ export function History() {
               >
                 <div className="flex items-center gap-4">
                   <div className="h-px w-12 bg-slate-200" />
-                  <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Our Mission</h2>
+                  <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Our Industrial Excellence Mission</h2>
                 </div>
                 <div className="grid sm:grid-cols-1 gap-6">
                   {[

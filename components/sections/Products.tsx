@@ -230,7 +230,7 @@ export function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-16">
             <div className="h-px w-12 bg-slate-200"></div>
-            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-slate-400">Material Catalog</h2>
+            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-slate-400">Primary Ferrous & Non-Ferrous Material Catalog</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             <AnimatePresence mode="popLayout">
@@ -304,7 +304,7 @@ export function Products() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="flex items-center gap-4 mb-16">
             <div className="h-px w-12 bg-slate-200"></div>
-            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-slate-400">Quality Commitment</h2>
+            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-slate-400">Our Metallurgical Quality Control Commitment</h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
               {[

@@ -154,7 +154,7 @@ export function SEO() {
 
     [...baseSchemas, ...routeSchemas].forEach(inject);
 
-    // 4. Page Title
+    // 4. Page Title & Meta Description
     const pageTitles: Record<string, string> = {
       '/': 'Prasmi Steel | Global Ferrous & Non-Ferrous Scrap Supplier',
       '/about': 'About Prasmi Steel | Leading Industrial Scrap Supplier',
@@ -163,8 +163,31 @@ export function SEO() {
       '/contact': 'Contact Prasmi Steel | Global Logistics & Support',
     };
 
+    const pageDescriptions: Record<string, string> = {
+      '/': 'Prasmi Steel Private Limited is a leading global supplier of premium ferrous and non-ferrous metal scrap solutions for smelting and foundries.',
+      '/about': 'Learn about Prasmi Steel Private Limited, our industrial heritage, and our commitment to supplying high-quality metal scrap to global partners.',
+      '/products': 'Explore the Prasmi Steel material catalog featuring premium ferrous and non-ferrous scrap, including HMS 1 & 2, Manganese Steel, and Aluminum.',
+      '/blogs': 'Read industrial insights and market reports on metal scrap recycling, smelting efficiency, and global trade trends from Prasmi Steel experts.',
+      '/contact': 'Contact Prasmi Steel Private Limited for global logistics support and inquiries about our ferrous and non-ferrous metal scrap supply chains.',
+    };
+
     if (!pathname.startsWith('/blogs/')) {
-      document.title = pageTitles[pathname] || document.title;
+      const title = pageTitles[pathname];
+      const description = pageDescriptions[pathname];
+      
+      if (title) document.title = title;
+      
+      if (description) {
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.setAttribute('content', description);
+        } else {
+          metaDesc = document.createElement('meta');
+          metaDesc.setAttribute('name', 'description');
+          metaDesc.setAttribute('content', description);
+          document.head.appendChild(metaDesc);
+        }
+      }
     }
 
   }, [pathname]);

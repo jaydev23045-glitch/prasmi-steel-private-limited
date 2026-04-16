@@ -47,7 +47,7 @@ export function FAQ() {
               <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Knowledge Base</span>
             </div>
             <h2 className="text-4xl font-black text-slate-900 tracking-tighter leading-none mb-8">
-              Technical <br /> <span className="text-[#4682b4]">Insights</span>
+              Technical <span className="text-[#4682b4]">Sourcing Insights</span> & Metal Scrap FAQs
             </h2>
             <p className="text-slate-500 font-light leading-relaxed">
               Addressing the critical technical questions of the global smelting and foundry industries through our professional procurement repository.
