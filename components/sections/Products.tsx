@@ -171,7 +171,7 @@ export function Products() {
                 <span className="text-[#4682b4] font-bold uppercase tracking-[0.3em] text-[10px]">Material Excellence</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-black text-slate-900 leading-[1.1] mb-10 tracking-tighter">
-                Premium <span className="text-[#4682b4]">Ferrous & Non-Ferrous</span> Materials
+                Premium <span className="text-[#4682b4]">Metal Scrap Catalog</span>: Ferrous & Non-Ferrous
               </h1>
               <p className="text-xl text-slate-600 font-light leading-relaxed max-w-xl border-l-4 border-slate-200 pl-8">
                 Every shipment is meticulously sorted and graded to meet international quality standards, ensuring maximum furnace yield for our partners.

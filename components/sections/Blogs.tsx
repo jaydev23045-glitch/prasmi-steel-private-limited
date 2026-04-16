@@ -92,7 +92,7 @@ export function Blogs() {
             </motion.div>
             
             <h1 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-8">
-              Industrial <span className="text-[#4682b4]">Insights</span> & Market Reports
+              Industrial <span className="text-[#4682b4]">Steel Recycling</span> & Market Reports
             </h1>
             
             <motion.p 

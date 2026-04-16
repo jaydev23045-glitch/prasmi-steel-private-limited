@@ -34,7 +34,7 @@ export function History() {
                 <span className="text-[#4682b4] font-bold uppercase tracking-[0.3em] text-[10px]">OUR JOURNEY</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-black text-slate-900 leading-[1.1] mb-10 tracking-tighter">
-                Our <span className="text-[#4682b4]">History</span> & Corporate Journey
+                Industrial Heritage: The <span className="text-[#4682b4]">Prasmi Steel</span> Journey
               </h1>
               <div className="space-y-8 text-lg text-slate-600 leading-relaxed font-light max-w-xl">
                 <p className="border-l-4 border-[#4682b4] pl-8 py-3 bg-[#4682b4]/5">
