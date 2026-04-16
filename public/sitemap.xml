@@ -1,58 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Primary Pages -->
   <url>
-    <loc>https://prasmisteel.com/</loc>
+    <loc>https://www.prasmisteel.com/</loc>
     <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://prasmisteel.com/about</loc>
+    <loc>https://www.prasmisteel.com/about</loc>
     <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://prasmisteel.com/products</loc>
+    <loc>https://www.prasmisteel.com/products</loc>
     <lastmod>2026-04-16</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://prasmisteel.com/blogs</loc>
+    <loc>https://www.prasmisteel.com/blogs</loc>
     <lastmod>2026-04-16</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://prasmisteel.com/contact</loc>
-    <lastmod>2026-04-16</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://prasmisteel.com/blogs/scrap-metal-industry-growth</loc>
+    <loc>https://www.prasmisteel.com/contact</loc>
+    <lastmod>2026-04-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://www.prasmisteel.com/blogs/scrap-metal-industry-growth</loc>
     <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://prasmisteel.com/blogs/choosing-right-scrap-supplier</loc>
+    <loc>https://www.prasmisteel.com/blogs/choosing-right-scrap-supplier</loc>
     <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://prasmisteel.com/blogs/benefits-high-quality-scrap-smelting</loc>
+    <loc>https://www.prasmisteel.com/blogs/benefits-high-quality-scrap-smelting</loc>
     <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://prasmisteel.com/blogs/ferrous-vs-non-ferrous-differences</loc>
+    <loc>https://www.prasmisteel.com/blogs/ferrous-vs-non-ferrous-differences</loc>
     <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://prasmisteel.com/blogs/future-of-scrap-metal-sustainability</loc>
+    <loc>https://www.prasmisteel.com/blogs/future-of-scrap-metal-sustainability</loc>
     <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://prasmisteel.com/blogs/global-scrap-metal-trade-trends</loc>
+    <loc>https://www.prasmisteel.com/blogs/global-scrap-metal-trade-trends</loc>
     <lastmod>2026-04-14</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 </urlset>
