@@ -47,6 +47,7 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
             className="flex-shrink-0 flex items-center gap-3 cursor-pointer"
             onClick={() => setIsMobileMenuOpen(false)}
           >
+            <img src="/favicon.png" alt="Prasmi Steel Logo" className="w-10 h-10 object-contain" />
             <div className="flex flex-col">
               <span className="font-extrabold text-2xl tracking-tighter text-slate-900 leading-none">
                 Prasmi<span className="text-red-600">Steel</span>
