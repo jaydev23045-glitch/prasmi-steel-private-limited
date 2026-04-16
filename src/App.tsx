@@ -33,6 +33,7 @@ function HomePage() {
 }
 
 import { ScrollToTop } from '@/components/ScrollToTop';
+import { SEO } from '@/lib/SEO';
 
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -48,6 +49,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <SEO />
       <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-slate-900 selection:text-white">
         <Header 
           isMobileMenuOpen={isMobileMenuOpen} 
