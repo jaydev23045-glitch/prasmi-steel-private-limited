@@ -165,30 +165,6 @@ export function Blogs() {
         </div>
       </section>
 
-      {/* Subscription CTA */}
-      <section className="py-24 bg-slate-950 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-xl">
-             <h2 className="text-3xl font-black text-white tracking-tighter mb-6">
-                Stay Ahead of the <span className="text-red-600 underline underline-offset-8 decoration-white/20">Market</span>
-             </h2>
-             <p className="text-slate-400 text-lg font-light mb-10 leading-relaxed">
-                Join our exclusive mailing list for monthly technical reports on global material supply chains and recycling innovation.
-             </p>
-             <div className="flex flex-col sm:flex-row gap-4">
-                <input 
-                  type="email" 
-                  placeholder="Official Email Address" 
-                  className="bg-white/5 border border-white/10 px-6 h-14 text-white text-sm focus:outline-none focus:border-red-600 transition-colors flex-grow rounded-none"
-                />
-                <button className="bg-red-600 hover:bg-red-700 text-white font-black uppercase text-[10px] tracking-[0.3em] px-10 h-14 transition-colors">
-                  Subscribe
-                </button>
-             </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
