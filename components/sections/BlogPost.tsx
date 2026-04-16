@@ -105,6 +105,43 @@ export function BlogPost() {
       const suffix = " | Prasmi Steel";
       const fullTitle = `${post.title}${suffix}`;
       document.title = fullTitle.length > 60 ? post.title : fullTitle;
+
+      // Inject Article Schema
+      const articleSchema = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.title,
+        "description": post.meta,
+        "image": `https://www.prasmisteel.com${post.image}`,
+        "datePublished": post.date,
+        "author": {
+          "@type": "Organization",
+          "name": "Prasmi Steel Editorial Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Prasmi Steel Private Limited",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.prasmisteel.com/favicon.png"
+          }
+        }
+      };
+
+      // Clean up previous article schema if any
+      const existing = document.getElementById('dynamic-article-schema');
+      if (existing) existing.remove();
+
+      const script = document.createElement('script');
+      script.id = 'dynamic-article-schema';
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(articleSchema);
+      document.head.appendChild(script);
+
+      return () => {
+        const script = document.getElementById('dynamic-article-schema');
+        if (script) script.remove();
+      };
     }
   }, [post]);
 
