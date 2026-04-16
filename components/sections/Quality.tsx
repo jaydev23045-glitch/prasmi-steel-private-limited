@@ -23,12 +23,15 @@ export function Quality() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
               <div className="absolute bottom-10 left-10">
                 <div className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Metallurgical Excellence</div>
-                <div className="text-2xl font-bold tracking-tight">Consistent Density. Maximum Yield.</div>
+                <h2 className="text-3xl sm:text-4xl lg:text-[56px] font-black text-slate-900 leading-none mb-10 tracking-tighter uppercase italic">
+                  Metallurgical <br/>
+                  <span className="text-red-600">Purest Grade</span>
+                </h2>
               </div>
             </div>
             
             {/* Decorative Glow */}
-            <div className="absolute -inset-10 bg-[#0066cc]/10 blur-[100px] -z-10 rounded-full"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-red-600/5 -z-10 rounded-full blur-3xl" />
           </motion.div>
 
           {/* Right Content Column */}

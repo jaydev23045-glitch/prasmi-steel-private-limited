@@ -28,7 +28,7 @@ export function GlobalPartners() {
             <p className="text-xl text-slate-400 font-light leading-relaxed mb-12">
               Our material sourcing network spans across four continents, enabling a resilient and agile supply chain that operates around the clock to reliably meet the demands of our valued customers
             </p>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {regions.map((region, idx) => (
                     <motion.div 
                         key={region.name}

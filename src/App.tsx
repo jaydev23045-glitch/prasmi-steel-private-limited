@@ -1,16 +1,25 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
 import { CorporateDetails } from '@/components/sections/CorporateDetails';
 import { GlobalPartners } from '@/components/sections/GlobalPartners';
-import { History } from '@/components/sections/History';
-import { Products } from '@/components/sections/Products';
-import { Contact } from '@/components/sections/Contact';
-import { Blogs } from '@/components/sections/Blogs';
-import { BlogPost } from '@/components/sections/BlogPost';
 import { Footer } from '@/components/sections/Footer';
+
+// Lazy load secondary pages
+const History = lazy(() => import('@/components/sections/History').then(m => ({ default: m.History })));
+const Products = lazy(() => import('@/components/sections/Products').then(m => ({ default: m.Products })));
+const Blogs = lazy(() => import('@/components/sections/Blogs').then(m => ({ default: m.Blogs })));
+const BlogPost = lazy(() => import('@/components/sections/BlogPost').then(m => ({ default: m.BlogPost })));
+const Contact = lazy(() => import('@/components/sections/Contact').then(m => ({ default: m.Contact })));
+
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-[60vh] flex items-center justify-center">
+    <div className="w-8 h-8 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+  </div>
+);
 
 function HomePage() {
   return (
@@ -44,14 +53,16 @@ export default function App() {
         />
         
         <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<History />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/blogs/:slug" element={<BlogPost />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<History />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/blogs/:slug" element={<BlogPost />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
         </main>
 
         <Footer />

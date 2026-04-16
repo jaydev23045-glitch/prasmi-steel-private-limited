@@ -34,7 +34,7 @@ export function Hero() {
             <div className="h-px w-12 bg-red-600"></div>
           </div>
 
-          <h1 className="text-2xl sm:text-3xl lg:text-[40px] font-bold text-white tracking-tight leading-tight mb-8 drop-shadow-lg lg:whitespace-nowrap">
+          <h1 className="text-3xl sm:text-5xl lg:text-[72px] font-bold text-white tracking-tight leading-tight mb-8 drop-shadow-lg lg:whitespace-nowrap">
             Your Trusted Partner for Best-Quality Metal Scrap Solutions
           </h1>
           
