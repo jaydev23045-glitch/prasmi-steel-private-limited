@@ -68,7 +68,7 @@ const products = [
     category: 'Non-Ferrous',
     description: 'Used Beverage Cans. Clean aluminum cans, free of moisture and contamination, processed for high-yield melting.',
     specs: ['Type: Cans', 'Cleanliness: High', 'Processing: Baled'],
-    image: '/UBC.webp'
+    image: '/ubc.webp'
   },
   {
     id: 13,
