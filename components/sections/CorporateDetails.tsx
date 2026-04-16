@@ -18,9 +18,9 @@ export function CorporateDetails() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-[42px] font-bold text-slate-900 mb-16 leading-[1.2] tracking-tight max-w-4xl"
+          className="text-[42px] font-bold text-slate-900 mb-16 leading-[1.2] tracking-tight max-w-none w-full"
         >
-          Prasmi Steel Private Limited - One of the Leading Ferrous & Non-Ferrous Scrap Supplier
+          Prasmi Steel Private Limited  <br className="hidden md:block" /> One of the Leading Ferrous & Non-Ferrous Scrap Supplier
         </motion.h2>
 
         {/* Narrative Content */}
@@ -32,15 +32,15 @@ export function CorporateDetails() {
           className="space-y-10 text-[19px] text-slate-600 leading-[1.7] font-normal max-w-6xl"
         >
           <p>
-            Prasmi Steel Private Limited. aims to provide best quality scrap materials. We supply all kind of Cast Iron scrap, CounterWeights, Oversized Cast, Machinery Cast, Mixed Cast, HMS 1 & 2, Manganese Steel Scrap, Discarded Electric Motors, Aluminum Engines/Transmissions, Dirty and Heavy Dirty Aluminum, Aluminum attachment Scrap as per the customer’s requirement.  
+            Prasmi Steel Private Limited, aims to supply best quality scrap materials. Mainly we are dealing in Ferrous & Non-Ferrous materials such as HMS 1 & 2, Manganese Steel Scrap, Cast Iron CounterWeights, Oversized Cast, Machinery Cast, Mixed Cast, Discarded Electric Motors, Aluminum Engines/Transmissions, Dirty and Heavy Dirty Aluminum, Aluminum Cast & Extrusion, Aluminum Scrap (Clean & Attachments)
           </p>
 
           <p>
-            We have provided the best scrap solutions in the industry for 06 years with materials that specifically suit the requirements of foundries, smelters and scrap traders. Being one of the globally working company, we are proud to work with over esteemed business partners established across the globe.
+            We are supplying the best scrap solutions in the industry since last 06 years with materials that specifically suit the requirements of foundries, smelters and scrap traders. Being one of the globally working company, we are proud to work with over esteemed business partners established across the globe.
           </p>
 
           <p>
-            Our experienced employees with exceptional expertise make more reliable supply of many hundreds of tons every year. We supply best-quality scrap that helps to boost the smelting process.
+            Our Professionals and Labourer team with exceptional expertise make more reliable supply of Hundreds of metric tons every year. We supply best-quality scrap that helps to boost the scrap turnaround process.
           </p>
 
           <p className="font-bold text-slate-900">

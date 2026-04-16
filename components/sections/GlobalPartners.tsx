@@ -23,10 +23,10 @@ export function GlobalPartners() {
               <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">Global Partners</span>
             </div>
             <h2 className="text-4xl sm:text-6xl font-black mb-10 tracking-tighter leading-none">
-              Connecting <br/><span className="text-slate-400">Global Markets</span>
+              Connected with <br/><span className="text-slate-400">global market</span>
             </h2>
             <p className="text-xl text-slate-400 font-light leading-relaxed mb-12">
-              Our network spans across four continents, ensuring a resilient supply chain that operates 24/7 to meet the demands of international foundries and steel mills.
+              Our material sourcing network spans across four continents, enabling a resilient and agile supply chain that operates around the clock to reliably meet the demands of our valued customers
             </p>
             <div className="grid grid-cols-2 gap-8">
                 {regions.map((region, idx) => (
