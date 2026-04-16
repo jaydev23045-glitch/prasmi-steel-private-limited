@@ -50,7 +50,7 @@ export function History() {
               className="relative aspect-video lg:aspect-square bg-slate-900 overflow-hidden shadow-2xl"
             >
               <img 
-                src="/about-hero.png" 
+                src="/about-hero.webp" 
                 alt="Industrial Metallurgy" 
                 className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:opacity-100 transition-opacity duration-700"
               />

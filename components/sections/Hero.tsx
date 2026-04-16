@@ -15,7 +15,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img
-          src="/Frist.webp"
+          src="/first.webp"
           alt="Prasmi Steel Industrial Yard"
           className="w-full h-full object-cover scale-105"
         />

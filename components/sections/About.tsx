@@ -35,7 +35,7 @@ export function About() {
           >
             <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl group cursor-pointer bg-slate-900">
               <img
-                src="/A.webp"
+                src="/a.webp"
                 alt="Industrial Metallurgy"
                 className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100"
               />

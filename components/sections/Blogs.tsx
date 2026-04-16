@@ -12,7 +12,7 @@ const blogPosts = [
     category: "Market Focus",
     date: "April 14, 2026",
     readTime: "7 min read",
-    image: "/industrial_growth.png",
+    image: "/industrial-growth.webp",
     color: "bg-red-600"
   },
   {
@@ -23,7 +23,7 @@ const blogPosts = [
     category: "Strategic Sourcing",
     date: "April 14, 2026",
     readTime: "5 min read",
-    image: "/supplier_selection.png",
+    image: "/supplier-selection.webp",
     color: "bg-slate-900"
   },
   {
@@ -34,7 +34,7 @@ const blogPosts = [
     category: "Technical Process",
     date: "April 14, 2026",
     readTime: "6 min read",
-    image: "/smelting_efficiency.png",
+    image: "/smelting-efficiency.webp",
     color: "bg-red-600"
   },
   {
@@ -45,7 +45,7 @@ const blogPosts = [
     category: "Technical Standards",
     date: "April 14, 2026",
     readTime: "4 min read",
-    image: "/products-hero.png",
+    image: "/products-hero.webp",
     color: "bg-slate-900"
   },
   {

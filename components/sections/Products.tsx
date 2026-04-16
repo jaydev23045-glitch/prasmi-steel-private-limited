@@ -12,7 +12,7 @@ const products = [
     category: 'Ferrous Metal',
     description: 'Heavy Melting Steel (80:20 Mix). Premium industrial grade scrap for high-efficiency melting.',
     specs: ['ISRI: 200-206', 'Thickness: 1/4 inch+', 'Density: 70kg/cu.ft'],
-    image: '/HMS 1& 2.webp'
+    image: '/hms-1-2.webp'
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const products = [
     category: 'Ferrous Metal',
     description: 'General grade mixed cast iron scrap. Primarily sourced from industrial machinery and structural components.',
     specs: ['Grade: Mixed', 'Cleanliness: High', 'Processing: Sorted'],
-    image: '/mix cast.webp'
+    image: '/mix-cast.webp'
   },
   {
     id: 8,
@@ -36,7 +36,7 @@ const products = [
     category: 'Ferrous Metal',
     description: 'Oversized cast iron components requiring preparation. Bulk industrial scrap from large-scale demolition and manufacturing.',
     specs: ['Size: Oversized', 'Type: Heavy Cast', 'Origin: Industrial'],
-    image: '/Unprepare cast.webp'
+    image: '/unprepare-cast.webp'
   },
   {
     id: 9,
@@ -44,7 +44,7 @@ const products = [
     category: 'Ferrous Metal',
     description: 'Extra-large cast iron sections and structural elements. High-density scrap primarily from industrial infrastructure.',
     specs: ['Grade: Industrial', 'Category: Oversized', 'Loading: Bulk'],
-    image: '/Oversized Cast.webp'
+    image: '/oversized-cast.webp'
   },
   {
     id: 10,
@@ -52,7 +52,7 @@ const products = [
     category: 'Ferrous Metal',
     description: 'High-alloy manganese steel scrap (Hadfield steel). Meticulously sorted from industrial crusher and mining equipment.',
     specs: ['Manganese: 11-14%', 'Type: Work-hardened', 'Purity: Solid'],
-    image: '/Manganese Steel.webp'
+    image: '/manganese-steel.webp'
   },
   {
     id: 11,
@@ -60,7 +60,7 @@ const products = [
     category: 'Non-Ferrous',
     description: 'Clean aluminum extrusion scrap. Primarily sourced from window frames, door sections, and industrial profiles.',
     specs: ['Grade: 6063', 'Cleanliness: 99%+', 'Processing: Baled/Loose'],
-    image: '/Aluminum Extrusion.webp'
+    image: '/aluminum-extrusion.webp'
   },
   {
     id: 12,
@@ -76,7 +76,7 @@ const products = [
     category: 'Non-Ferrous',
     description: 'Clean aluminum auto engines and transmissions. Free of steel components and drained of all fluids.',
     specs: ['Grade: ADC12', 'Cleanliness: High', 'Processing: Shredded'],
-    image: '/Aluminum Engines:Transmissions.webp'
+    image: '/aluminum-engines-transmissions.webp'
   },
   {
     id: 14,
@@ -84,7 +84,7 @@ const products = [
     category: 'Non-Ferrous',
     description: 'Mixed cast aluminum scrap. Primarily sourced from automotive parts, machinery housings, and structural castings.',
     specs: ['Grade: Tense', 'Purity: High', 'Form: Clean Cast'],
-    image: '/Cast Aluminum.webp'
+    image: '/cast-aluminum.webp'
   },
   {
     id: 15,
@@ -92,7 +92,7 @@ const products = [
     category: 'Non-Ferrous',
     description: 'Old aluminum sheet scrap. Primarily sourced from aircraft, automotive, and general industrial sheeting.',
     specs: ['Grade: Taint Tabor', 'Purity: 98%+', 'Type: Sheet'],
-    image: '/TT:Old Sheets.webp'
+    image: '/tt-old-sheets.webp'
   },
   {
     id: 16,
@@ -100,7 +100,7 @@ const products = [
     category: 'Non-Ferrous',
     description: 'Shredded non-ferrous metals (predominantly aluminum). Sorted and processed to ensure consistent industrial grade.',
     specs: ['Grade: Shredded', 'Purity: Solid', 'Form: Mix'],
-    image: '/Zorba.webp'
+    image: '/zorba.webp'
   },
   {
     id: 17,
@@ -108,7 +108,7 @@ const products = [
     category: 'Non-Ferrous',
     description: 'Aluminum breakage and casting scrap with ferrous attachments. Ideal for processors and refining foundries.',
     specs: ['Aluminum: 70-90%', 'Iron: <5%', 'Type: Mixed Cast'],
-    image: '/Aluminum Breakage.webp'
+    image: '/aluminum-breakage.webp'
   },
   {
     id: 18,
@@ -116,7 +116,7 @@ const products = [
     category: 'Non-Ferrous',
     description: 'Discarded electric motors (Elmo grade). Shredded or whole units with high copper recovery potential.',
     specs: ['Grade: Elmo', 'Copper: High Yield', 'Source: Industrial'],
-    image: '/Discarded Ele Motors.webp'
+    image: '/discarded-ele-motors.webp'
   },
   {
     id: 19,
@@ -124,7 +124,7 @@ const products = [
     category: 'Non-Ferrous',
     description: 'Mixed alternators and starters from automotive dismantling. High copper and aluminum recovery grade.',
     specs: ['Grade: Mixed', 'Yield: High', 'Source: Automotive'],
-    image: '/Alternators & Starters.webp'
+    image: '/alternators-starters.webp'
   }
 ];
 
@@ -185,7 +185,7 @@ export function Products() {
               className="relative aspect-video bg-slate-900 overflow-hidden shadow-2xl"
             >
               <img 
-                src="/products-hero.png" 
+                src="/products-hero.webp" 
                 alt="Product Assortment" 
                 className="w-full h-full object-cover opacity-90 transition-opacity duration-700"
               />
