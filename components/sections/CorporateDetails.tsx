@@ -37,19 +37,23 @@ export function CorporateDetails() {
           className="space-y-10 text-[19px] text-slate-600 leading-[1.7] font-normal max-w-6xl"
         >
           <p>
-            Prasmi Steel Private Limited, aims to supply best quality scrap materials. Mainly we are dealing in Ferrous & Non-Ferrous materials such as HMS 1 & 2, Manganese Steel Scrap, Cast Iron CounterWeights, Oversized Cast, Machinery Cast, Mixed Cast, Discarded Electric Motors, Aluminum Engines/Transmissions, Dirty and Heavy Dirty Aluminum, Aluminum Cast & Extrusion, Aluminum Scrap (Clean & Attachments)
+            Prasmi Steel Private Limited, aims to supply best quality scrap materials. Mainly we are dealing in Ferrous & Non-Ferrous materials such as HMS 1 & 2, Manganese Steel Scrap (Hadfield Steel), Cast Iron CounterWeights, Oversized Cast, Machinery Cast, Mixed Cast, and UNprepared Cast Iron. Our non-ferrous portfolio includes Discarded Electric Motors (Elmo), Aluminum Engines and Transmissions, Dirty and Heavy Dirty Aluminum, Aluminum Cast & Extrusion, Aluminum Scrap (Clean & Attachments), and Zorba (Non-Ferrous Shredder Residue).
           </p>
 
           <p>
-            We are supplying the best scrap solutions in the industry since last 06 years with materials that specifically suit the requirements of foundries, smelters and scrap traders. Being one of the globally working company, we are proud to work with over esteemed business partners established across the globe.
+            With over 06 years of specialized experience, we have refined our procurement and processing workflows to deliver precise scrap solutions that meet the exacting metallurgical requirements of global foundries and smelters. Every metric ton of material passing through our facilities is subjected to rigorous sorting, sizing, and cleaning protocols. This attention to detail ensures that our business partners—ranging from boutique specialty founders to large-scale industrial smelters—receive a consistent feedstock that optimizes furnace yield and minimizes slag production.
           </p>
 
           <p>
-            Our Professionals and Labourer team with exceptional expertise make more reliable supply of Hundreds of metric tons every year. We supply best-quality scrap that helps to boost the scrap turnaround process.
+            Our operational strength lies in our deep understanding of the global metal market's logistical complexities. Operating as a globally engaged entity, Prasmi Steel manages end-to-end supply chains that connect high-volume scrap generation hubs with strategic consumption points. We pride ourselves on working with esteemed business partners established across four continents, maintaining a reputation for reliability, transparency in grading, and adherence to international ISRI standards.
           </p>
 
-          <p className="font-bold text-slate-900">
-            Call us today to learn how your organization can benefit from Prasmi Steel's services and products.
+          <p>
+            The core of our success is our dedicated team of Metallurgy Professionals and Skilled Labourers. Their collective expertise allows us to process hundreds of metric tons of specialized scrap annually, maintaining high purity levels even in complex multi-alloy streams. By leveraging advanced segregation techniques, we help our clients boost their scrap turnaround efficiency, reducing the reliance on virgin ores and contributing directly to a more sustainable, circular industrial economy.
+          </p>
+
+          <p className="font-bold text-slate-900 border-l-4 border-[#4682b4] pl-8 py-4 bg-slate-50">
+            Contact our logistics and procurement experts today to learn how Prasmi Steel's specialized material sourcing can optimize your organization's secondary raw material supply chain.
           </p>
         </motion.div>
       </div>

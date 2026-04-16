@@ -21,6 +21,8 @@ const PageLoader = () => (
   </div>
 );
 
+import { FAQ } from '@/components/sections/FAQ';
+
 function HomePage() {
   return (
     <>
@@ -28,6 +30,7 @@ function HomePage() {
       <About />
       <CorporateDetails />
       <GlobalPartners />
+      <FAQ />
     </>
   );
 }

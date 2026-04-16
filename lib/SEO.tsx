@@ -28,11 +28,11 @@ export function SEO() {
 
     // Update Page Title based on route (optional but good for UX)
     const pageTitles: Record<string, string> = {
-      '/': 'Prasmi Steel Private Limited | A Leading Supplier of Ferrous & Non-Ferrous Scrap',
-      '/about': 'About Us | Prasmi Steel Private Limited',
-      '/products': 'Our Products | Ferrous & Non-Ferrous Scrap',
-      '/blogs': 'Industrial Insights | Prasmi Steel Journal',
-      '/contact': 'Contact Us | Prasmi Steel Private Limited',
+      '/': 'Prasmi Steel | Global Ferrous & Non-Ferrous Scrap Supplier',
+      '/about': 'About Prasmi Steel | Leading Industrial Scrap Supplier',
+      '/products': 'Prasmi Steel | Premium Ferrous & Non-Ferrous Catalog',
+      '/blogs': 'Prasmi Steel Journal | Industrial Insights & Reports',
+      '/contact': 'Contact Prasmi Steel | Global Logistics & Support',
     };
 
     // Handle dynamic blog post titles if possible, otherwise use a default

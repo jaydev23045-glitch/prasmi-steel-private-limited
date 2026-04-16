@@ -5,7 +5,7 @@ import { ArrowLeft, Clock, Calendar, Quote, ChevronRight } from 'lucide-react';
 
 const fullPosts = {
   "scrap-metal-industry-growth": {
-    title: "Scrap Metal Industry Growth | Ferrous & Non-Ferrous Scrap Supplier in India",
+    title: "Industry Growth: Ferrous & Non-Ferrous Scrap Guide",
     date: "April 14, 2026",
     readTime: "10 min read",
     category: "Market Focus",
@@ -20,7 +20,7 @@ const fullPosts = {
     ]
   },
   "choosing-right-scrap-supplier": {
-    title: "How to Choose the Right Scrap Metal Supplier | Prasmi Steel Guide",
+    title: "Choosing the Right Scrap Metal Supplier",
     date: "April 14, 2026",
     readTime: "8 min read",
     category: "Strategic Sourcing",
@@ -35,7 +35,7 @@ const fullPosts = {
     ]
   },
   "benefits-high-quality-scrap-smelting": {
-    title: "Benefits of High-Quality Scrap in Smelting Process | Improve Efficiency",
+    title: "High-Quality Scrap Benefits in Smelting",
     date: "April 14, 2026",
     readTime: "9 min read",
     category: "Technical Process",
@@ -99,6 +99,14 @@ const fullPosts = {
 export function BlogPost() {
   const { slug } = useParams();
   const post = fullPosts[slug as keyof typeof fullPosts];
+  
+  React.useEffect(() => {
+    if (post) {
+      const suffix = " | Prasmi Steel";
+      const fullTitle = `${post.title}${suffix}`;
+      document.title = fullTitle.length > 60 ? post.title : fullTitle;
+    }
+  }, [post]);
 
   if (!post) {
     return (
