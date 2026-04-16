@@ -16,13 +16,9 @@ export function Contact() {
       {/* Hero Section */}
       <section className="py-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter text-center mb-24"
-          >
-            Contact <span className="text-[#4682b4]">Us</span>
-          </motion.h1>
+          <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter text-center mb-24">
+            Contact <span className="text-[#4682b4]">Prasmi Steel</span> Private Limited
+          </h1>
 
           <div className="grid lg:grid-cols-2 gap-20 items-start">
             <div className="flex items-center gap-4 mb-2 md:hidden">

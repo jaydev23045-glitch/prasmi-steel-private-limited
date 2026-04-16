@@ -35,7 +35,7 @@ export function Hero() {
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-[72px] font-bold text-white tracking-tight leading-tight mb-8 drop-shadow-lg">
-            Your Trusted Partner for Best-Quality Metal Scrap Solutions
+            Best-Quality Ferrous & Non-Ferrous Metal Scrap Solutions
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-zinc-200 mb-10 max-w-2xl mx-auto leading-relaxed drop-shadow-sm font-medium">
