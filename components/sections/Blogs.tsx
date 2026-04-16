@@ -116,6 +116,10 @@ export function Blogs() {
       <section className="py-24 bg-mesh bg-grid relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-slate-200" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="flex items-center gap-4 mb-16">
+            <div className="h-px w-12 bg-slate-200"></div>
+            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-slate-400">Journal Archive</h2>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {blogPosts.map((post, index) => (
               <motion.article 

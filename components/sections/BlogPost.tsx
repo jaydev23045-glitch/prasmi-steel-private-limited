@@ -166,14 +166,14 @@ export function BlogPost() {
             {/* Sidebar Metadata */}
             <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit space-y-16">
               <div className="p-10 bg-slate-50 border-l-4 border-[#4682b4]">
-                <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-6">Briefing</h4>
+                <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-6">Article briefing</h2>
                 <p className="text-slate-600 text-sm italic font-light leading-relaxed">
                   "{post.meta}"
                 </p>
               </div>
  
               <div className="space-y-8">
-                <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Logistics Contact</h4>
+                <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Logistics Contact</h2>
                 <div className="space-y-4">
                   <p className="text-sm font-bold text-slate-900 tracking-tight">Prasmi Steel Private Limited</p>
                   <a href="mailto:prasmisteel@gmail.com" className="text-sm text-[#4682b4] font-black tracking-widest hover:underline">prasmisteel@gmail.com</a>

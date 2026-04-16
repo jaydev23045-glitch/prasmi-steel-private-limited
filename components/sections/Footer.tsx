@@ -43,7 +43,7 @@ export function Footer() {
             </div>
 
             <div className="md:col-span-3">
-              <h4 className="text-white font-black mb-8 uppercase tracking-[0.2em] text-xs">Quick Access</h4>
+              <h2 className="text-white font-black mb-8 uppercase tracking-[0.2em] text-[10px]">Quick Access</h2>
               <ul className="space-y-4 text-sm font-medium">
                 <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
                 <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
@@ -52,7 +52,7 @@ export function Footer() {
             </div>
 
             <div className="md:col-span-4">
-              <h4 className="text-white font-black mb-8 uppercase tracking-[0.2em] text-xs">Operations</h4>
+              <h2 className="text-white font-black mb-8 uppercase tracking-[0.2em] text-[10px]">Operations</h2>
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-slate-700 flex-shrink-0 mt-0.5" />
@@ -122,7 +122,7 @@ export function Footer() {
         </section>
         <section>
           <h3 className="text-white font-bold text-base mb-2">5. Your Rights</h3>
-          <p>You have the right to request access to, correction of, or deletion of the personal information we hold about you. To exercise these rights, please contact us at <span className="text-red-500">prasmisteel@gmail.com</span>.</p>
+          <p>You have the right to request access to, correction of, or deletion of the personal information we hold about you. To exercise these rights, please contact us at <span className="text-[#4682b4]">prasmisteel@gmail.com</span>.</p>
         </section>
         <section>
           <h3 className="text-white font-bold text-base mb-2">6. International Transfers</h3>
@@ -137,7 +137,7 @@ export function Footer() {
           <p>For any questions regarding this Privacy Policy, contact us at:<br />
           <span className="text-white font-medium">Prasmi Steel Private Limited</span><br />
           Vishal Industrial, Plot No. 16, Kotda Sangani, Piplana, Gujarat 360020, India<br />
-          Email: <span className="text-red-500">prasmisteel@gmail.com</span><br />
+          Email: <span className="text-[#4682b4]">prasmisteel@gmail.com</span><br />
           Phone: +91 9586633799</p>
         </section>
       </LegalModal>
@@ -188,7 +188,7 @@ export function Footer() {
           <h3 className="text-white font-bold text-base mb-2">10. Contact</h3>
           <p>For queries regarding these Terms, contact us at:<br />
           <span className="text-white font-medium">Prasmi Steel Private Limited</span><br />
-          Email: <span className="text-red-500">prasmisteel@gmail.com</span> &nbsp;|&nbsp; Phone: +91 9586633799</p>
+          Email: <span className="text-[#4682b4]">prasmisteel@gmail.com</span> &nbsp;|&nbsp; Phone: +91 9586633799</p>
         </section>
       </LegalModal>
     </>

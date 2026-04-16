@@ -25,12 +25,21 @@ export function Contact() {
           </motion.h1>
 
           <div className="grid lg:grid-cols-2 gap-20 items-start">
+            <div className="flex items-center gap-4 mb-2 md:hidden">
+              <div className="h-px w-8 bg-slate-200"></div>
+              <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Get in Touch</h2>
+            </div>
+
             {/* Left Column: Contact Details */}
             <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="space-y-16"
+               initial={{ opacity: 0, x: -30 }}
+               animate={{ opacity: 1, x: 0 }}
+               className="space-y-16"
             >
+              <div className="hidden md:flex items-center gap-4 mb-8">
+                <div className="h-px w-12 bg-slate-200"></div>
+                <h2 className="text-xs font-black uppercase tracking-[0.4em] text-slate-400">Reach Our Experts</h2>
+              </div>
               {/* Regional Offices */}
               <div className="grid sm:grid-cols-2 gap-12">
                 <div className="space-y-4">
