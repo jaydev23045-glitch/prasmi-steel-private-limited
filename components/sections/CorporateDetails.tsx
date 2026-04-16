@@ -2,14 +2,19 @@ import { motion } from 'motion/react';
 
 export function CorporateDetails() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-mesh bg-grid relative overflow-hidden">
+      {/* Decorative Background Element */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none -z-10 rotate-12 scale-150">
+        <img src="/favicon.png" alt="" className="w-full h-full object-contain" />
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Horizontal Line Accent */}
         <motion.div 
           initial={{ opacity: 0, width: 0 }}
           whileInView={{ opacity: 1, width: 64 }}
           viewport={{ once: true }}
-          className="h-[2px] bg-slate-200 mb-12"
+          className="h-[2px] bg-[#4682b4] mb-12"
         />
 
         {/* Authoritative Headline */}

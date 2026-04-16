@@ -118,13 +118,32 @@
 }
 
 @layer base {
+  :root {
+    --steel-blue: #4682b4;
+    --charcoal: #36454f;
+    --background: #f8fafc;
+    --foreground: var(--charcoal);
+  }
+
   * {
     @apply border-border outline-ring/50;
-    }
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
     @apply bg-background text-foreground;
-    }
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    font-size: 16px; /* Minimum mobile font size */
+  }
+
   html {
     @apply font-sans scroll-smooth scroll-pt-20;
-    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 }

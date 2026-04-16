@@ -13,7 +13,7 @@ const blogPosts = [
     date: "April 14, 2026",
     readTime: "7 min read",
     image: "/industrial-growth.webp",
-    color: "bg-red-600"
+    color: "bg-[#4682b4]"
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const blogPosts = [
     date: "April 14, 2026",
     readTime: "6 min read",
     image: "/smelting-efficiency.webp",
-    color: "bg-red-600"
+    color: "bg-[#4682b4]"
   },
   {
     id: 4,
@@ -87,7 +87,7 @@ export function Blogs() {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center gap-4 mb-8"
             >
-              <div className="h-px w-12 bg-red-600"></div>
+              <div className="h-px w-12 bg-[#4682b4]"></div>
               <span className="text-[10px] font-black uppercase tracking-[0.45em] text-slate-500">Prasmi Steel Journal</span>
             </motion.div>
             
@@ -97,7 +97,7 @@ export function Blogs() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-8"
             >
-              Industrial <span className="text-red-600">Insights</span>
+              Industrial <span className="text-[#4682b4]">Insights</span>
             </motion.h1>
             
             <motion.p 
@@ -113,8 +113,9 @@ export function Blogs() {
       </section>
 
       {/* Blog Grid */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-mesh bg-grid relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-px bg-slate-200" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {blogPosts.map((post, index) => (
               <motion.article 
@@ -144,18 +145,18 @@ export function Blogs() {
                   <div className="space-y-4">
                     <div className="flex items-center gap-6 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                       <span className="flex items-center gap-2">
-                         <Clock className="w-3 h-3 text-red-600" /> {post.readTime}
+                         <Clock className="w-3 h-3 text-[#4682b4]" /> {post.readTime}
                       </span>
                       <span>{post.date}</span>
                     </div>
-                    <h3 className="text-2xl font-black text-slate-900 tracking-tight leading-tight group-hover:text-red-600 transition-colors">
+                    <h3 className="text-2xl font-black text-slate-900 tracking-tight leading-tight group-hover:text-[#4682b4] transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-slate-500 text-sm font-light leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
                     <div className="pt-4 flex items-center gap-2 text-slate-900 font-black text-[10px] uppercase tracking-[0.2em] group-hover:gap-4 transition-all">
-                      Full Analysis <ChevronRight className="w-4 h-4 text-red-600" />
+                      Full Analysis <ChevronRight className="w-4 h-4 text-[#4682b4]" />
                     </div>
                   </div>
                 </Link>

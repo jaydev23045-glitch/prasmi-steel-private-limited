@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 
 export function History() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-mesh bg-grid min-h-screen">
       {/* Background Glow */}
-      <div className="fixed inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.02),transparent_50%)] pointer-events-none" />
+      <div className="fixed inset-0 bg-white/40 pointer-events-none -z-20" />
 
       {/* Back Header Nav */}
       <div className="sticky top-20 z-40 bg-white/80 backdrop-blur-sm border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-slate-500 hover:text-red-600 transition-colors font-bold uppercase tracking-widest text-[10px] group"
+            className="inline-flex items-center gap-2 text-slate-500 hover:text-[#4682b4] transition-colors font-bold uppercase tracking-widest text-[10px] group"
           >
             <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
             Back to Global Overview
@@ -31,13 +31,13 @@ export function History() {
               className="flex flex-col items-start"
             >
               <div className="inline-flex items-center gap-3 mb-8 bg-slate-50 px-4 py-1.5 rounded-none border border-slate-100">
-                <span className="text-red-600 font-bold uppercase tracking-[0.3em] text-[10px]">OUR JOURNEY</span>
+                <span className="text-[#4682b4] font-bold uppercase tracking-[0.3em] text-[10px]">OUR JOURNEY</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-black text-slate-900 leading-[1.1] mb-10 tracking-tighter">
-                Our <span className="text-red-600">History</span>
+                Our <span className="text-[#4682b4]">History</span>
               </h1>
               <div className="space-y-8 text-lg text-slate-600 leading-relaxed font-light max-w-xl">
-                <p className="border-l-4 border-red-600 pl-8 py-3 bg-red-50/20">
+                <p className="border-l-4 border-[#4682b4] pl-8 py-3 bg-[#4682b4]/5">
                   Prasmi Steel Private Limited is an emerging leader in the global scrap industry, specializing in the sourcing and supply of premium ferrous and non-ferrous metal scrap.
                 </p>
               </div>
@@ -105,8 +105,8 @@ export function History() {
                     'To continuously grow and innovate in line with industry advancements'
                   ].map((point, idx) => (
                     <div key={idx} className="flex gap-4 group items-center">
-                      <div className="flex-shrink-0 w-8 h-8 bg-white border border-slate-100 shadow-sm flex items-center justify-center transition-colors group-hover:bg-red-600 group-hover:text-white">
-                        <div className="w-1.5 h-1.5 rounded-full bg-red-600 transition-colors group-hover:bg-white" />
+                      <div className="flex-shrink-0 w-8 h-8 bg-white border border-slate-100 shadow-sm flex items-center justify-center transition-colors group-hover:bg-[#4682b4] group-hover:text-white">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#4682b4] transition-colors group-hover:bg-white" />
                       </div>
                       <p className="text-slate-600 font-light text-base leading-relaxed">{point}</p>
                     </div>
@@ -121,7 +121,7 @@ export function History() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                className="bg-white p-12 border border-slate-100 shadow-xl space-y-10"
+                className="premium-card p-12 space-y-10"
               >
                 <div className="space-y-8 text-slate-600 font-light leading-relaxed text-lg italic">
                   <p>
@@ -138,7 +138,7 @@ export function History() {
                 <div className="flex items-center gap-6 pt-10 border-t border-slate-100">
                    <div className="flex flex-col">
                       <span className="text-3xl font-black text-slate-900 tracking-tighter leading-none">2024</span>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-red-600 mt-2 italic">Official Launch</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-[#4682b4] mt-2 italic">Official Launch</span>
                    </div>
                    <div className="h-12 w-px bg-slate-100 mx-4" />
                    <div className="flex flex-col">

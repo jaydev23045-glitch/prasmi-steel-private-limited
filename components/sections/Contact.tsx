@@ -4,7 +4,12 @@ import { Phone, Mail, MapPin, Globe, Shield, Clock, Building2 } from 'lucide-rea
 
 export function Contact() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-mesh bg-grid min-h-screen relative overflow-hidden">
+      {/* Decorative Background Element */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none -z-10 rotate-12 scale-150">
+        <img src="/favicon.png" alt="" className="w-full h-full object-contain" />
+      </div>
+      
       {/* Header Space */}
       <div className="h-20" />
 
@@ -16,7 +21,7 @@ export function Contact() {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter text-center mb-24"
           >
-            Contact <span className="text-red-600">Us</span>
+            Contact <span className="text-[#4682b4]">Us</span>
           </motion.h1>
 
           <div className="grid lg:grid-cols-2 gap-20 items-start">
@@ -29,11 +34,11 @@ export function Contact() {
               {/* Regional Offices */}
               <div className="grid sm:grid-cols-2 gap-12">
                 <div className="space-y-4">
-                  <div className="flex items-center gap-2 text-red-600 mb-2">
+                  <div className="flex items-center gap-2 text-[#4682b4] mb-2">
                     <Globe className="w-4 h-4" />
                     <span className="text-[10px] font-black uppercase tracking-[0.2em]">Registered Office & Works:</span>
                   </div>
-                  <h3 className="text-xl font-black text-slate-900 tracking-tight underline decoration-red-600/30 decoration-4 underline-offset-8 mb-6 uppercase">Rajkot</h3>
+                  <h3 className="text-xl font-black text-slate-900 tracking-tight underline decoration-[#4682b4]/30 decoration-4 underline-offset-8 mb-6 uppercase">Rajkot</h3>
                   <p className="text-sm text-slate-600 font-bold leading-relaxed uppercase tracking-wider">
                     VISHAL INDUSTRIAL, PLOT NO. 16,<br />
                     KOTDA SANGANI, Piplana,<br />
@@ -47,10 +52,10 @@ export function Contact() {
                 <div className="group">
                   <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4">Direct Line</h4>
                   <div className="flex items-center gap-6">
-                    <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-red-600 transition-all duration-500">
+                    <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-[#4682b4] transition-all duration-500">
                       <Phone className="w-5 h-5" />
                     </div>
-                    <a href="tel:+919586633799" className="text-2xl font-black text-slate-900 tracking-tighter hover:text-red-600 transition-colors">
+                    <a href="tel:+919586633799" className="text-2xl font-black text-slate-900 tracking-tighter hover:text-[#4682b4] transition-colors">
                       +91 95866 33799
                     </a>
                   </div>
@@ -60,10 +65,10 @@ export function Contact() {
                   <div className="group">
                     <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4">Official Email</h4>
                     <div className="flex items-center gap-6">
-                      <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-red-600 transition-all duration-500">
+                      <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-[#4682b4] transition-all duration-500">
                         <Mail className="w-5 h-5" />
                       </div>
-                      <a href="mailto:prasmisteel@gmail.com" className="text-xl sm:text-2xl font-black text-slate-900 tracking-tighter hover:text-red-600 transition-colors break-all">
+                      <a href="mailto:prasmisteel@gmail.com" className="text-xl sm:text-2xl font-black text-slate-900 tracking-tighter hover:text-[#4682b4] transition-colors break-all">
                         prasmisteel@gmail.com
                       </a>
                     </div>
@@ -74,15 +79,15 @@ export function Contact() {
               {/* Operational Status */}
               <div className="grid sm:grid-cols-3 gap-8 pt-12 border-t border-slate-50">
                 <div className="flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-red-600" />
+                  <Clock className="w-4 h-4 text-[#4682b4]" />
                   <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">24/7 Logistics</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Shield className="w-4 h-4 text-red-600" />
+                  <Shield className="w-4 h-4 text-[#4682b4]" />
                   <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">ISRI Compliant</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Building2 className="w-4 h-4 text-red-600" />
+                  <Building2 className="w-4 h-4 text-[#4682b4]" />
                   <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">Grade Verified</span>
                 </div>
               </div>
@@ -105,7 +110,7 @@ export function Contact() {
                 className="grayscale hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute bottom-10 left-10 bg-slate-900/90 backdrop-blur-md px-8 py-6 text-white border border-white/10 hidden sm:block">
-                <div className="text-[8px] font-black uppercase tracking-[0.3em] text-red-600 mb-2">Visit Our Yard</div>
+                <div className="text-[8px] font-black uppercase tracking-[0.3em] text-[#4682b4] mb-2">Visit Our Yard</div>
                 <div className="text-xl font-black tracking-tighter">Kotda Sangani Area</div>
               </div>
             </motion.div>

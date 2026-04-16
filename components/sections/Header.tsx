@@ -50,7 +50,7 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
             <img src="/favicon.png" alt="Prasmi Steel Logo" className="w-10 h-10 object-contain" />
             <div className="flex flex-col">
               <span className="font-extrabold text-2xl tracking-tighter text-slate-900 leading-none">
-                Prasmi<span className="text-red-600">Steel</span>
+                Prasmi<span className="text-[#4682b4]">Steel</span>
               </span>
               <span className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1 whitespace-nowrap">Private Limited</span>
             </div>
@@ -86,8 +86,8 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
            <div className="md:hidden flex items-center">
              <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                <SheetTrigger asChild>
-                 <Button variant="ghost" size="icon" className="text-slate-600">
-                   <Menu className="h-6 w-6" />
+                 <Button variant="ghost" size="icon" className="text-slate-600 w-12 h-12">
+                   <Menu className="h-7 w-7" />
                  </Button>
                </SheetTrigger>
                <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white">

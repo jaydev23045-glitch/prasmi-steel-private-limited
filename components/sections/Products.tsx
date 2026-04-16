@@ -150,7 +150,7 @@ export function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-slate-500 hover:text-red-600 transition-colors font-bold uppercase tracking-widest text-[10px] group"
+            className="inline-flex items-center gap-2 text-slate-500 hover:text-[#4682b4] transition-colors font-bold uppercase tracking-widest text-[10px] group"
           >
             <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
             Home / Material Catalog
@@ -168,10 +168,10 @@ export function Products() {
               className="flex flex-col items-start"
             >
               <div className="inline-flex items-center gap-3 mb-8 bg-slate-50 px-4 py-1.5 rounded-none border border-slate-100">
-                <span className="text-red-600 font-bold uppercase tracking-[0.3em] text-[10px]">Material Excellence</span>
+                <span className="text-[#4682b4] font-bold uppercase tracking-[0.3em] text-[10px]">Material Excellence</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-black text-slate-900 leading-[1.1] mb-10 tracking-tighter">
-                Premium <span className="text-red-600">Materials</span> for Global Industry.
+                Premium <span className="text-[#4682b4]">Materials</span> for Global Industry.
               </h1>
               <p className="text-xl text-slate-600 font-light leading-relaxed max-w-xl border-l-4 border-slate-200 pl-8">
                 Every shipment is meticulously sorted and graded to meet international quality standards, ensuring maximum furnace yield for our partners.
@@ -213,7 +213,7 @@ export function Products() {
                   onClick={() => setActiveCategory(cat)}
                   className={`px-6 py-2 text-[10px] font-black uppercase tracking-widest transition-all ${
                     activeCategory === cat 
-                      ? 'bg-red-600 text-white shadow-xl shadow-red-600/20' 
+                      ? 'bg-[#4682b4] text-white shadow-xl shadow-[#4682b4]/20' 
                       : 'bg-slate-50 text-slate-500 hover:bg-slate-100 border border-slate-100'
                   }`}
                 >
@@ -237,7 +237,7 @@ export function Products() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  className="bg-white border border-slate-100 group overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500"
+                  className="premium-card bg-white border border-slate-100 group overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500"
                 >
                   {/* Image Container */}
                   <div className="aspect-square relative overflow-hidden bg-slate-100">
@@ -257,7 +257,7 @@ export function Products() {
                   {/* Content */}
                   <div className="p-8 space-y-6">
                     <div>
-                      <h3 className="text-2xl font-black text-slate-900 tracking-tighter mb-2 group-hover:text-red-600 transition-colors">
+                      <h3 className="text-2xl font-black text-slate-900 tracking-tighter mb-2 group-hover:text-[#4682b4] transition-colors">
                         {product.name}
                       </h3>
                       <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -267,7 +267,7 @@ export function Products() {
 
                     <div className="space-y-3 pt-6 border-t border-slate-50">
                       <div className="flex items-center gap-3">
-                         <Shield className="w-3.5 h-3.5 text-red-600" />
+                         <Shield className="w-3.5 h-3.5 text-[#4682b4]" />
                          <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">Technical Data</span>
                       </div>
                       <div className="flex flex-wrap gap-2">
@@ -281,7 +281,7 @@ export function Products() {
 
                     <button 
                       onClick={() => handleRequestQuote(product)}
-                      className="w-full py-4 bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-red-600 transition-colors flex items-center justify-center gap-2 group/btn"
+                      className="w-full py-4 bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#4682b4] transition-colors flex items-center justify-center gap-2 group/btn"
                     >
                       Request Quote
                       <Zap className="w-3 h-3 transition-transform group-hover/btn:translate-x-1" />
@@ -305,7 +305,7 @@ export function Products() {
                 { icon: <Target />, title: 'Custom Sourcing', text: 'Specialized segregation for boutique alloys and high-purity non-ferrous requirements.' }
               ].map((item, i) => (
                 <div key={i} className="space-y-4">
-                   <div className="w-10 h-10 bg-slate-50 flex items-center justify-center text-red-600">
+                   <div className="w-10 h-10 bg-slate-50 flex items-center justify-center text-[#4682b4]">
                       {item.icon}
                    </div>
                    <h5 className="font-black uppercase tracking-widest text-[10px] text-slate-900">{item.title}</h5>

@@ -17,7 +17,7 @@ const Contact = lazy(() => import('@/components/sections/Contact').then(m => ({ 
 // Loading component
 const PageLoader = () => (
   <div className="min-h-[60vh] flex items-center justify-center">
-    <div className="w-8 h-8 border-4 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+    <div className="w-8 h-8 border-4 border-[#4682b4] border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
 

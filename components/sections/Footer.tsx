@@ -14,7 +14,7 @@ export function Footer() {
               <div className="flex items-center gap-3 mb-8 cursor-pointer" onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })}>
                 <div className="flex flex-col">
                   <span className="font-black text-3xl tracking-tighter text-white leading-none">
-                    Prasmi<span className="text-red-600">Steel</span>
+                    Prasmi<span className="text-[#4682b4]">Steel</span>
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mt-2">Private Limited</span>
                 </div>
