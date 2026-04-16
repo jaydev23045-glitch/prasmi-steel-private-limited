@@ -146,8 +146,8 @@ export function Products() {
   return (
     <div className="bg-white min-h-screen">
       {/* Back Nav */}
-      <div className="sticky top-20 z-40 bg-white/80 backdrop-blur-sm border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="sticky top-16 md:top-20 z-40 bg-white/80 backdrop-blur-sm border-b border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-4">
           <Link 
             to="/" 
             className="inline-flex items-center gap-2 text-slate-500 hover:text-[#4682b4] transition-colors font-bold uppercase tracking-widest text-[10px] group"
@@ -159,7 +159,7 @@ export function Products() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-32 overflow-hidden border-b border-slate-100">
+      <section className="relative pt-12 md:pt-24 pb-16 md:pb-32 overflow-hidden border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div
@@ -202,10 +202,10 @@ export function Products() {
       </section>
 
       {/* Catalog Filter */}
-      <section className="py-12 border-b border-slate-100 sticky top-[128px] z-30 bg-white/95 backdrop-blur-md">
+      <section className="py-6 md:py-12 border-b border-slate-100 sticky top-[104px] md:top-[128px] z-30 bg-white/95 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-8">
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Filter by category:</span>
+          <div className="flex flex-wrap items-center gap-4 md:gap-8">
+            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Filter:</span>
             <div className="flex gap-4">
               {categories.map((cat) => (
                 <button
@@ -248,9 +248,9 @@ export function Products() {
                     <img 
                       src={product.image} 
                       alt={product.name} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors" />
+                    <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors" />
                     <div className="absolute top-4 left-4">
                       <div className="bg-white/90 backdrop-blur-md px-3 py-1 border border-slate-200 shadow-sm text-[8px] font-bold uppercase tracking-widest text-slate-900">
                         {product.category}

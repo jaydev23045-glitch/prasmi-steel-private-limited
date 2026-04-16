@@ -39,9 +39,9 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm pt-[env(safe-area-inset-top,0px)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16 md:h-20">
           <Link 
             to="/" 
             className="flex-shrink-0 flex items-center gap-3 cursor-pointer"
