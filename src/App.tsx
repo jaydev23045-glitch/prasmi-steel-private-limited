@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from 'react';
+import { useState, lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
@@ -37,9 +37,19 @@ function HomePage() {
 
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { SEO } from '@/lib/SEO';
+import { BrandSplash } from '@/components/ui/BrandSplash';
 
 export default function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showSplash, setShowSplash] = useState(false);
+
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem('prasmi_visited');
+    if (!hasVisited) {
+      setShowSplash(true);
+      sessionStorage.setItem('prasmi_visited', 'true');
+    }
+  }, []);
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -51,6 +61,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      {showSplash && <BrandSplash onComplete={() => setShowSplash(false)} />}
       <ScrollToTop />
       <SEO />
       <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-slate-900 selection:text-white">
