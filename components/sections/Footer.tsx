@@ -45,9 +45,9 @@ export function Footer() {
             <div className="md:col-span-3">
               <h2 className="text-white font-black mb-8 uppercase tracking-[0.2em] text-[10px]">Prasmi Steel: Quick Navigation</h2>
               <ul className="space-y-4 text-sm font-medium">
-                <li><a href="#home" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#global" className="hover:text-white transition-colors">Global Partners</a></li>
+                <li><a href="/#home" className="hover:text-white transition-colors">Home</a></li>
+                <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+                <li><a href="/#global" className="hover:text-white transition-colors">Global Partners</a></li>
               </ul>
             </div>
 
