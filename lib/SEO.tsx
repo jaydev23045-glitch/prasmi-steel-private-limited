@@ -156,7 +156,7 @@ export function SEO() {
 
     // 4. Page Title & Meta Description
     const pageTitles: Record<string, string> = {
-      '/': 'Prasmi Steel | Ferrous, Non-Ferrous & Cast Iron Scrap Supply',
+      '/': 'Prasmi Steel Private Limited | Ferrous, Non-Ferrous & Cast Iron Metal Scrap Supply',
       '/about': 'About Prasmi Steel | Leading Industrial Scrap Supplier',
       '/products': 'Prasmi Steel | Premium Ferrous & Non-Ferrous Catalog',
       '/blogs': 'Prasmi Steel Journal | Industrial Insights & Reports',
@@ -164,7 +164,7 @@ export function SEO() {
     };
 
     const pageDescriptions: Record<string, string> = {
-      '/': 'Prasmi Steel Private Limited offers a premium supply of ferrous, non-ferrous, and cast iron metal scrap solutions for global smelting and foundries.',
+      '/': 'Prasmi Steel Private Limited is a global leader in industrial material sourcing, providing a premium supply of ferrous, non-ferrous, and cast iron metal scrap solutions.',
       '/about': 'Learn about Prasmi Steel Private Limited, our industrial heritage, and our commitment to supplying high-quality metal scrap to global partners.',
       '/products': 'Explore the Prasmi Steel material catalog featuring premium ferrous and non-ferrous scrap, including HMS 1 & 2, Manganese Steel, and Aluminum.',
       '/blogs': 'Read industrial insights and market reports on metal scrap recycling, smelting efficiency, and global trade trends from Prasmi Steel experts.',
