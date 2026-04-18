@@ -7,7 +7,7 @@ export function Contact() {
     <div className="bg-mesh bg-grid min-h-screen relative overflow-hidden">
       {/* Decorative Background Element */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none -z-10 rotate-12 scale-150">
-        <img src="/favicon.png" alt="" className="w-full h-full object-contain" />
+        <img src="/favicon.png" alt="Prasmi Steel Contact Watermark" className="w-full h-full object-contain" />
       </div>
       
       {/* Header Space */}
