@@ -50,7 +50,7 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
             <img src="/favicon.png" alt="Prasmi Steel Logo" className="w-10 h-10 object-contain" />
             <div className="flex flex-col">
               <span className="font-extrabold text-2xl tracking-tighter text-slate-900 leading-none">
-                Prasmi<span className="text-[#4682b4]">Steel</span>
+                Prasmi<span className="text-[#dc2626]">Steel</span>
               </span>
               <span className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1 whitespace-nowrap">Private Limited</span>
             </div>

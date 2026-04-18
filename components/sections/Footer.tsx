@@ -14,7 +14,7 @@ export function Footer() {
               <div className="flex items-center gap-3 mb-8 cursor-pointer" onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })}>
                 <div className="flex flex-col">
                   <span className="font-black text-3xl tracking-tighter text-white leading-none">
-                    Prasmi<span className="text-[#4682b4]">Steel</span>
+                    Prasmi<span className="text-[#dc2626]">Steel</span>
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mt-2">Private Limited</span>
                 </div>
@@ -122,7 +122,7 @@ export function Footer() {
         </section>
         <section>
           <h3 className="text-white font-bold text-base mb-2">5. Your Rights</h3>
-          <p>You have the right to request access to, correction of, or deletion of the personal information we hold about you. To exercise these rights, please contact us at <span className="text-[#4682b4]">prasmisteel@gmail.com</span>.</p>
+          <p>You have the right to request access to, correction of, or deletion of the personal information we hold about you. To exercise these rights, please contact us at <span className="text-[#dc2626]">prasmisteel@gmail.com</span>.</p>
         </section>
         <section>
           <h3 className="text-white font-bold text-base mb-2">6. International Transfers</h3>
@@ -137,7 +137,7 @@ export function Footer() {
           <p>For any questions regarding this Privacy Policy, contact us at:<br />
           <span className="text-white font-medium">Prasmi Steel Private Limited</span><br />
           Vishal Industrial, Plot No. 16, Kotda Sangani, Piplana, Gujarat 360020, India<br />
-          Email: <span className="text-[#4682b4]">prasmisteel@gmail.com</span><br />
+          Email: <span className="text-[#dc2626]">prasmisteel@gmail.com</span><br />
           Phone: +91 9586633799</p>
         </section>
       </LegalModal>
@@ -188,7 +188,7 @@ export function Footer() {
           <h3 className="text-white font-bold text-base mb-2">10. Contact</h3>
           <p>For queries regarding these Terms, contact us at:<br />
           <span className="text-white font-medium">Prasmi Steel Private Limited</span><br />
-          Email: <span className="text-[#4682b4]">prasmisteel@gmail.com</span> &nbsp;|&nbsp; Phone: +91 9586633799</p>
+          Email: <span className="text-[#dc2626]">prasmisteel@gmail.com</span> &nbsp;|&nbsp; Phone: +91 9586633799</p>
         </section>
       </LegalModal>
     </>

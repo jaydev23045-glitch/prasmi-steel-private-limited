@@ -24,7 +24,7 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
         >
           {/* Animated Background Mesh */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#4682b4]/20 via-transparent to-transparent animate-pulse" />
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#dc2626]/20 via-transparent to-transparent animate-pulse" />
           </div>
 
           <div className="relative flex flex-col items-center">
@@ -49,7 +49,7 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
               <motion.div 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                className="absolute -inset-4 border border-[#4682b4]/20 rounded-full border-t-[#4682b4]"
+                className="absolute -inset-4 border border-[#dc2626]/20 rounded-full border-t-[#dc2626]"
               />
             </motion.div>
 
@@ -66,7 +66,7 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
                 className="flex flex-col items-center gap-3"
               >
                 <h1 className="text-3xl md:text-5xl font-black text-white tracking-[0.2em] uppercase text-center">
-                  Prasmi <span className="text-[#4682b4]">Steel</span>
+                  Prasmi <span className="text-[#dc2626]">Steel</span>
                 </h1>
                 <div className="flex items-center gap-4 w-full">
                   <motion.div 
@@ -75,7 +75,7 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
                     transition={{ duration: 1, delay: 1 }}
                     className="h-px flex-1 bg-zinc-800"
                   />
-                  <span className="text-[10px] font-bold text-[#4682b4] uppercase tracking-[0.5em] whitespace-nowrap">
+                  <span className="text-[10px] font-bold text-[#dc2626] uppercase tracking-[0.5em] whitespace-nowrap">
                     Private Limited
                   </span>
                   <motion.div 
@@ -94,7 +94,7 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 2.2, ease: "easeInOut" }}
-            className="absolute bottom-0 left-0 h-1 bg-[#4682b4] w-full origin-left"
+            className="absolute bottom-0 left-0 h-1 bg-[#dc2626] w-full origin-left"
           />
         </motion.div>
       )}

@@ -14,7 +14,7 @@ export function CorporateDetails() {
           initial={{ opacity: 0, width: 0 }}
           whileInView={{ opacity: 1, width: 64 }}
           viewport={{ once: true }}
-          className="h-[2px] bg-[#4682b4] mb-12"
+          className="h-[2px] bg-[#dc2626] mb-12"
         />
 
         {/* Authoritative Headline */}
@@ -46,7 +46,7 @@ export function CorporateDetails() {
             The core of our success is our dedicated team of Metallurgy Professionals and Skilled Labourers. Their collective expertise allows us to process hundreds of metric tons of specialized scrap annually, maintaining high purity levels even in complex multi-alloy streams. By leveraging advanced segregation techniques, we help our clients boost their scrap turnaround efficiency, reducing the reliance on virgin ores and contributing directly to a more sustainable, circular industrial economy.
           </p>
 
-          <p className="font-bold text-slate-900 border-l-4 border-[#4682b4] pl-8 py-4 bg-slate-50">
+          <p className="font-bold text-slate-900 border-l-4 border-[#dc2626] pl-8 py-4 bg-slate-50">
             Contact our logistics and procurement experts today to learn how Prasmi Steel's specialized material sourcing can optimize your organization's secondary raw material supply chain.
           </p>
         </motion.div>

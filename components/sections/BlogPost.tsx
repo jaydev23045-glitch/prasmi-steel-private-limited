@@ -208,7 +208,7 @@ export function BlogPost() {
             to="/blogs" 
             className="inline-flex items-center gap-3 text-white/60 hover:text-white transition-colors uppercase text-[10px] font-black tracking-[0.4em] mb-12"
           >
-            <ArrowLeft className="w-4 h-4 text-[#4682b4]" /> Back to Journal
+            <ArrowLeft className="w-4 h-4 text-[#dc2626]" /> Back to Journal
           </Link>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -216,7 +216,7 @@ export function BlogPost() {
             className="max-w-4xl"
           >
             <div className="flex items-center gap-4 mb-8">
-              <span className="bg-[#4682b4] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-widest">
+              <span className="bg-[#dc2626] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-widest">
                 {post.category}
               </span>
               <div className="h-px w-12 bg-white/20"></div>
@@ -227,7 +227,7 @@ export function BlogPost() {
             </h1>
             <div className="flex items-center gap-8 text-white/50 text-[10px] font-black uppercase tracking-widest">
               <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#4682b4]" /> {post.readTime}
+                <Clock className="w-4 h-4 text-[#dc2626]" /> {post.readTime}
               </span>
               <span>•</span>
               <span>Technical Analysis</span>
@@ -242,7 +242,7 @@ export function BlogPost() {
           <div className="grid lg:grid-cols-12 gap-20">
             {/* Sidebar Metadata */}
             <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit space-y-16">
-              <div className="p-10 bg-slate-50 border-l-4 border-[#4682b4]">
+              <div className="p-10 bg-slate-50 border-l-4 border-[#dc2626]">
                 <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-6">Article briefing</h2>
                 <p className="text-slate-600 text-sm italic font-light leading-relaxed">
                   "{post.meta}"
@@ -253,7 +253,7 @@ export function BlogPost() {
                 <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Logistics Contact</h2>
                 <div className="space-y-4">
                   <p className="text-sm font-bold text-slate-900 tracking-tight">Prasmi Steel Private Limited</p>
-                  <a href="mailto:prasmisteel@gmail.com" className="text-sm text-[#4682b4] font-black tracking-widest hover:underline">prasmisteel@gmail.com</a>
+                  <a href="mailto:prasmisteel@gmail.com" className="text-sm text-[#dc2626] font-black tracking-widest hover:underline">prasmisteel@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -268,7 +268,7 @@ export function BlogPost() {
               {post.content.map((paragraph, index) => (
                 <div key={index} className="relative">
                    {index === 0 && <span className="absolute -left-8 top-0 h-full w-0.5 bg-slate-100 hidden md:block"></span>}
-                   <p className={`text-xl md:text-2xl text-slate-800 leading-relaxed font-light ${index === 0 ? 'first-letter:text-6xl first-letter:font-black first-letter:text-[#4682b4] first-letter:mr-3 first-letter:float-left first-letter:mt-1' : ''}`}>
+                   <p className={`text-xl md:text-2xl text-slate-800 leading-relaxed font-light ${index === 0 ? 'first-letter:text-6xl first-letter:font-black first-letter:text-[#dc2626] first-letter:mr-3 first-letter:float-left first-letter:mt-1' : ''}`}>
                       {paragraph}
                    </p>
                 </div>
@@ -276,7 +276,7 @@ export function BlogPost() {
  
               <div className="pt-20 border-t border-slate-100 mt-20">
                 <div className="flex items-center gap-6">
-                   <div className="w-16 h-1 bg-[#4682b4]"></div>
+                   <div className="w-16 h-1 bg-[#dc2626]"></div>
                    <h3 className="text-sm font-black uppercase tracking-[0.4em] text-slate-900">End of Analysis</h3>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export function BlogPost() {
           <div className="flex justify-center">
             <Link 
                to="/blogs" 
-               className="group flex items-center gap-6 bg-slate-900 text-white px-10 py-6 font-black uppercase text-[10px] tracking-[0.3em] hover:bg-[#4682b4] transition-all duration-500"
+               className="group flex items-center gap-6 bg-slate-900 text-white px-10 py-6 font-black uppercase text-[10px] tracking-[0.3em] hover:bg-[#dc2626] transition-all duration-500"
             >
                Return to Journal Archive <ChevronRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
             </Link>

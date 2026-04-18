@@ -17,7 +17,7 @@ export function Contact() {
       <section className="py-24 border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter text-center mb-24 uppercase">
-            Global <span className="text-[#4682b4]">Inquiries & Logistics</span>: Contact Us
+            Global <span className="text-[#dc2626]">Inquiries & Logistics</span>: Contact Us
           </h1>
 
           <div className="grid lg:grid-cols-2 gap-20 items-start">
@@ -39,11 +39,11 @@ export function Contact() {
               {/* Regional Offices */}
               <div className="grid sm:grid-cols-2 gap-12">
                 <div className="space-y-4">
-                  <div className="flex items-center gap-2 text-[#4682b4] mb-2">
+                  <div className="flex items-center gap-2 text-[#dc2626] mb-2">
                     <Globe className="w-4 h-4" />
                     <span className="text-[10px] font-black uppercase tracking-[0.2em]">Registered Office & Works:</span>
                   </div>
-                  <h3 className="text-xl font-black text-slate-900 tracking-tight underline decoration-[#4682b4]/30 decoration-4 underline-offset-8 mb-6 uppercase">Rajkot</h3>
+                  <h3 className="text-xl font-black text-slate-900 tracking-tight underline decoration-[#dc2626]/30 decoration-4 underline-offset-8 mb-6 uppercase">Rajkot</h3>
                   <address className="not-italic text-sm text-slate-600 font-bold leading-relaxed uppercase tracking-wider" itemScope itemType="https://schema.org/PostalAddress">
                     <span itemProp="streetAddress">VISHAL INDUSTRIAL, PLOT NO. 16,</span><br />
                     <span itemProp="addressLocality">KOTDA SANGANI, Piplana,</span><br />
@@ -57,10 +57,10 @@ export function Contact() {
                 <div className="group">
                   <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4">Direct Line</h4>
                   <div className="flex items-center gap-6">
-                    <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-[#4682b4] transition-all duration-500">
+                    <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-[#dc2626] transition-all duration-500">
                       <Phone className="w-5 h-5" />
                     </div>
-                    <a href="tel:+919586633799" className="text-2xl font-black text-slate-900 tracking-tighter hover:text-[#4682b4] transition-colors" itemProp="telephone">
+                    <a href="tel:+919586633799" className="text-2xl font-black text-slate-900 tracking-tighter hover:text-[#dc2626] transition-colors" itemProp="telephone">
                       +91 95866 33799
                     </a>
                   </div>
@@ -70,10 +70,10 @@ export function Contact() {
                   <div className="group">
                     <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4">Official Email</h4>
                     <div className="flex items-center gap-6">
-                      <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-[#4682b4] transition-all duration-500">
+                      <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-[#dc2626] transition-all duration-500">
                         <Mail className="w-5 h-5" />
                       </div>
-                      <a href="mailto:prasmisteel@gmail.com" className="text-xl sm:text-2xl font-black text-slate-900 tracking-tighter hover:text-[#4682b4] transition-colors break-all">
+                      <a href="mailto:prasmisteel@gmail.com" className="text-xl sm:text-2xl font-black text-slate-900 tracking-tighter hover:text-[#dc2626] transition-colors break-all">
                         prasmisteel@gmail.com
                       </a>
                     </div>
@@ -84,15 +84,15 @@ export function Contact() {
               {/* Operational Status */}
               <div className="grid sm:grid-cols-3 gap-8 pt-12 border-t border-slate-50">
                 <div className="flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-[#4682b4]" />
+                  <Clock className="w-4 h-4 text-[#dc2626]" />
                   <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">24/7 Logistics</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Shield className="w-4 h-4 text-[#4682b4]" />
+                  <Shield className="w-4 h-4 text-[#dc2626]" />
                   <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">ISRI Compliant</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Building2 className="w-4 h-4 text-[#4682b4]" />
+                  <Building2 className="w-4 h-4 text-[#dc2626]" />
                   <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">Grade Verified</span>
                 </div>
               </div>
@@ -115,7 +115,7 @@ export function Contact() {
                 className="grayscale hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute bottom-10 left-10 bg-slate-900/90 backdrop-blur-md px-8 py-6 text-white border border-white/10 hidden sm:block">
-                <div className="text-[8px] font-black uppercase tracking-[0.3em] text-[#4682b4] mb-2">Visit Our Yard</div>
+                <div className="text-[8px] font-black uppercase tracking-[0.3em] text-[#dc2626] mb-2">Visit Our Yard</div>
                 <div className="text-xl font-black tracking-tighter">Kotda Sangani Area</div>
               </div>
             </motion.div>

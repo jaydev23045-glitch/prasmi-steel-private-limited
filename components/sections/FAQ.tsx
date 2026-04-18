@@ -47,7 +47,7 @@ export function FAQ() {
               <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">Knowledge Base</span>
             </div>
             <h2 className="text-4xl font-black text-slate-900 tracking-tighter leading-none mb-8">
-              Expert <span className="text-[#4682b4]">Metallurgy Insights</span> & Industrial Scrap Metal FAQs
+              Expert <span className="text-[#dc2626]">Metallurgy Insights</span> & Industrial Scrap Metal FAQs
             </h2>
             <p className="text-slate-500 font-light leading-relaxed">
               Addressing the critical technical questions of the global smelting and foundry industries through our professional procurement repository.
@@ -63,10 +63,10 @@ export function FAQ() {
                 transition={{ delay: index * 0.1 }}
                 className="group"
               >
-                <h3 className="text-xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-[#4682b4] transition-colors">
+                <h3 className="text-xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-[#dc2626] transition-colors">
                   {faq.question}
                 </h3>
-                <p className="text-slate-600 font-light leading-relaxed border-l-2 border-slate-100 pl-8 transition-colors group-hover:border-[#4682b4]/30">
+                <p className="text-slate-600 font-light leading-relaxed border-l-2 border-slate-100 pl-8 transition-colors group-hover:border-[#dc2626]/30">
                   {faq.answer}
                 </p>
               </motion.div>

@@ -27,13 +27,13 @@ export function Quality() {
                 <div className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Metallurgical Excellence</div>
                 <h2 className="text-3xl sm:text-4xl lg:text-[56px] font-black text-slate-900 leading-none mb-10 tracking-tighter uppercase italic">
                   Metallurgical <br/>
-                  <span className="text-[#4682b4]">Purest Grade</span>
+                  <span className="text-[#dc2626]">Purest Grade</span>
                 </h2>
               </div>
             </div>
             
             {/* Decorative Glow */}
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#4682b4]/5 -z-10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[#dc2626]/5 -z-10 rounded-full blur-3xl" />
           </motion.div>
 
           {/* Right Content Column */}
@@ -44,9 +44,9 @@ export function Quality() {
             transition={{ duration: 0.7 }}
             className="flex flex-col items-start"
           >
-            <span className="text-[#4682b4] font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Metallurgical Excellence</span>
+            <span className="text-[#dc2626] font-bold tracking-[0.3em] uppercase text-xs mb-6 block">Metallurgical Excellence</span>
             <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-10 leading-[1.1] tracking-tighter uppercase">
-              Uncompromising <br /><span className="text-[#4682b4]">Quality Control</span>
+              Uncompromising <br /><span className="text-[#dc2626]">Quality Control</span>
             </h2>
             <div className="space-y-8 text-lg text-slate-600 leading-relaxed font-light">
               <p>
@@ -80,7 +80,7 @@ export function Quality() {
                     transition={{ delay: i * 0.1 }}
                     className="flex items-center gap-6 group"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0 group-hover:bg-[#4682b4] transition-all duration-300 border border-slate-200">
+                    <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center flex-shrink-0 group-hover:bg-[#dc2626] transition-all duration-300 border border-slate-200">
                       <ChevronRight className="w-5 h-5 text-slate-400 group-hover:text-white" />
                     </div>
                     <span className="text-slate-600 font-medium text-lg tracking-tight">{item}</span>

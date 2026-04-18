@@ -16,7 +16,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/60 z-10" />
         <img
           src="/first.webp"
-          alt="Prasmi Steel Industrial Yard"
+          alt="Prasmi Steel Global Ferrous & Non-Ferrous Metal Scrap Supply Yard"
           className="w-full h-full object-cover scale-105"
           loading="eager"
           // @ts-ignore
@@ -32,9 +32,9 @@ export function Hero() {
           className="max-w-7xl mx-auto"
         >
           <div className="inline-flex items-center gap-4 mb-8">
-            <div className="h-px w-12 bg-[#4682b4]"></div>
+            <div className="h-px w-12 bg-[#dc2626]"></div>
             <span className="text-sm font-black uppercase tracking-[0.45em] text-zinc-300">Prasmi Steel Private Limited</span>
-            <div className="h-px w-12 bg-[#4682b4]"></div>
+            <div className="h-px w-12 bg-[#dc2626]"></div>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-[72px] font-bold text-white tracking-tight leading-tight mb-8 drop-shadow-lg">
@@ -49,7 +49,7 @@ export function Hero() {
             <Button 
               size="lg" 
               asChild
-              className="bg-[#4682b4] hover:bg-[#36648b] text-white rounded-full px-8 h-12 text-sm font-bold uppercase tracking-wider transition-transform hover:scale-105 w-full sm:w-auto"
+              className="bg-[#dc2626] hover:bg-[#36648b] text-white rounded-full px-8 h-12 text-sm font-bold uppercase tracking-wider transition-transform hover:scale-105 w-full sm:w-auto"
             >
               <Link to="/products">Explore Our Products</Link>
             </Button>
