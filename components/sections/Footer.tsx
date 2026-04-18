@@ -14,15 +14,15 @@ export function Footer() {
             <div className="md:col-span-5">
               <Link to="/#home" onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })} className="flex items-center gap-4 mb-8 cursor-pointer group">
                 <img src="/logo-premium.png" alt="Prasmi Steel Logo" className="w-12 h-12 object-contain grayscale-0 brightness-110 transition-transform group-hover:scale-110" />
-                <div className="flex flex-col">
-                  <span className="font-black text-3xl tracking-tighter text-white leading-none">
+                <div className="flex flex-col text-left">
+                  <span className="font-black text-2xl md:text-3xl tracking-tighter text-white leading-none">
                     Prasmi<span className="text-[#dc2626]">Steel</span>
                   </span>
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mt-2">Private Limited</span>
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mt-1.5 whitespace-nowrap">Private Limited</span>
                 </div>
               </Link>
               <p className="text-slate-500 max-w-sm leading-relaxed mb-10 text-lg font-light">
-                Your Trusted Partner for Best-Quality Metal Scrap Solutions. Supplying international industry with premium ferrous and non-ferrous materials since 2024.
+                Your Trusted Partner for Best-Quality Metal Scrap Solutions. Supplying best ferrous and non-ferrous scrap material solutions since 2024.
               </p>
               <div className="flex gap-5">
                 {[
@@ -49,7 +49,8 @@ export function Footer() {
               <ul className="space-y-4 text-sm font-medium">
                 <li><a href="/#home" className="hover:text-white transition-colors">Home</a></li>
                 <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="/#global" className="hover:text-white transition-colors">Global Partners</a></li>
+                <li><Link to="/products" className="hover:text-white transition-colors">Our Products</Link></li>
+                <li><Link to="/blogs" className="hover:text-white transition-colors">Industrial Journal</Link></li>
               </ul>
             </div>
 

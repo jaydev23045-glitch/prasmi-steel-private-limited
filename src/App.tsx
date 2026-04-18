@@ -4,15 +4,16 @@ import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
 import { CorporateDetails } from '@/components/sections/CorporateDetails';
-import { GlobalPartners } from '@/components/sections/GlobalPartners';
 import { Footer } from '@/components/sections/Footer';
 
 // Lazy load secondary pages
-const History = lazy(() => import('@/components/sections/History').then(m => ({ default: m.History })));
-const Products = lazy(() => import('@/components/sections/Products').then(m => ({ default: m.Products })));
-const Blogs = lazy(() => import('@/components/sections/Blogs').then(m => ({ default: m.Blogs })));
-const BlogPost = lazy(() => import('@/components/sections/BlogPost').then(m => ({ default: m.BlogPost })));
-const Contact = lazy(() => import('@/components/sections/Contact').then(m => ({ default: m.Contact })));
+const History = lazy(() => import('@/components/sections/History.tsx'));
+const Leadership = lazy(() => import('@/components/sections/Management.tsx'));
+const WhatWeDo = lazy(() => import('@/components/sections/WhatWeDo.tsx'));
+const Products = lazy(() => import('@/components/sections/Products.tsx').then(m => ({ default: m.Products })));
+const Blogs = lazy(() => import('@/components/sections/Blogs.tsx').then(m => ({ default: m.Blogs })));
+const BlogPost = lazy(() => import('@/components/sections/BlogPost.tsx').then(m => ({ default: m.BlogPost })));
+const Contact = lazy(() => import('@/components/sections/Contact.tsx').then(m => ({ default: m.Contact })));
 
 // Loading component
 const PageLoader = () => (
@@ -20,8 +21,6 @@ const PageLoader = () => (
     <div className="w-8 h-8 border-4 border-[#dc2626] border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
-
-import { FAQ } from '@/components/sections/FAQ';
 
 function HomePage() {
   return (
@@ -32,12 +31,6 @@ function HomePage() {
       </div>
       <div className="section-lazy">
         <CorporateDetails />
-      </div>
-      <div className="section-lazy">
-        <GlobalPartners />
-      </div>
-      <div className="section-lazy">
-        <FAQ />
       </div>
     </>
   );
@@ -61,7 +54,15 @@ export default function App() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
+    { 
+      name: 'About Us', 
+      href: '/about',
+      sublinks: [
+        { name: 'Our Story', href: '/about' },
+        { name: 'Leadership', href: '/management' }
+      ]
+    },
+    { name: 'What We Do', href: '/what-we-do' },
     { name: 'Products', href: '/products' },
     { name: 'Blogs', href: '/blogs' },
     { name: 'Contact Us', href: '/contact' },
@@ -84,6 +85,8 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<History />} />
+              <Route path="/management" element={<Suspense fallback={<PageLoader />}><Leadership /></Suspense>} />
+              <Route path="/what-we-do" element={<Suspense fallback={<PageLoader />}><WhatWeDo /></Suspense>} />
               <Route path="/products" element={<Products />} />
               <Route path="/blogs" element={<Blogs />} />
               <Route path="/blogs/:slug" element={<BlogPost />} />

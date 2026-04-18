@@ -145,4 +145,9 @@
     height: auto;
     display: block;
   }
+
+  .outline-text-white {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    color: transparent;
+  }
 }

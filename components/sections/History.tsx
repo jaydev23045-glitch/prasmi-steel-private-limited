@@ -1,152 +1,248 @@
 import { motion } from 'motion/react';
-import { ArrowLeft, Target, Award, Globe, History as HistoryIcon } from 'lucide-react';
+import { ArrowLeft, Target, Award, Globe, History as HistoryIcon, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export function History() {
+export default function History() {
   return (
-    <div className="bg-mesh bg-grid min-h-screen">
-      {/* Background Glow */}
-      <div className="fixed inset-0 bg-white/40 pointer-events-none -z-20" />
+    <div className="bg-white min-h-screen">
+      {/* Cinematic Lighting System */}
+      <div className="fixed inset-0 pointer-events-none -z-10">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#dc2626]/5 blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-100 blur-[120px] rounded-full" />
+      </div>
 
-      {/* Back Header Nav */}
-      <div className="sticky top-20 z-40 bg-white/80 backdrop-blur-sm border-b border-slate-100">
+      {/* Back Nav Overlay */}
+      <div className="sticky top-20 z-40 bg-white/60 backdrop-blur-md border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-slate-500 hover:text-[#dc2626] transition-colors font-bold uppercase tracking-widest text-[10px] group"
+            className="inline-flex items-center gap-2 text-slate-400 hover:text-[#dc2626] transition-all font-bold uppercase tracking-[0.2em] text-[10px] group"
           >
-            <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
+            <ArrowLeft className="w-3 h-3 transition-transform group-hover:-translate-x-1" />
             Back to Global Overview
           </Link>
         </div>
       </div>
 
-      {/* Full-width Impact Hero */}
-      <section className="relative pt-24 pb-32 overflow-hidden border-b border-slate-100">
+      {/* Premium Hero Section */}
+      <section className="relative pt-24 pb-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-24 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex flex-col items-start"
+              transition={{ duration: 0.8 }}
+              className="relative z-10"
             >
-              <div className="inline-flex items-center gap-3 mb-8 bg-slate-50 px-4 py-1.5 rounded-none border border-slate-100">
-                <span className="text-[#dc2626] font-bold uppercase tracking-[0.3em] text-[10px]">OUR JOURNEY</span>
+              <div className="inline-flex items-center gap-4 mb-10">
+                <div className="h-px w-8 bg-[#dc2626]" />
+                <span className="text-[#dc2626] font-black uppercase tracking-[0.4em] text-[10px]">OUR JOURNEY</span>
               </div>
-              <h1 className="text-4xl sm:text-5xl lg:text-[64px] font-black text-slate-900 leading-[1.1] mb-10 tracking-tighter">
-                Industrial Heritage: The <span className="text-[#dc2626]">Prasmi Steel</span> Journey
-              </h1>
-              <div className="space-y-8 text-lg text-slate-600 leading-relaxed font-light max-w-xl">
-                <p className="border-l-4 border-[#dc2626] pl-8 py-3 bg-[#dc2626]/5">
+              
+              <div className="space-y-10 max-w-xl">
+                <p className="text-xl sm:text-2xl text-slate-900 font-bold leading-relaxed border-l-4 border-[#dc2626] pl-8 py-4 bg-slate-50 shadow-sm">
                   Prasmi Steel Private Limited is an emerging leader in the global scrap industry, specializing in the sourcing and supply of premium ferrous and non-ferrous metal scrap.
                 </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="relative aspect-video lg:aspect-square bg-slate-900 overflow-hidden shadow-2xl"
-            >
-              <img 
-                src="/about-hero.webp" 
-                alt="Industrial Metallurgy" 
-                className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:opacity-100 transition-opacity duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
-              <div className="absolute bottom-10 left-10">
-                <div className="text-white font-black text-6xl tracking-tighter">2024</div>
-                <div className="text-white/60 uppercase tracking-[0.4em] text-xs font-bold mt-2">Established Integrity</div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Balanced Philosophy Section */}
-      <section className="py-32 bg-slate-50/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-32">
-            {/* Mission & Vision */}
-            <div className="space-y-24">
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="space-y-8"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="h-px w-12 bg-slate-200" />
-                  <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Our Strategic Global Vision</h2>
-                </div>
-                <p className="text-2xl text-slate-900 font-bold leading-tight tracking-tight">
-                  To become a globally recognized leader in the scrap metal industry by delivering sustainable, high-quality, and innovative metal recycling solutions that support industrial growth and environmental responsibility.
-                </p>
-              </motion.div>
-
-              <motion.div 
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="space-y-12"
-              >
-                <div className="flex items-center gap-4">
-                  <div className="h-px w-12 bg-slate-200" />
-                  <h2 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400">Our Industrial Excellence Mission</h2>
-                </div>
-                <div className="grid sm:grid-cols-1 gap-6">
-                  {[
-                    'To provide superior quality ferrous and non-ferrous scrap',
-                    'To build long-term relationships through trust, transparency, and reliability',
-                    'To ensure consistent supply with efficient logistics and global sourcing',
-                    'To contribute towards sustainable practices by promoting responsible recycling',
-                    'To continuously grow and innovate in line with industry advancements'
-                  ].map((point, idx) => (
-                    <div key={idx} className="flex gap-4 group items-center">
-                      <div className="flex-shrink-0 w-8 h-8 bg-white border border-slate-100 shadow-sm flex items-center justify-center transition-colors group-hover:bg-[#dc2626] group-hover:text-white">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#dc2626] transition-colors group-hover:bg-white" />
-                      </div>
-                      <p className="text-slate-600 font-light text-base leading-relaxed">{point}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Expanded Content */}
-            <div className="space-y-16">
-              <motion.div 
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="premium-card p-12 space-y-10"
-              >
-                <div className="space-y-8 text-slate-600 font-light leading-relaxed text-lg italic">
+                
+                <div className="space-y-6 text-lg text-slate-500 font-light leading-relaxed pl-8">
                   <p>
                     Since our incorporation in 2024, we have been committed to delivering excellence through quality-driven processes and strategic sourcing.
                   </p>
                   <p>
                     Our diverse product portfolio is carefully curated to meet the evolving demands of industrial clients, ensuring every shipment aligns with international standards.
                   </p>
-                  <p>
-                    "At Prasmi Steel, we don’t just supply materials — we build long-term partnerships based on performance and mutual growth."
+                </div>
+
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="pl-8 py-6 border-l-4 border-slate-900 bg-slate-900 shadow-xl"
+                >
+                  <p className="text-white font-bold text-lg italic leading-relaxed">
+                    "At Prasmi Steel, we don’t just supply materials — we build long-term partnerships based on performance, Trust and Shared Growth."
                   </p>
+                </motion.div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
+              className="relative"
+            >
+              <div className="aspect-[4/5] bg-slate-100 overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.15)] group">
+                <img 
+                  src="/about-hero.webp" 
+                  alt="Industrial Excellence" 
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+                <div className="absolute bottom-12 left-12">
+                  <div className="text-6xl font-black text-white tracking-tighter leading-none mb-4">2024</div>
+                  <div className="h-0.5 w-12 bg-[#dc2626] mb-4" />
+                  <div className="text-white/60 uppercase tracking-[0.4em] text-[10px] font-bold">ESTABLISHED INTEGRITY</div>
                 </div>
-                
-                <div className="flex items-center gap-6 pt-10 border-t border-slate-100">
-                   <div className="flex flex-col">
-                      <span className="text-3xl font-black text-slate-900 tracking-tighter leading-none">2024</span>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-[#dc2626] mt-2 italic">Official Launch</span>
-                   </div>
-                   <div className="h-12 w-px bg-slate-100 mx-4" />
-                   <div className="flex flex-col">
-                      <span className="text-3xl font-black text-slate-900 tracking-tighter leading-none">4+</span>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 mt-2">Active Regions</span>
-                   </div>
-                </div>
+              </div>
+              {/* Decorative Elements */}
+              <div className="absolute -top-10 -right-10 w-40 h-40 border-[16px] border-[#dc2626]/5 -z-10" />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Full-Focus Expert Vision Section (Cinematic Art Direction) */}
+      <section className="relative min-h-screen py-48 overflow-hidden bg-[#0a0a0b] selection:bg-[#dc2626] selection:text-white flex items-center">
+        {/* Full-Bleed 3D Industrial World Asset */}
+        <div className="absolute inset-0 z-0">
+          <motion.img 
+            initial={{ scale: 1.15, filter: 'brightness(0.3) contrast(1.1)' }}
+            whileInView={{ scale: 1, filter: 'brightness(0.5) contrast(1.05)' }}
+            transition={{ duration: 15, ease: "easeOut" }}
+            src="/industrial_future_world_3d_v1_1776509012180.png" 
+            className="w-full h-full object-cover"
+          />
+          {/* Cinematic Color Grading Overlays */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0b] via-transparent to-[#0a0a0b]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0b] via-transparent to-[#0a0a0b]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#0a0a0b_90%)] opacity-80" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full flex flex-col items-center justify-center text-center">
+          <div className="max-w-5xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="space-y-6"
+            >
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                className="flex items-center justify-center gap-8 mb-12"
+              >
+                <div className="h-px w-20 bg-[#dc2626]" />
+                <span className="text-[#dc2626] font-black uppercase tracking-[1em] text-[11px]">OUR VISION</span>
+                <div className="h-px w-20 bg-[#dc2626]" />
               </motion.div>
+              
+              <div className="space-y-4">
+                <motion.h2 
+                  initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+                  whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                  className="text-6xl sm:text-[7.5rem] font-black text-white tracking-widest leading-[0.8] uppercase"
+                >
+                  FAST SCRAP <br className="hidden sm:block" /> TURNAROUND <br className="sm:hidden" />
+                  <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#fff,#dc2626)]">PROCESS</span>
+                </motion.h2>
+
+                <div className="flex items-center justify-center gap-10 py-8">
+                  <motion.h2 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 0.6, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.2, delay: 0.8 }}
+                    className="text-4xl sm:text-6xl font-light text-white tracking-[0.5em] uppercase italic"
+                  >
+                    WHERE
+                  </motion.h2>
+                  <motion.h2 
+                    initial={{ opacity: 0, scale: 0.8, filter: 'blur(20px)' }}
+                    whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 1.2, ease: "backOut" }}
+                    className="text-7xl sm:text-[8rem] font-black text-[#dc2626] tracking-tightest leading-none uppercase drop-shadow-[0_0_50px_rgba(220,38,38,0.5)]"
+                  >
+                    WASTE
+                  </motion.h2>
+                </div>
+
+                <motion.h2 
+                  initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
+                  whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.5, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
+                  className="text-6xl sm:text-[7.5rem] font-black text-white tracking-widest leading-[0.8] uppercase"
+                >
+                  BECOMES <br className="hidden sm:block" />
+                  RESOURCES
+                </motion.h2>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Mission Section (VVIP White Theme Editorial) */}
+      <section className="relative py-48 bg-[#f8fafc] overflow-hidden">
+        {/* Subtle Industrial Grid Pattern */}
+        <div className="absolute inset-0 opacity-[0.4] pointer-events-none" 
+             style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-24 items-start">
+            <div className="space-y-10">
+              <div className="flex flex-col gap-4">
+                <span className="text-[#dc2626] font-black tracking-[0.8em] text-[12px] uppercase">OUR MISSION</span>
+                <div className="h-1.5 w-24 bg-[#dc2626]" />
+              </div>
+              <h3 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tightest leading-[0.9] uppercase transition-all hover:tracking-tighter duration-1000">
+                Delinitve <br /> 
+                <span className="text-[#dc2626] italic font-light">Solutions</span> <br />
+                for the globe
+              </h3>
+              <p className="text-slate-500 text-lg sm:text-xl font-light leading-relaxed max-w-sm tracking-wide uppercase">
+                Forging long-term partnerships through absolute transparency and material excellence.
+              </p>
+            </div>
+            
+            <div className="space-y-16">
+              {[
+                "To provide end user focused scrap solutions",
+                "To build long-term relationships through trust, transparency, and reliability",
+                "To be a reliable and trustworthy partner in the global supply chain of scrap materials",
+                "To responsibly source, process, and trade high-quality scrap materials",
+                "To continuously grow and innovate in line with industry advancements"
+              ].map((text, idx) => (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ 
+                    delay: idx * 0.15, 
+                    duration: 1,
+                    ease: [0.22, 1, 0.36, 1] 
+                  }}
+                  className="group relative cursor-default"
+                >
+                  <div className="flex gap-10 items-start">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-4" />
+                    <div className="space-y-5 flex-1">
+                      <p className="text-slate-800 font-black text-xl sm:text-3xl leading-tight tracking-tight group-hover:text-slate-900 transition-all uppercase">
+                        {text}
+                      </p>
+                      <motion.div 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "100%" }}
+                        viewport={{ once: true }}
+                        transition={{ 
+                          delay: idx * 0.15 + 0.5, 
+                          duration: 1.5,
+                          ease: "circOut" 
+                        }}
+                        className="h-[2px] bg-[#dc2626]" 
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>

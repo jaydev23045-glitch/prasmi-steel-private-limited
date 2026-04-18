@@ -15,15 +15,12 @@ export function About() {
             className="flex flex-col items-start"
           >
             <h2 className="text-4xl sm:text-5xl lg:text-[48px] font-bold text-slate-900 leading-[1.2] mb-12 flex flex-col items-start tracking-tight">
-              High-Yield Scrap Metal, <br/> Expert Material Sourcing, <br/> Superior Metallurgical Results.
+              Right Scrap, <br/> Right Composition, <br/> Right Results.
             </h2>
             
             <div className="space-y-6 text-xl text-slate-600 leading-relaxed font-normal max-w-xl">
               <p className="border-l-4 border-slate-200 pl-6 py-2">
                 With expertise in sizing, sorting, segregation, and cleaning, our experienced team delivers a reliable supply that you can trust for all your needs.
-              </p>
-              <p className="text-base text-slate-500 font-light pt-4 border-t border-slate-50">
-                Our mission is to empower global industry with high-purity secondary raw materials. By maintaining rigorous quality control at every stage—from initial collection to final dispatch—we ensure that every ton of metal scrap contributes to a higher yield and more efficient metallurgical processing for our partners worldwide.
               </p>
             </div>
           </motion.div>

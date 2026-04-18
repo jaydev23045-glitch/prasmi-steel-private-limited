@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface NavLink {
+  name: string;
+  href: string;
+  sublinks?: { name: string; href: string }[];
+}
 
 interface HeaderProps {
   isMobileMenuOpen: boolean;
   setIsMobileMenuOpen: (open: boolean) => void;
-  navLinks: { name: string; href: string }[];
+  navLinks: NavLink[];
 }
 
 export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: HeaderProps) {
   const { pathname } = useLocation();
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const handleLinkClick = (e: React.MouseEvent, href: string) => {
     const isAnchor = href.startsWith('#');
@@ -24,7 +32,6 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
       }
       setIsMobileMenuOpen(false);
     } else {
-      // Normal navigation for non-anchors or cross-page anchors
       setIsMobileMenuOpen(false);
     }
   };
@@ -55,61 +62,116 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
               <span className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mt-1.5 whitespace-nowrap">Private Limited</span>
             </div>
           </Link>
- 
-           <nav className="hidden md:flex space-x-8">
-             {navLinks.map((link) => {
-               const LinkTag: any = link.href.startsWith('/') || (pathname !== '/' && link.href.startsWith('#')) ? Link : 'a';
-               const to = link.href.startsWith('#') && pathname !== '/' ? `/${link.href}` : link.href;
- 
-               return (
-                 <Link
-                   key={link.name}
-                   to={to}
-                   onClick={(e) => handleLinkClick(e, link.href)}
-                   className="text-[11px] font-bold text-slate-600 hover:text-slate-900 transition-all uppercase tracking-[0.2em]"
-                 >
-                   {link.name}
-                 </Link>
-               );
-             })}
-           </nav>
- 
-           <div className="hidden md:flex items-center">
-             <button 
-               onClick={handleWhatsAppInquiry}
-               className="bg-slate-800 hover:bg-slate-900 text-white rounded px-6 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors shadow-sm"
-             >
-               Get a Quote
-             </button>
-           </div>
- 
-           <div className="md:hidden flex items-center">
-             <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
-               <SheetTrigger asChild>
-                 <Button variant="ghost" size="icon" className="text-slate-600 w-12 h-12">
-                   <Menu className="h-7 w-7" />
-                 </Button>
-               </SheetTrigger>
-               <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white">
-                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-                 <nav className="flex flex-col gap-6 mt-12">
-                   {navLinks.map((link) => (
-                     <Link
-                       key={link.name}
-                       to={link.href.startsWith('#') && pathname !== '/' ? `/${link.href}` : link.href}
-                       onClick={(e) => handleLinkClick(e, link.href)}
-                       className="text-xl font-bold text-slate-800 hover:text-slate-600 uppercase tracking-wide transition-colors"
-                     >
-                       {link.name}
-                     </Link>
-                   ))}
-                   <button 
-                     onClick={handleWhatsAppInquiry}
-                     className="mt-8 bg-slate-800 hover:bg-slate-900 text-white w-full h-12 text-sm flex items-center justify-center font-bold uppercase tracking-widest transition-colors shadow-lg"
-                   >
-                     Get a Quote
-                   </button>
-                </nav>
+
+          <nav className="hidden lg:flex space-x-10">
+            {navLinks.map((link) => (
+              <div 
+                key={link.name}
+                className="relative group h-20 flex items-center"
+                onMouseEnter={() => link.sublinks && setActiveDropdown(link.name)}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                <div className="flex items-center gap-1.5 cursor-pointer">
+                  <Link
+                    to={link.href.startsWith('#') && pathname !== '/' ? `/${link.href}` : link.href}
+                    onClick={(e) => !link.sublinks && handleLinkClick(e, link.href)}
+                    className="text-[11px] font-bold text-slate-600 hover:text-slate-900 transition-all uppercase tracking-[0.2em] relative"
+                  >
+                    {link.name}
+                    <div className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-[#dc2626] transition-all duration-300 group-hover:w-full ${pathname === link.href ? 'w-full' : ''}`} />
+                  </Link>
+                  {link.sublinks && (
+                    <ChevronDown className={`w-3 h-3 text-slate-400 group-hover:text-[#dc2626] transition-transform duration-300 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
+                  )}
+                </div>
+
+                {link.sublinks && (
+                  <AnimatePresence>
+                    {activeDropdown === link.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        className="absolute top-full left-0 w-64 bg-white border border-slate-100 shadow-[0_15px_50px_-15px_rgba(0,0,0,0.1)] py-4 overflow-hidden"
+                      >
+                        <div className="absolute top-0 left-0 w-full h-1 bg-[#dc2626]" />
+                        {link.sublinks.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            to={sub.href}
+                            onClick={(e) => handleLinkClick(e, sub.href)}
+                            className="block px-8 py-3.5 text-[11px] font-bold text-slate-600 hover:text-slate-900 hover:bg-slate-50 uppercase tracking-[0.1em] transition-all"
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          <div className="hidden lg:flex items-center">
+            <button 
+              onClick={handleWhatsAppInquiry}
+              className="bg-slate-800 hover:bg-slate-900 text-white rounded px-8 py-3 text-[11px] font-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-md"
+            >
+              Get a Quote
+            </button>
+          </div>
+
+          <div className="lg:hidden flex items-center">
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-slate-600 w-12 h-12">
+                  <Menu className="h-7 w-7" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-full sm:w-[400px] bg-white p-0">
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                <div className="flex flex-col h-full">
+                  <div className="p-8 border-b border-slate-100">
+                    <span className="text-[#dc2626] font-black text-2xl tracking-tighter">Prasmi</span>
+                  </div>
+                  <nav className="flex-grow p-8 space-y-8 overflow-y-auto">
+                    {navLinks.map((link) => (
+                      <div key={link.name} className="space-y-4">
+                        <Link
+                          to={link.href.startsWith('#') && pathname !== '/' ? `/${link.href}` : link.href}
+                          onClick={(e) => !link.sublinks && handleLinkClick(e, link.href)}
+                          className="text-2xl font-black text-slate-900 hover:text-[#dc2626] uppercase tracking-tighter flex items-center justify-between group"
+                        >
+                          {link.name}
+                          {link.sublinks && <ChevronDown className="w-5 h-5 text-slate-300" />}
+                        </Link>
+                        {link.sublinks && (
+                          <div className="pl-6 space-y-4 border-l-2 border-slate-100 mt-4">
+                            {link.sublinks.map((sub) => (
+                              <Link
+                                key={sub.name}
+                                to={sub.href}
+                                onClick={(e) => handleLinkClick(e, sub.href)}
+                                className="block text-sm font-bold text-slate-500 hover:text-[#dc2626] uppercase tracking-widest transition-colors"
+                              >
+                                {sub.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </nav>
+                  <div className="p-8 border-t border-slate-100">
+                    <button 
+                      onClick={handleWhatsAppInquiry}
+                      className="bg-slate-800 hover:bg-slate-900 text-white w-full h-16 text-xs flex items-center justify-center font-black uppercase tracking-[0.2em] transition-all"
+                    >
+                      Get a Quote
+                    </button>
+                  </div>
+                </div>
               </SheetContent>
             </Sheet>
           </div>
