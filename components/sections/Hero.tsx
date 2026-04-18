@@ -18,6 +18,9 @@ export function Hero() {
           src="/first.webp"
           alt="Prasmi Steel Industrial Yard"
           className="w-full h-full object-cover scale-105"
+          loading="eager"
+          // @ts-ignore
+          fetchpriority="high"
         />
       </div>
       

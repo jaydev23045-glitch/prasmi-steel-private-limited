@@ -7,8 +7,8 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(onComplete, 800); // Wait for exit animation
-    }, 2500); // Show splash for 2.5 seconds
+      setTimeout(onComplete, 500); // Wait for exit animation
+    }, 1500); // Show splash for 1.5 seconds
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -18,8 +18,8 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
       {isVisible && (
         <motion.div
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="fixed inset-0 z-[9999] bg-zinc-950 flex items-center justify-center overflow-hidden"
         >
           {/* Animated Background Mesh */}

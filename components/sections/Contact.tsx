@@ -44,11 +44,11 @@ export function Contact() {
                     <span className="text-[10px] font-black uppercase tracking-[0.2em]">Registered Office & Works:</span>
                   </div>
                   <h3 className="text-xl font-black text-slate-900 tracking-tight underline decoration-[#4682b4]/30 decoration-4 underline-offset-8 mb-6 uppercase">Rajkot</h3>
-                  <p className="text-sm text-slate-600 font-bold leading-relaxed uppercase tracking-wider">
-                    VISHAL INDUSTRIAL, PLOT NO. 16,<br />
-                    KOTDA SANGANI, Piplana,<br />
-                    Gujarat 360020
-                  </p>
+                  <address className="not-italic text-sm text-slate-600 font-bold leading-relaxed uppercase tracking-wider" itemScope itemType="https://schema.org/PostalAddress">
+                    <span itemProp="streetAddress">VISHAL INDUSTRIAL, PLOT NO. 16,</span><br />
+                    <span itemProp="addressLocality">KOTDA SANGANI, Piplana,</span><br />
+                    <span itemProp="addressRegion">Gujarat</span> <span itemProp="postalCode">360020</span>
+                  </address>
                 </div>
               </div>
 
@@ -60,7 +60,7 @@ export function Contact() {
                     <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-[#4682b4] transition-all duration-500">
                       <Phone className="w-5 h-5" />
                     </div>
-                    <a href="tel:+919586633799" className="text-2xl font-black text-slate-900 tracking-tighter hover:text-[#4682b4] transition-colors">
+                    <a href="tel:+919586633799" className="text-2xl font-black text-slate-900 tracking-tighter hover:text-[#4682b4] transition-colors" itemProp="telephone">
                       +91 95866 33799
                     </a>
                   </div>

@@ -20,6 +20,7 @@ export function Quality() {
                 src="https://images.unsplash.com/photo-1536411396596-afcd99bc85b8?auto=format&fit=crop&w=1200&q=80"
                 alt="Smelting Process"
                 className="w-full h-full object-cover grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
               <div className="absolute bottom-10 left-10">

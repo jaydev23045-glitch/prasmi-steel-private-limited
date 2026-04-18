@@ -27,10 +27,18 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <About />
-      <CorporateDetails />
-      <GlobalPartners />
-      <FAQ />
+      <div className="section-lazy">
+        <About />
+      </div>
+      <div className="section-lazy">
+        <CorporateDetails />
+      </div>
+      <div className="section-lazy">
+        <GlobalPartners />
+      </div>
+      <div className="section-lazy">
+        <FAQ />
+      </div>
     </>
   );
 }

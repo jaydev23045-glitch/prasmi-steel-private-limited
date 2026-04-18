@@ -56,11 +56,11 @@ export function Footer() {
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-slate-700 flex-shrink-0 mt-0.5" />
-                  <div className="flex flex-col text-sm leading-relaxed font-bold uppercase tracking-wider">
-                    <span>VISHAL INDUSTRIAL, PLOT NO. 16,</span>
-                    <span>KOTDA SANGANI, Piplana</span>
-                    <span>Gujarat 360020</span>
-                  </div>
+                  <address className="not-italic flex flex-col text-sm leading-relaxed font-bold uppercase tracking-wider" itemScope itemType="https://schema.org/PostalAddress">
+                    <span itemProp="streetAddress">VISHAL INDUSTRIAL, PLOT NO. 16,</span>
+                    <span itemProp="addressLocality">KOTDA SANGANI, Piplana</span>
+                    <span itemProp="addressRegion">Gujarat</span> <span itemProp="postalCode">360020</span>
+                  </address>
                 </li>
                 <li className="flex items-center gap-4">
                   <Mail className="w-5 h-5 text-slate-700 flex-shrink-0" />
@@ -68,7 +68,7 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-4">
                   <Phone className="w-5 h-5 text-slate-700 flex-shrink-0" />
-                  <span className="text-sm">+91 9586633799</span>
+                  <span className="text-sm" itemProp="telephone">+91 9586633799</span>
                 </li>
                 <li className="flex items-center gap-4">
                   <Globe className="w-5 h-5 text-slate-700 flex-shrink-0" />
