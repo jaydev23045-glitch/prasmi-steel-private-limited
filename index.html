@@ -4,6 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <!-- Google Analytics Placeholder for SEO Audits -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <meta name="description"
     content="Prasmi Steel Private Limited is a global leader in industrial material sourcing, providing a premium supply of ferrous, non-ferrous, and cast iron metal scrap solutions." />
   <meta name="keywords"
@@ -34,7 +42,25 @@
 </head>
 
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <!-- Static Fallback for SEO & LLM Readability -->
+    <div style="display:none;">
+      <h1>Prasmi Steel Private Limited</h1>
+      <p>Global leader in industrial material sourcing and premium supply of ferrous, non-ferrous, and cast iron metal
+        scrap.</p>
+      <ul>
+        <li>HMS 1 & 2 Metal Scrap</li>
+        <li>Manganese Steel & Cast Iron</li>
+        <li>Aluminum & Copper Solutions</li>
+      </ul>
+    </div>
+  </div>
+  <noscript>
+    <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+      <h2>Prasmi Steel Private Limited</h2>
+      <p>Please enable JavaScript to view our full industrial catalog and interactive features.</p>
+    </div>
+  </noscript>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
