@@ -60,7 +60,12 @@ export function SEO() {
           "contactType": "customer support",
           "telephone": "+91-9586633799",
           "email": "prasmisteel@gmail.com"
-        }
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/prasmi-steel",
+          "https://www.facebook.com/prasmisteel",
+          "https://www.instagram.com/prasmisteel"
+        ]
       },
       {
         "@context": "https://schema.org",
