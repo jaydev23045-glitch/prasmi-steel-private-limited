@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
  */
 export function SEO() {
   const { pathname } = useLocation();
-  const baseUrl = 'https://www.prasmisteel.com';
+  const baseUrl = 'https://prasmisteel.com';
 
   useEffect(() => {
     // Construct the canonical URL

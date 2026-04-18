@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.prasmisteel.com/sitemap.xml
+Sitemap: https://prasmisteel.com/sitemap.xml
