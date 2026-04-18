@@ -46,67 +46,9 @@ export function SEO() {
     document.documentElement.lang = 'en';
 
     // 3. Structured Data (JSON-LD)
-    const baseSchemas = [
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": `${baseUrl}/#organization`,
-        "name": "Prasmi Steel Private Limited",
-        "url": baseUrl,
-        "logo": `${baseUrl}/favicon.png`,
-        "description": "Leading global supplier of high-quality ferrous and non-ferrous metal scrap solutions.",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "telephone": "+91-9586633799",
-          "email": "prasmisteel@gmail.com"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/prasmi-steel",
-          "https://www.facebook.com/prasmisteel",
-          "https://www.instagram.com/prasmisteel"
-        ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "@id": `${baseUrl}/#website`,
-        "name": "Prasmi Steel",
-        "url": baseUrl,
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": `${baseUrl}/search?q={search_term_string}`,
-          "query-input": "required name=search_term_string"
-        }
-      }
-    ];
-
     const routeSchemas: any[] = [];
 
     if (pathname === '/') {
-      routeSchemas.push({
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Prasmi Steel Private Limited",
-        "image": `${baseUrl}/favicon.png`,
-        "@id": `${baseUrl}/#localbusiness`,
-        "url": baseUrl,
-        "telephone": "+919586633799",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "VISHAL INDUSTRIAL, PLOT NO. 16, KOTDA SANGANI, Piplana",
-          "addressLocality": "Rajkot",
-          "addressRegion": "Gujarat",
-          "postalCode": "360020",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 22.0945,
-          "longitude": 70.8351
-        }
-      });
-
       // FAQ Schema (Moved from component to here for central management)
       routeSchemas.push({
         "@context": "https://schema.org",
@@ -157,7 +99,7 @@ export function SEO() {
       document.head.appendChild(script);
     };
 
-    [...baseSchemas, ...routeSchemas].forEach(inject);
+    routeSchemas.forEach(inject);
 
     // 4. Page Title & Meta Description
     const pageTitles: Record<string, string> = {

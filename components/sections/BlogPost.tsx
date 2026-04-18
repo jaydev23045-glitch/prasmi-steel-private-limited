@@ -112,7 +112,7 @@ export function BlogPost() {
         "@type": "Article",
         "headline": post.title,
         "description": post.meta,
-        "image": `https://www.prasmisteel.com${post.image}`,
+        "image": `https://prasmisteel.com${post.image}`,
         "datePublished": post.date,
         "author": {
           "@type": "Organization",
@@ -123,7 +123,7 @@ export function BlogPost() {
           "name": "Prasmi Steel Private Limited",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.prasmisteel.com/favicon.png"
+            "url": "https://prasmisteel.com/favicon.png"
           }
         }
       };

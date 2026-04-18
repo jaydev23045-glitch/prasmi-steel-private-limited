@@ -72,7 +72,7 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-4">
                   <Globe className="w-5 h-5 text-slate-700 flex-shrink-0" />
-                  <span className="text-sm">www.prasmisteel.com</span>
+                  <span className="text-sm">prasmisteel.com</span>
                 </li>
               </ul>
             </div>
