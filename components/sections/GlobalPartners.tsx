@@ -23,7 +23,7 @@ export function GlobalPartners() {
               <span className="text-sm font-bold text-slate-500 uppercase tracking-widest">Global Partners</span>
             </div>
             <h2 className="text-4xl sm:text-6xl font-black mb-10 tracking-tighter leading-none">
-              Connected with <br/><span className="text-slate-400">global market</span>
+              International Metal Scrap <br/><span className="text-slate-400">Logistics Connectivity</span>
             </h2>
             <p className="text-xl text-slate-400 font-light leading-relaxed mb-12">
               Our material sourcing network spans across four continents, enabling a resilient and agile supply chain that operates around the clock to reliably meet the demands of our valued customers

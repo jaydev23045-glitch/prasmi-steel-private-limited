@@ -15,7 +15,7 @@ export function About() {
             className="flex flex-col items-start"
           >
             <h2 className="text-4xl sm:text-5xl lg:text-[48px] font-bold text-slate-900 leading-[1.2] mb-12 flex flex-col items-start tracking-tight">
-              Right Scrap, <br/> Right Composition, <br/> Right Results.
+              High-Yield Scrap Metal, <br/> Precise Chemical Composition, <br/> Superior Metallurgical Results.
             </h2>
             
             <div className="space-y-6 text-xl text-slate-600 leading-relaxed font-normal max-w-xl">

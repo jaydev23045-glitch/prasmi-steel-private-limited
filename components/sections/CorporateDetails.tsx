@@ -19,7 +19,7 @@ export function CorporateDetails() {
 
         {/* Authoritative Headline */}
         <h2 className="text-3xl md:text-[42px] font-bold text-slate-900 mb-16 leading-[1.2] tracking-tight max-w-none w-full"> 
-          Prasmi Steel Private Limited  <br className="hidden md:block" /> One of the Leading Ferrous & Non-Ferrous Scrap Supplier
+          Prasmi Steel: Global Leader in High-Grade <br className="hidden md:block" /> Ferrous & Non-Ferrous Scrap Metal Solutions
         </h2>
 
         {/* Narrative Content */}
