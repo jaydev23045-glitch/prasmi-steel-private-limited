@@ -7,8 +7,8 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
-      setTimeout(onComplete, 300); // Faster exit
-    }, 1000); // 1.0s duration
+      setTimeout(onComplete, 500); // Smoother exit
+    }, 2500); // 2.5s duration
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -65,8 +65,8 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
                 }}
                 className="flex flex-col items-center gap-3"
               >
-                <h1 className="text-3xl md:text-5xl font-black text-white tracking-[0.2em] uppercase text-center">
-                  Prasmi <span className="text-[#dc2626]">Steel</span>
+                <h1 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase text-center drop-shadow-2xl">
+                  Prasmi <span className="text-[#dc2626] drop-shadow-[0_0_15px_rgba(220,38,38,0.4)]">Steel</span>
                 </h1>
                 <div className="flex items-center gap-4 w-full">
                   <motion.div 

@@ -44,15 +44,15 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
         <div className="flex justify-between items-center h-16 md:h-20">
           <Link 
             to="/" 
-            className="flex-shrink-0 flex items-center gap-3 cursor-pointer"
+            className="flex-shrink-0 flex items-center gap-3 cursor-pointer group"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <img src="/favicon.png" alt="Prasmi Steel Logo" className="w-10 h-10 object-contain" />
+            <img src="/logo-premium.png" alt="Prasmi Steel Logo" className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform group-hover:scale-110 duration-300" />
             <div className="flex flex-col">
-              <span className="font-extrabold text-2xl tracking-tighter text-slate-900 leading-none">
+              <span className="font-black text-2xl md:text-3xl tracking-tighter text-slate-900 leading-none">
                 Prasmi<span className="text-[#dc2626]">Steel</span>
               </span>
-              <span className="text-[10px] uppercase tracking-widest text-slate-500 font-bold mt-1 whitespace-nowrap">Private Limited</span>
+              <span className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mt-1.5 whitespace-nowrap">Private Limited</span>
             </div>
           </Link>
  
