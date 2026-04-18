@@ -149,12 +149,33 @@ export function BlogPost() {
         document.head.appendChild(metaDesc);
       }
 
+      // 3. Update OG/Twitter Tags
+      const baseUrl = 'https://prasmisteel.com';
+      const currentUrl = `${baseUrl}/blogs/${slug}`;
+      const fullImageUrl = `${baseUrl}${post.image}`;
+
+      const tags = [
+        { selector: 'meta[property="og:url"]', attr: 'content', val: currentUrl },
+        { selector: 'meta[property="og:title"]', attr: 'content', val: fullTitle },
+        { selector: 'meta[property="og:description"]', attr: 'content', val: post.meta },
+        { selector: 'meta[property="og:image"]', attr: 'content', val: fullImageUrl },
+        { selector: 'meta[property="twitter:url"]', attr: 'content', val: currentUrl },
+        { selector: 'meta[property="twitter:title"]', attr: 'content', val: fullTitle },
+        { selector: 'meta[property="twitter:description"]', attr: 'content', val: post.meta },
+        { selector: 'meta[property="twitter:image"]', attr: 'content', val: fullImageUrl },
+      ];
+
+      tags.forEach(tag => {
+        const el = document.querySelector(tag.selector);
+        if (el) el.setAttribute(tag.attr, tag.val);
+      });
+
       return () => {
         const script = document.getElementById('dynamic-article-schema');
         if (script) script.remove();
       };
     }
-  }, [post]);
+  }, [post, slug]);
 
   if (!post) {
     return (

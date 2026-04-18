@@ -187,7 +187,31 @@ export function SEO() {
           metaDesc.setAttribute('content', description);
           document.head.appendChild(metaDesc);
         }
+
+        // Update OG Description
+        let ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', description);
+
+        let twDesc = document.querySelector('meta[property="twitter:description"]');
+        if (twDesc) twDesc.setAttribute('content', description);
       }
+
+      if (title) {
+        // Update OG Title
+        let ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', title);
+
+        let twTitle = document.querySelector('meta[property="twitter:title"]');
+        if (twTitle) twTitle.setAttribute('content', title);
+      }
+
+      // Update OG URL
+      const currentUrl = `${baseUrl}${pathname}`;
+      let ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute('content', currentUrl);
+
+      let twUrl = document.querySelector('meta[property="twitter:url"]');
+      if (twUrl) twUrl.setAttribute('content', currentUrl);
     }
 
   }, [pathname]);
