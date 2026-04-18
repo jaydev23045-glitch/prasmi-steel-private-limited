@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MapPin, Mail, Globe, Phone } from 'lucide-react';
 import { LegalModal } from '@/components/ui/LegalModal';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   const [modal, setModal] = useState<'privacy' | 'terms' | null>(null);
@@ -11,14 +12,15 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-12 gap-16 mb-20">
             <div className="md:col-span-5">
-              <div className="flex items-center gap-3 mb-8 cursor-pointer" onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })}>
+              <Link to="/#home" onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })} className="flex items-center gap-4 mb-8 cursor-pointer group">
+                <img src="/logo-premium.png" alt="Prasmi Steel Logo" className="w-12 h-12 object-contain grayscale-0 brightness-110 transition-transform group-hover:scale-110" />
                 <div className="flex flex-col">
                   <span className="font-black text-3xl tracking-tighter text-white leading-none">
                     Prasmi<span className="text-[#dc2626]">Steel</span>
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mt-2">Private Limited</span>
                 </div>
-              </div>
+              </Link>
               <p className="text-slate-500 max-w-sm leading-relaxed mb-10 text-lg font-light">
                 Your Trusted Partner for Best-Quality Metal Scrap Solutions. Supplying international industry with premium ferrous and non-ferrous materials since 2024.
               </p>

@@ -40,9 +40,9 @@ export function BrandSplash({ onComplete }: { onComplete: () => void }) {
               className="relative w-32 h-32 md:w-48 md:h-48 mb-12"
             >
               <img 
-                src="/favicon.png" 
+                src="/logo-premium.png" 
                 alt="Prasmi Steel Logo" 
-                className="w-full h-full object-contain drop-shadow-[0_0_30px_rgba(70,130,180,0.3)]"
+                className="w-full h-full object-contain drop-shadow-[0_0_40px_rgba(220,38,38,0.4)]"
               />
               
               {/* Spinning Ring */}
