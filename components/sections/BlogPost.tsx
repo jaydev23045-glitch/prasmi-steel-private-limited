@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { ArrowLeft, Clock, Calendar, Quote, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, Quote, ChevronRight, ArrowUpRight } from 'lucide-react';
 
 const fullPosts = {
   "scrap-metal-industry-growth": {
@@ -21,7 +21,7 @@ const fullPosts = {
   },
   "choosing-right-scrap-supplier": {
     title: "Choosing the Right Scrap Metal Supplier",
-    date: "April 14, 2026",
+    date: "March 28, 2026",
     readTime: "8 min read",
     category: "Strategic Sourcing",
     image: "/supplier-selection.webp",
@@ -36,7 +36,7 @@ const fullPosts = {
   },
   "benefits-high-quality-scrap-smelting": {
     title: "High-Quality Scrap Benefits in Smelting",
-    date: "April 14, 2026",
+    date: "March 12, 2026",
     readTime: "9 min read",
     category: "Technical Process",
     image: "/smelting-efficiency.webp",
@@ -51,7 +51,7 @@ const fullPosts = {
   },
   "ferrous-vs-non-ferrous-differences": {
     title: "Ferrous vs Non-Ferrous Scrap: Key Differences Explained",
-    date: "April 14, 2026",
+    date: "February 25, 2026",
     readTime: "7 min read",
     category: "Technical Standards",
     image: "/products-hero.webp",
@@ -66,7 +66,7 @@ const fullPosts = {
   },
   "future-of-scrap-metal-sustainability": {
     title: "Future of Scrap Metal Industry | Sustainable Metal Recycling Trends",
-    date: "April 14, 2026",
+    date: "February 10, 2026",
     readTime: "9 min read",
     category: "Sustainability",
     image: "/c.webp",
@@ -81,7 +81,7 @@ const fullPosts = {
   },
   "global-scrap-metal-trade-trends": {
     title: "Global Scrap Metal Trade Trends | Import Export Scrap Business",
-    date: "April 14, 2026",
+    date: "January 22, 2026",
     readTime: "8 min read",
     category: "Global Trade",
     image: "/b.webp",
@@ -208,7 +208,7 @@ export function BlogPost() {
             to="/blogs" 
             className="inline-flex items-center gap-3 text-white/60 hover:text-white transition-colors uppercase text-[10px] font-black tracking-[0.4em] mb-12"
           >
-            <ArrowLeft className="w-4 h-4 text-[#dc2626]" /> Back to Journal
+            <ArrowLeft className="w-4 h-4 text-[#991b1b]" /> Back to Journal
           </Link>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -216,7 +216,7 @@ export function BlogPost() {
             className="max-w-4xl"
           >
             <div className="flex items-center gap-4 mb-8">
-              <span className="bg-[#dc2626] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-widest">
+              <span className="bg-[#991b1b] text-white px-4 py-1.5 text-[10px] font-black uppercase tracking-widest">
                 {post.category}
               </span>
               <div className="h-px w-12 bg-white/20"></div>
@@ -227,7 +227,7 @@ export function BlogPost() {
             </h1>
             <div className="flex items-center gap-8 text-white/50 text-[10px] font-black uppercase tracking-widest">
               <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#dc2626]" /> {post.readTime}
+                <Clock className="w-4 h-4 text-[#991b1b]" /> {post.readTime}
               </span>
               <span>•</span>
               <span>Technical Analysis</span>
@@ -242,7 +242,7 @@ export function BlogPost() {
           <div className="grid lg:grid-cols-12 gap-20">
             {/* Sidebar Metadata */}
             <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit space-y-16">
-              <div className="p-10 bg-slate-50 border-l-4 border-[#dc2626]">
+              <div className="p-10 bg-slate-50 border-l-4 border-[#991b1b]">
                 <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-6">Article briefing</h2>
                 <p className="text-slate-600 text-sm italic font-light leading-relaxed">
                   "{post.meta}"
@@ -253,7 +253,7 @@ export function BlogPost() {
                 <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Logistics Contact</h2>
                 <div className="space-y-4">
                   <p className="text-sm font-bold text-slate-900 tracking-tight">Prasmi Steel Private Limited</p>
-                  <a href="mailto:prasmisteel@gmail.com" className="text-sm text-[#dc2626] font-black tracking-widest hover:underline">prasmisteel@gmail.com</a>
+                  <a href="mailto:prasmisteel@gmail.com" className="text-sm text-[#991b1b] font-black tracking-widest hover:underline">prasmisteel@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -268,7 +268,7 @@ export function BlogPost() {
               {post.content.map((paragraph, index) => (
                 <div key={index} className="relative">
                    {index === 0 && <span className="absolute -left-8 top-0 h-full w-0.5 bg-slate-100 hidden md:block"></span>}
-                   <p className={`text-xl md:text-2xl text-slate-800 leading-relaxed font-light ${index === 0 ? 'first-letter:text-6xl first-letter:font-black first-letter:text-[#dc2626] first-letter:mr-3 first-letter:float-left first-letter:mt-1' : ''}`}>
+                   <p className={`text-xl md:text-2xl text-slate-800 leading-relaxed font-light ${index === 0 ? 'first-letter:text-6xl first-letter:font-black first-letter:text-[#991b1b] first-letter:mr-3 first-letter:float-left first-letter:mt-1' : ''}`}>
                       {paragraph}
                    </p>
                 </div>
@@ -276,7 +276,7 @@ export function BlogPost() {
  
               <div className="pt-20 border-t border-slate-100 mt-20">
                 <div className="flex items-center gap-6">
-                   <div className="w-16 h-1 bg-[#dc2626]"></div>
+                   <div className="w-16 h-1 bg-[#991b1b]"></div>
                    <h3 className="text-sm font-black uppercase tracking-[0.4em] text-slate-900">End of Analysis</h3>
                 </div>
               </div>
@@ -285,17 +285,54 @@ export function BlogPost() {
         </div>
       </section>
  
-      {/* Related Footer */}
-      <section className="bg-slate-50 py-32 border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-black text-slate-900 tracking-tighter mb-12">Continue Reading</h2>
-          <div className="flex justify-center">
+      {/* Related Analysis - Cinematic Pillar Design */}
+      <section className="bg-white py-32 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <div className="h-px w-12 bg-[#991b1b]"></div>
+                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#991b1b]">Technical_Insight</span>
+              </div>
+              <h2 className="text-5xl font-black text-slate-900 uppercase tracking-tighter">Continue <br /> <span className="text-[#991b1b]">Reading</span></h2>
+            </div>
+            
             <Link 
-               to="/blogs" 
-               className="group flex items-center gap-6 bg-slate-900 text-white px-10 py-6 font-black uppercase text-[10px] tracking-[0.3em] hover:bg-[#dc2626] transition-all duration-500"
+              to="/blogs" 
+              className="group flex items-center gap-6 bg-slate-900 text-white px-10 py-6 font-black uppercase text-[10px] tracking-[0.3em] hover:bg-[#991b1b] transition-all duration-500 shadow-2xl shadow-slate-900/20"
             >
-               Return to Journal Archive <ChevronRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+              Back to Archive <ChevronRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
             </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {Object.entries(fullPosts)
+              .filter(([pSlug]) => pSlug !== slug)
+              .slice(0, 3)
+              .map(([pSlug, pData], i) => (
+                <Link 
+                  key={pSlug}
+                  to={`/blogs/${pSlug}`}
+                  className="group relative h-[450px] overflow-hidden bg-slate-900 border border-slate-800"
+                >
+                  <img 
+                    src={pData.image} 
+                    alt={pData.title}
+                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-40 group-hover:scale-110 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent group-hover:opacity-0 transition-opacity duration-700" />
+                  
+                  <div className="absolute inset-0 p-10 flex flex-col justify-between z-10">
+                    <span className="text-[#991b1b] font-black text-[10px] uppercase tracking-widest">{pData.category}</span>
+                    <div className="space-y-4">
+                      <h4 className="text-xl font-black text-white uppercase leading-tight group-hover:text-white transition-colors">{pData.title}</h4>
+                      <div className="flex items-center gap-4 text-white/40 text-[8px] font-black uppercase tracking-widest">
+                        {pData.date} <ArrowUpRight className="w-3 h-3 text-[#991b1b]" />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
           </div>
         </div>
       </section>

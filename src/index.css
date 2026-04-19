@@ -150,4 +150,23 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
     color: transparent;
   }
+
+  @keyframes gradient-slow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .animate-gradient-slow {
+    animation: gradient-slow 8s ease underline infinite;
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; filter: blur(0px); }
+    50% { opacity: 0.8; filter: blur(2px); }
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 3s ease-in-out infinite;
+  }
 }

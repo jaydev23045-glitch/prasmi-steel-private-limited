@@ -19,7 +19,7 @@ export default function History() {
             className="inline-flex items-center gap-2 text-slate-400 hover:text-[#dc2626] transition-all font-bold uppercase tracking-[0.2em] text-[10px] group"
           >
             <ArrowLeft className="w-3 h-3 transition-transform group-hover:-translate-x-1" />
-            Back to Global Overview
+            Back to Home
           </Link>
         </div>
       </div>
@@ -123,55 +123,65 @@ export default function History() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.2, ease: "easeOut" }}
-                className="flex items-center justify-center gap-8 mb-12"
+                className="flex items-center justify-center gap-10 mb-24"
               >
-                <div className="h-px w-20 bg-[#dc2626]" />
-                <span className="text-[#dc2626] font-black uppercase tracking-[1em] text-[11px]">OUR VISION</span>
-                <div className="h-px w-20 bg-[#dc2626]" />
+                <div className="h-0.5 w-40 bg-[#dc2626]" />
+                <span className="text-[#dc2626] font-black uppercase tracking-[1em] text-[18px]">OUR VISION</span>
+                <div className="h-0.5 w-40 bg-[#dc2626]" />
               </motion.div>
               
               <div className="space-y-4">
                 <motion.h2 
-                  initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
-                  whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.5, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                  className="text-6xl sm:text-[7.5rem] font-black text-white tracking-widest leading-[0.8] uppercase"
+                  initial={{ opacity: 0, y: 100, filter: 'blur(30px)', skewY: 10 }}
+                  whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)', skewY: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 1.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-5xl sm:text-7xl font-black text-white tracking-widest leading-[0.8] uppercase"
                 >
-                  FAST SCRAP <br className="hidden sm:block" /> TURNAROUND <br className="sm:hidden" />
-                  <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#fff,#dc2626)]">PROCESS</span>
+                  A WASTE-FREE <br className="hidden sm:block" /> FUTURE
                 </motion.h2>
 
-                <div className="flex items-center justify-center gap-10 py-8">
+                <div className="flex items-center justify-center gap-10 py-12">
                   <motion.h2 
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 0.6, x: 0 }}
+                    initial={{ opacity: 0, x: -50, filter: 'blur(10px)' }}
+                    whileInView={{ opacity: 0.6, x: 0, filter: 'blur(0px)' }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1.2, delay: 0.8 }}
-                    className="text-4xl sm:text-6xl font-light text-white tracking-[0.5em] uppercase italic"
+                    transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
+                    className="text-2xl sm:text-4xl font-light text-white tracking-[0.5em] uppercase italic"
                   >
                     WHERE
                   </motion.h2>
                   <motion.h2 
-                    initial={{ opacity: 0, scale: 0.8, filter: 'blur(20px)' }}
-                    whileInView={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+                    initial={{ opacity: 0, scale: 0.5, rotate: -10, filter: 'blur(20px)' }}
+                    whileInView={{ opacity: 1, scale: 1, rotate: 0, filter: 'blur(0px)' }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 1.2, ease: "backOut" }}
-                    className="text-7xl sm:text-[8rem] font-black text-[#dc2626] tracking-tightest leading-none uppercase drop-shadow-[0_0_50px_rgba(220,38,38,0.5)]"
+                    animate={{ 
+                      filter: ["drop-shadow(0 0 20px rgba(220,38,38,0))", "drop-shadow(0 0 40px rgba(220,38,38,0.6))", "drop-shadow(0 0 20px rgba(220,38,38,0))"] 
+                    }}
+                    transition={{ 
+                      type: "spring",
+                      stiffness: 100,
+                      damping: 20,
+                      delay: 1.5,
+                      filter: { repeat: Infinity, duration: 4, ease: "easeInOut" }
+                    }}
+                    className="text-5xl sm:text-7xl font-black text-[#dc2626] tracking-tightest leading-none uppercase"
                   >
                     WASTE
                   </motion.h2>
                 </div>
 
                 <motion.h2 
-                  initial={{ opacity: 0, y: 40, filter: 'blur(10px)' }}
-                  whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.5, delay: 1.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="text-6xl sm:text-[7.5rem] font-black text-white tracking-widest leading-[0.8] uppercase"
+                  initial={{ opacity: 0, y: 100, filter: 'blur(30px)', skewY: -10 }}
+                  whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)', skewY: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 1.8, delay: 2.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-5xl sm:text-7xl font-black text-white tracking-widest leading-[0.8] uppercase"
                 >
                   BECOMES <br className="hidden sm:block" />
-                  RESOURCES
+                  <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#fff,#dc2626,#fff)] bg-[length:200%_auto] animate-gradient-slow outline-none">
+                    RESOURCES
+                  </span>
                 </motion.h2>
               </div>
             </motion.div>
@@ -192,8 +202,8 @@ export default function History() {
                 <span className="text-[#dc2626] font-black tracking-[0.8em] text-[12px] uppercase">OUR MISSION</span>
                 <div className="h-1.5 w-24 bg-[#dc2626]" />
               </div>
-              <h3 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tightest leading-[0.9] uppercase transition-all hover:tracking-tighter duration-1000">
-                Delinitve <br /> 
+              <h3 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tightest leading-[0.9] uppercase">
+                Definitive <br /> 
                 <span className="text-[#dc2626] italic font-light">Solutions</span> <br />
                 for the globe
               </h3>

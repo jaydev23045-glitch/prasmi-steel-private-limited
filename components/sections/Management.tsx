@@ -31,7 +31,7 @@ export default function Leadership() {
             >
               <div className="space-y-8">
                 <div className="flex items-center gap-4">
-                  <span className="text-slate-900 font-black tracking-[0.8em] text-[10px] uppercase">OPERATIONAL_HEAD_PROFILE</span>
+                  <span className="text-slate-900 font-black tracking-[0.6em] text-[10px] uppercase">EXECUTIVE_LEADERSHIP_PROFILE</span>
                   <div className="h-px flex-1 bg-slate-200" />
                 </div>
                 
@@ -76,9 +76,8 @@ export default function Leadership() {
                 className="w-full h-full object-cover transition-transform duration-[30s] ease-linear group-hover:scale-110"
               />
 
-                <div className="absolute bottom-12 left-12 right-12 flex items-center gap-6 z-30">
-                  <div className="h-px w-20 bg-[#dc2626]" />
-                  <span className="text-[#dc2626] font-black uppercase tracking-[0.5em] text-[10px]">MANAGING_DIRECTOR</span>
+                <div className="absolute bottom-12 left-0 right-0 flex items-center justify-center z-30">
+                  <span className="text-[#dc2626] font-black uppercase tracking-[0.2em] text-xs sm:text-sm">Harshilbhai Savaliya</span>
                 </div>
             </motion.div>
 

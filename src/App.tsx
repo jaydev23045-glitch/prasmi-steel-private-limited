@@ -1,10 +1,13 @@
 import { useState, lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
 import { CorporateDetails } from '@/components/sections/CorporateDetails';
 import { Footer } from '@/components/sections/Footer';
+import { ScrollToTop } from '@/components/ScrollToTop';
+import { SEO } from '@/lib/SEO';
+import { BrandSplash } from '@/components/ui/BrandSplash';
 
 // Lazy load secondary pages
 const History = lazy(() => import('@/components/sections/History.tsx'));
@@ -36,13 +39,17 @@ function HomePage() {
   );
 }
 
-import { ScrollToTop } from '@/components/ScrollToTop';
-import { SEO } from '@/lib/SEO';
-import { BrandSplash } from '@/components/ui/BrandSplash';
-
-export default function App() {
+function AppContent() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showSplash, setShowSplash] = useState(false);
+  const location = useLocation();
+  const hideFooter = location.pathname === '/management' || 
+                    location.pathname === '/about' || 
+                    location.pathname === '/what-we-do' || 
+                    location.pathname === '/products' || 
+                    location.pathname === '/blogs' ||
+                    location.pathname.startsWith('/blogs/') ||
+                    location.pathname === '/contact';
 
   useEffect(() => {
     const hasVisited = sessionStorage.getItem('prasmi_visited');
@@ -69,34 +76,40 @@ export default function App() {
   ];
 
   return (
-    <BrowserRouter>
+    <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-slate-900 selection:text-white">
       {showSplash && <BrandSplash onComplete={() => setShowSplash(false)} />}
       <ScrollToTop />
       <SEO />
-      <div className="min-h-screen bg-white font-sans text-slate-900 selection:bg-slate-900 selection:text-white">
-        <Header 
-          isMobileMenuOpen={isMobileMenuOpen} 
-          setIsMobileMenuOpen={setIsMobileMenuOpen} 
-          navLinks={navLinks} 
-        />
-        
-        <main>
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<History />} />
-              <Route path="/management" element={<Suspense fallback={<PageLoader />}><Leadership /></Suspense>} />
-              <Route path="/what-we-do" element={<Suspense fallback={<PageLoader />}><WhatWeDo /></Suspense>} />
-              <Route path="/products" element={<Products />} />
-              <Route path="/blogs" element={<Blogs />} />
-              <Route path="/blogs/:slug" element={<BlogPost />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Suspense>
-        </main>
+      <Header 
+        isMobileMenuOpen={isMobileMenuOpen} 
+        setIsMobileMenuOpen={setIsMobileMenuOpen} 
+        navLinks={navLinks} 
+      />
+      
+      <main>
+        <Suspense fallback={<PageLoader />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<History />} />
+            <Route path="/management" element={<Suspense fallback={<PageLoader />}><Leadership /></Suspense>} />
+            <Route path="/what-we-do" element={<Suspense fallback={<PageLoader />}><WhatWeDo /></Suspense>} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/blogs/:slug" element={<BlogPost />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Suspense>
+      </main>
 
-        <Footer />
-      </div>
+      {!hideFooter && <Footer />}
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
     </BrowserRouter>
   );
 }
