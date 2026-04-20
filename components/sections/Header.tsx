@@ -118,7 +118,7 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
               onClick={handleWhatsAppInquiry}
               className="bg-slate-800 hover:bg-slate-900 text-white rounded px-8 py-3 text-[11px] font-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-md"
             >
-              Get a Quote
+              Get In Touch
             </button>
           </div>
 
@@ -168,7 +168,7 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
                       onClick={handleWhatsAppInquiry}
                       className="bg-slate-800 hover:bg-slate-900 text-white w-full h-16 text-xs flex items-center justify-center font-black uppercase tracking-[0.2em] transition-all"
                     >
-                      Get a Quote
+                      Get In Touch
                     </button>
                   </div>
                 </div>

@@ -47,7 +47,7 @@ export function CorporateDetails() {
           </p>
 
           <p className="font-bold text-slate-900 border-l-4 border-[#dc2626] pl-8 py-4 bg-slate-50">
-            Call us today to learn how your organization can benefit from Prasmi Steel's services and products.
+            Get in touch to discuss how we can support your recycling and sourcing needs
           </p>
         </motion.div>
       </div>

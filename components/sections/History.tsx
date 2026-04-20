@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowLeft, Target, Award, Globe, History as HistoryIcon, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, Target, Award, Globe, History as HistoryIcon, ShieldCheck, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function History() {
@@ -41,7 +41,7 @@ export default function History() {
               
               <div className="space-y-10 max-w-xl">
                 <p className="text-xl sm:text-2xl text-slate-900 font-bold leading-relaxed border-l-4 border-[#dc2626] pl-8 py-4 bg-slate-50 shadow-sm">
-                  Prasmi Steel Private Limited is an emerging leader in the global scrap industry, specializing in the sourcing and supply of premium ferrous and non-ferrous metal scrap.
+                  Prasmi Steel Private Limited is an emerging leader in the global scrap industry, specializing in the sourcing, processing and supply of best-quality ferrous and non-ferrous metal scrap.
                 </p>
                 
                 <div className="space-y-6 text-lg text-slate-500 font-light leading-relaxed pl-8">
@@ -49,7 +49,7 @@ export default function History() {
                     Since our incorporation in 2024, we have been committed to delivering excellence through quality-driven processes and strategic sourcing.
                   </p>
                   <p>
-                    Our diverse product portfolio is carefully curated to meet the evolving demands of industrial clients, ensuring every shipment aligns with international standards.
+                    With deep roots in the recycling sector and a reputation for reliability, we help partners divert waste from landfills and put it back into the supply chain where it belongs.
                   </p>
                 </div>
 
@@ -60,7 +60,7 @@ export default function History() {
                   className="pl-8 py-6 border-l-4 border-slate-900 bg-slate-900 shadow-xl"
                 >
                   <p className="text-white font-bold text-lg italic leading-relaxed">
-                    "At Prasmi Steel, we don’t just supply materials — we build long-term partnerships based on performance, Trust and Shared Growth."
+                    "At our core, we’re more than just Buyer, Recycler, or Supplier — we’re sustainability enablers"
                   </p>
                 </motion.div>
               </div>
@@ -255,6 +255,30 @@ export default function History() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+      {/* Global Partnership CTA (Cinematic Black Finish) */}
+      <section className="py-48 bg-[#0a0a0b] relative overflow-hidden">
+        {/* Subtle Background Lighting */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#dc2626]/5 skew-x-12 translate-x-32" />
+        <div className="absolute bottom-0 left-0 w-1/2 h-full bg-slate-900/40 -skew-x-12 -translate-x-32" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
+          <div className="h-px w-24 bg-[#dc2626] mb-12" />
+          <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tightest leading-[1.1] uppercase max-w-4xl mb-16">
+            Let's Build a <br />
+            <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#fff,#dc2626)]">strong and sustainable</span> <br />
+            edge in metal recycling.
+          </h2>
+          
+          <Link 
+            to="/contact"
+            className="group relative inline-flex items-center gap-6 bg-white text-black px-12 py-6 font-black uppercase tracking-[0.4em] text-xs transition-all hover:bg-[#dc2626] hover:text-white"
+          >
+            <span>Initialize Partnership</span>
+            <Layers className="w-4 h-4 transition-transform group-hover:rotate-180 duration-700" />
+            <div className="absolute -bottom-2 -right-2 w-full h-full border border-white/20 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform" />
+          </Link>
         </div>
       </section>
     </div>

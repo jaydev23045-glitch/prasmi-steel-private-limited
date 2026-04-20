@@ -243,32 +243,6 @@ export function Products() {
         </div>
       </section>
 
-      {/* Quality Commitment & Blog Grid */}
-      <section className="py-24 bg-mesh bg-grid relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-px bg-slate-200" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex items-center gap-4 mb-16">
-            <div className="h-px w-12 bg-slate-200"></div>
-            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-slate-400">Our Metallurgical Quality Control Commitment</h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-              {[
-                { icon: <Shield />, title: 'Composition Guarantee', text: 'All materials undergo XRF spectrometer testing to verify exact composition.' },
-                { icon: <Factory />, title: 'Furnace Ready', text: 'Scrap is sized and cleaned to meet specific melting requirements of foundries.' },
-                { icon: <Warehouse />, title: 'Logistics Precision', text: 'Streamlined container loading and documentation for seamless global transit.' },
-                { icon: <Target />, title: 'Custom Sourcing', text: 'Specialized segregation for boutique alloys and high-purity non-ferrous requirements.' }
-              ].map((item, i) => (
-                <div key={i} className="space-y-4">
-                   <div className="w-10 h-10 bg-slate-50 flex items-center justify-center text-[#991b1b]">
-                      {item.icon}
-                   </div>
-                   <h3 className="font-black uppercase tracking-widest text-[10px] text-slate-900">{item.title}</h3>
-                   <p className="text-xs text-slate-500 font-light leading-relaxed">{item.text}</p>
-                </div>
-              ))}
-           </div>
-        </div>
-      </section>
     </div>
   );
 }

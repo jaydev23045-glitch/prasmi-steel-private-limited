@@ -23,7 +23,7 @@ export default function WhatWeDo() {
     {
       id: "proc_03",
       title: "WE SELL",
-      description: "We sell premium ferrous and non-ferrous materials worldwide, leveraging market intelligence to provide our partners with a definitive edge.",
+      description: "We sell ferrous and non-ferrous materials, leveraging market intelligence to provide our partners with a definitive edge.",
       icon: BarChart3,
       image: "/wesell.webp",
       color: "bg-slate-900"
@@ -68,7 +68,7 @@ export default function WhatWeDo() {
             transition={{ duration: 0.8 }}
             className="text-5xl sm:text-7xl font-black text-white uppercase tracking-tightest"
           >
-            OPERATIONS
+            What We Do
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0 }}
@@ -77,7 +77,7 @@ export default function WhatWeDo() {
             className="mt-6 flex items-center justify-center gap-4"
           >
             <div className="h-px w-12 bg-white/30" />
-            <span className="text-white/80 text-[10px] sm:text-xs font-black tracking-[0.6em] uppercase">Excellence at Every Process</span>
+            <span className="text-white/80 text-[10px] sm:text-xs font-black tracking-[0.4em] uppercase">From buying to processing and selling, we manage the complete scrap lifecycle.</span>
             <div className="h-px w-12 bg-white/30" />
           </motion.div>
         </div>
@@ -137,54 +137,42 @@ export default function WhatWeDo() {
             </motion.div>
           ))}
         </div>
+
+        {/* Dynamic Supply Chain Mission Statement */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="mt-32 text-center flex flex-col items-center"
+        >
+          <div className="h-px w-16 bg-[#dc2626] mb-8" />
+          <p className="text-xl sm:text-3xl font-black text-slate-900 tracking-tightest max-w-4xl leading-[1.3]">
+            We don’t just move material — <br />
+            we <span className="text-[#dc2626]">manage relationships</span> and <span className="text-[#dc2626]">optimize</span> the entire supply chain.
+          </p>
+        </motion.div>
+
+        {/* Next Step CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-24 pb-32 flex justify-center"
+        >
+          <Link 
+            to="/contact"
+            className="group relative flex items-center gap-4 bg-slate-900 overflow-hidden px-12 py-6 rounded-none transition-all hover:scale-[1.02] active:scale-[0.98]"
+          >
+            <div className="absolute inset-0 bg-[#dc2626] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />
+            <span className="relative z-10 text-white font-black uppercase tracking-[0.3em] text-sm">
+              Contact Us
+            </span>
+            <ArrowRight className="relative z-10 w-5 h-5 text-white transform group-hover:translate-x-2 transition-transform duration-500" />
+          </Link>
+        </motion.div>
       </div>
-
-      {/* Why Choose Us Section - Pure Centered Executive Layout */}
-      <section className="relative py-48 bg-slate-50 border-t border-white overflow-hidden">
-        <div className="max-w-5xl mx-auto px-4 sm:px-10 lg:px-8 text-center">
-          <div className="space-y-24">
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-              className="space-y-24 flex flex-col items-center"
-            >
-              <div className="flex items-center gap-12">
-                <div className="h-0.5 w-48 bg-[#991b1b]" />
-                <span className="text-[#991b1b] font-black tracking-[1em] text-[18px] uppercase">WHY_CHOOSE_US</span>
-                <div className="h-0.5 w-48 bg-[#991b1b]" />
-              </div>
-              
-              <div className="space-y-16">
-                <div className="space-y-6">
-                  <motion.h2 
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.2, delay: 0.2 }}
-                    className="text-5xl sm:text-8xl font-black text-slate-900 leading-[0.85] tracking-tightest uppercase"
-                  >
-                    ALWAYS READY <br /> TO DEAL IN <br /> 
-                    <span className="text-[#991b1b]">VOLUMES</span>
-                  </motion.h2>
-                  <div className="h-1.5 w-32 bg-[#991b1b] mx-auto opacity-30" />
-                </div>
-
-                <motion.p 
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.5, delay: 0.8 }}
-                  className="text-slate-500 text-xl sm:text-2xl leading-relaxed tracking-wide uppercase font-light max-w-3xl mx-auto"
-                >
-                  Our financial credibility is one of our strongest assets - we maintain flawless payment history with zero delays or defaults to the date.
-                </motion.p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }

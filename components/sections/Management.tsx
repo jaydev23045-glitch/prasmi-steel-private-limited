@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { ArrowLeft, Zap, ShieldCheck, TrendingUp, Globe2, Layers } from 'lucide-react';
+import { ArrowLeft, Zap, ShieldCheck, TrendingUp, Globe2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Leadership() {
@@ -43,7 +43,7 @@ export default function Leadership() {
                   
                   <div className="space-y-8 border-l border-[#dc2626]/20 pl-10">
                     <p className="text-slate-900 text-lg leading-relaxed tracking-wide font-bold">
-                      At Prasmi Steel Private Limited, our leadership combines academic excellence, practical industry knowledge, and global market insight. With a deep understanding of scrap sourcing, processing, and trading, we are focused on driving operational efficiency, maintaining quality standards, and fostering long-term partnerships worldwide.
+                      At Prasmi Steel Private Limited, leadership under Harshil Savaliya combines practical industry knowledge, and global market insight. With a deep understanding of scrap sourcing, processing, and trading, focused on driving operational efficiency, maintaining high standards, and building long-term, reliable partnerships worldwide.
                     </p>
 
                     <p className="text-slate-500 text-lg leading-relaxed tracking-wide font-light">
@@ -76,8 +76,9 @@ export default function Leadership() {
                 className="w-full h-full object-cover transition-transform duration-[30s] ease-linear group-hover:scale-110"
               />
 
-                <div className="absolute bottom-12 left-0 right-0 flex items-center justify-center z-30">
-                  <span className="text-[#dc2626] font-black uppercase tracking-[0.2em] text-xs sm:text-sm">Harshilbhai Savaliya</span>
+                <div className="absolute bottom-12 left-0 right-0 flex flex-col items-start justify-center z-30 px-12 space-y-4">
+                  <div className="h-0.5 w-12 bg-[#dc2626]" />
+                  <span className="text-white font-black uppercase tracking-[0.2em] text-xs sm:text-sm drop-shadow-lg">Harshil Savaliya</span>
                 </div>
             </motion.div>
 
@@ -85,30 +86,6 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Global Partnership CTA (Cinematic Black Finish) */}
-      <section className="py-48 bg-[#0a0a0b] relative overflow-hidden">
-        {/* Subtle Background Lighting */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-[#dc2626]/5 skew-x-12 translate-x-32" />
-        <div className="absolute bottom-0 left-0 w-1/2 h-full bg-slate-900/40 -skew-x-12 -translate-x-32" />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
-          <div className="h-px w-24 bg-[#dc2626] mb-12" />
-          <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tightest leading-[1.1] uppercase max-w-4xl mb-16">
-            Let's Build a <br />
-            <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#fff,#dc2626)]">strong and sustainable</span> <br />
-            edge in metal recycling.
-          </h2>
-          
-          <Link 
-            to="/contact"
-            className="group relative inline-flex items-center gap-6 bg-white text-black px-12 py-6 font-black uppercase tracking-[0.4em] text-xs transition-all hover:bg-[#dc2626] hover:text-white"
-          >
-            <span>Initialize Partnership</span>
-            <Layers className="w-4 h-4 transition-transform group-hover:rotate-180 duration-700" />
-            <div className="absolute -bottom-2 -right-2 w-full h-full border border-white/20 -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform" />
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }

@@ -42,11 +42,11 @@ export function Hero() {
           </div>
 
           <h1 className="text-[clamp(1.2rem,4vw,44px)] font-extrabold text-white tracking-tight leading-tight mb-8 drop-shadow-[0_10px_10px_rgba(0,0,0,0.9)] max-w-[90vw] mx-auto text-center whitespace-normal xl:whitespace-nowrap">
-            Your Trusted Partner for Best-Quality Metal Scrap Solutions
+            Your trusted partner in the global recycling supply chain
           </h1>
           
           <p className="text-base sm:text-lg md:text-xl text-white drop-shadow-[0_2px_4px_rgba(0,0,0,1)] mb-10 max-w-2xl mx-auto leading-relaxed font-semibold">
-            From Quote to Closure Deal – We Deliver What We Commit
+            From Quote to Closure – We Stand for What We Commit
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

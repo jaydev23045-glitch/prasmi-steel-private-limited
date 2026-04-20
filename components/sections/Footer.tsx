@@ -22,7 +22,7 @@ export function Footer() {
                 </div>
               </Link>
               <p className="text-slate-500 max-w-sm leading-relaxed mb-10 text-lg font-light">
-                Your Trusted Partner for Best-Quality Metal Scrap Solutions. Supplying best ferrous and non-ferrous scrap material solutions since 2024.
+                Your trusted partner in the global recycling supply chain. Supplying best ferrous and non-ferrous scrap material solutions since 2024.
               </p>
               <div className="flex gap-5">
                 {[

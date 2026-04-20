@@ -17,6 +17,7 @@ const Products = lazy(() => import('@/components/sections/Products.tsx').then(m 
 const Blogs = lazy(() => import('@/components/sections/Blogs.tsx').then(m => ({ default: m.Blogs })));
 const BlogPost = lazy(() => import('@/components/sections/BlogPost.tsx').then(m => ({ default: m.BlogPost })));
 const Contact = lazy(() => import('@/components/sections/Contact.tsx').then(m => ({ default: m.Contact })));
+const WhyChooseUs = lazy(() => import('@/components/sections/WhyChooseUs.tsx'));
 
 // Loading component
 const PageLoader = () => (
@@ -46,6 +47,7 @@ function AppContent() {
   const hideFooter = location.pathname === '/management' || 
                     location.pathname === '/about' || 
                     location.pathname === '/what-we-do' || 
+                    location.pathname === '/why-choose-us' || 
                     location.pathname === '/products' || 
                     location.pathname === '/blogs' ||
                     location.pathname.startsWith('/blogs/') ||
@@ -69,7 +71,14 @@ function AppContent() {
         { name: 'Leadership', href: '/management' }
       ]
     },
-    { name: 'What We Do', href: '/what-we-do' },
+    { 
+      name: 'What We Do', 
+      href: '/what-we-do',
+      sublinks: [
+        { name: 'What We Do', href: '/what-we-do' },
+        { name: 'Why Us', href: '/why-choose-us' }
+      ]
+    },
     { name: 'Products', href: '/products' },
     { name: 'Blogs', href: '/blogs' },
     { name: 'Contact Us', href: '/contact' },
@@ -93,6 +102,7 @@ function AppContent() {
             <Route path="/about" element={<History />} />
             <Route path="/management" element={<Suspense fallback={<PageLoader />}><Leadership /></Suspense>} />
             <Route path="/what-we-do" element={<Suspense fallback={<PageLoader />}><WhatWeDo /></Suspense>} />
+            <Route path="/why-choose-us" element={<Suspense fallback={<PageLoader />}><WhyChooseUs /></Suspense>} />
             <Route path="/products" element={<Products />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blogs/:slug" element={<BlogPost />} />
