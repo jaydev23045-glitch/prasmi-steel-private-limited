@@ -48,8 +48,34 @@ export function SEO() {
     // 3. Structured Data (JSON-LD)
     const routeSchemas: any[] = [];
 
+    // Global Breadcrumb Schema for all pages
+    const breadcrumbItems = [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": baseUrl }
+    ];
+
+    if (pathname !== '/') {
+      const pathSegments = pathname.split('/').filter(Boolean);
+      let currentPath = '';
+      pathSegments.forEach((segment, index) => {
+        currentPath += `/${segment}`;
+        const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+        breadcrumbItems.push({
+          "@type": "ListItem",
+          "position": index + 2,
+          "name": name,
+          "item": `${baseUrl}${currentPath}`
+        });
+      });
+    }
+
+    routeSchemas.push({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": breadcrumbItems
+    });
+
     if (pathname === '/') {
-      // FAQ Schema (Moved from component to here for central management)
+      // FAQ Schema
       routeSchemas.push({
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -88,6 +114,78 @@ export function SEO() {
       });
     }
 
+    // Blog Post Data (Mirrored from Blogs.tsx)
+    const blogPosts = [
+      {
+        slug: "scrap-metal-industry-growth",
+        title: "Scrap Metal Industry Growth | Ferrous & Non-Ferrous Scrap Supplier in India",
+        description: "The global demand for sustainable and cost-effective raw materials has significantly increased the importance of scrap metal in modern industry. Prasmi Steel play a vital role in bridging the gap.",
+        date: "2026-04-14"
+      },
+      {
+        slug: "choosing-right-scrap-supplier",
+        title: "How to Choose the Right Scrap Metal Supplier | Prasmi Steel Guide",
+        description: "Selecting the right scrap supplier is crucial for maintaining production efficiency and product quality. A dependable supplier ensures consistency, proper grading, and timely delivery.",
+        date: "2026-03-28"
+      },
+      {
+        slug: "benefits-high-quality-scrap-smelting",
+        title: "Benefits of High-Quality Scrap in Smelting Process | Improve Efficiency",
+        description: "Using high-quality scrap metal directly impacts the efficiency of smelting processes. Clean and well-graded scrap reduces impurities and improves melting efficiency.",
+        date: "2026-03-12"
+      },
+      {
+        slug: "ferrous-vs-non-ferrous-differences",
+        title: "Ferrous vs Non-Ferrous Scrap: Key Differences Explained",
+        description: "Understand the difference between ferrous and non-ferrous scrap metals and their unique industrial applications. Complete guide by Prasmi Steel experts.",
+        date: "2026-02-25"
+      },
+      {
+        slug: "future-of-scrap-metal-sustainability",
+        title: "Future of Scrap Metal Industry | Sustainable Metal Recycling Trends",
+        description: "Discover how scrap metal recycling supports sustainability and industrial growth. Insights into future trends by Prasmi Steel Private Limited.",
+        date: "2026-02-10"
+      },
+      {
+        slug: "global-scrap-metal-trade-trends",
+        title: "Global Scrap Metal Trade Trends | Import Export Scrap Business",
+        description: "Explore how global scrap trade is evolving with changing demand, logistics, and pricing trends. Insights into the international marketplace.",
+        date: "2026-01-22"
+      }
+    ];
+
+    if (pathname.startsWith('/blogs/')) {
+      const slug = pathname.replace('/blogs/', '');
+      const post = blogPosts.find(p => p.slug === slug);
+      
+      if (post) {
+        // Article Schema
+        routeSchemas.push({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": post.title,
+          "description": post.description,
+          "datePublished": post.date,
+          "author": {
+            "@type": "Organization",
+            "name": "Prasmi Steel Private Limited"
+          },
+          "publisher": {
+            "@id": "https://prasmisteel.com/#organization"
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `${baseUrl}${pathname}`
+          }
+        });
+
+        // Set Title & Description
+        document.title = post.title;
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', post.description);
+      }
+    }
+
     // Clean up only our managed scripts
     document.querySelectorAll('script[data-seo-managed]').forEach(el => el.remove());
 
@@ -101,7 +199,7 @@ export function SEO() {
 
     routeSchemas.forEach(inject);
 
-    // 4. Page Title & Meta Description
+    // 4. Page Title & Meta Description for Static Routes
     const pageTitles: Record<string, string> = {
       '/': 'Prasmi Steel Private Limited | Ferrous, Non-Ferrous & Cast Iron Metal Scrap Supply',
       '/about': 'About Prasmi Steel | Leading Industrial Scrap Supplier',

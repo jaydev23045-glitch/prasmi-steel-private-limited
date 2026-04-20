@@ -47,8 +47,8 @@ export function Footer() {
             <div className="md:col-span-3">
               <h2 className="text-white font-black mb-8 uppercase tracking-[0.2em] text-[10px]">Prasmi Steel: Quick Navigation</h2>
               <ul className="space-y-4 text-sm font-medium">
-                <li><a href="/#home" className="hover:text-white transition-colors">Home</a></li>
-                <li><a href="/about" className="hover:text-white transition-colors">About Us</a></li>
+                <li><Link to="/#home" onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Home</Link></li>
+                <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
                 <li><Link to="/products" className="hover:text-white transition-colors">Our Products</Link></li>
                 <li><Link to="/blogs" className="hover:text-white transition-colors">Industrial Journal</Link></li>
                 <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
