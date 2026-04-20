@@ -32,7 +32,7 @@ const products = [
   },
   {
     id: 8,
-    name: 'UNprepared cast',
+    name: 'unprepared cast',
     category: 'Ferrous Metal',
     description: 'Oversized cast iron components requiring preparation. Bulk industrial scrap from large-scale demolition and manufacturing.',
     specs: ['Size: Oversized', 'Type: Heavy Cast', 'Origin: Industrial'],

@@ -31,7 +31,7 @@ export default function Leadership() {
             >
               <div className="space-y-8">
                 <div className="flex items-center gap-4">
-                  <span className="text-slate-900 font-black tracking-[0.6em] text-[10px] uppercase">EXECUTIVE_LEADERSHIP_PROFILE</span>
+                  <span className="text-slate-900 font-black tracking-[0.6em] text-[10px] uppercase">MANAGING_DIRECTOR_PROFILE</span>
                   <div className="h-px flex-1 bg-slate-200" />
                 </div>
                 

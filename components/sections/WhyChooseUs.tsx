@@ -138,11 +138,12 @@ export default function WhyChooseUs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="mt-32 text-center flex flex-col items-center"
+            className="mt-16 text-center flex flex-col items-center"
           >
             <div className="h-px w-16 bg-[#dc2626] mb-8" />
-            <p className="text-xl sm:text-3xl font-black text-slate-900 tracking-tightest max-w-4xl leading-[1.3]">
-              When you work with Prasmi Steel, you’re not just choosing a dependable supplier or buyer— <br />
+            <p className="text-xl sm:text-3xl font-black text-slate-900 tracking-tightest max-w-4xl leading-[1.3] uppercase">
+              When you work with Prasmi Steel, <br />
+              you’re not just choosing a dependable supplier or buyer— <br />
               you’re choosing a <span className="text-[#dc2626]">smarter</span>, <span className="text-[#dc2626]">more sustainable</span> way of doing business.
             </p>
           </motion.div>
