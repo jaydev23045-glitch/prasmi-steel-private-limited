@@ -35,10 +35,8 @@ export function Hero() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-7xl mx-auto"
         >
-          <div className="inline-flex items-center gap-4 mb-4">
-            <div className="h-px w-12 bg-[#dc2626]"></div>
-            <span className="text-xs sm:text-sm font-black uppercase tracking-[0.45em] text-zinc-300">Prasmi Steel Private Limited</span>
-            <div className="h-px w-12 bg-[#dc2626]"></div>
+          <div className="mb-6">
+            <span className="text-xs sm:text-sm font-black uppercase tracking-[0.45em] text-[#dc2626]">Prasmi Steel Private Limited</span>
           </div>
 
           <h1 className="text-[clamp(1.2rem,4vw,44px)] font-extrabold text-white tracking-tight leading-tight mb-8 drop-shadow-[0_10px_10px_rgba(0,0,0,0.9)] max-w-[90vw] mx-auto text-center whitespace-normal xl:whitespace-nowrap">

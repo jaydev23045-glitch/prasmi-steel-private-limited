@@ -8,30 +8,38 @@ export default function WhyChooseUs() {
     {
       id: "01",
       title: "Bulk Scrap Trading",
-      desc: "Always ready to Buy & sell scrap materials in bulk.",
-      image: "/bulk_scrap_trading.webp",
-      icon: Handshake
+      desc: "Always ready to buy & sell scrap materials in bulk with absolute market transparency.",
+      image: "/bulk_scrap_trading.webp"
     },
     {
       id: "02",
-      title: "End-to-End Logistics",
-      desc: "Seamless end-to-end logistics—from local deliveries to global shipping, all under one trusted partner.",
-      image: "/logistics_excellence.webp", // Corrected image route
-      icon: Globe
+      title: "End-to-End Solutions",
+      desc: "From buying and processing to selling, we manage the complete scrap lifecycle with efficiency and precision.",
+      image: "/end-to-end-solutions.png"
     },
     {
       id: "03",
       title: "Material Grading & Sorting",
       desc: "Accurate grading and expertly sorted materials ensure consistent quality you can rely on.",
-      image: "/material_grading.webp",
-      icon: ShieldCheck
+      image: "/material_grading.webp"
     },
     {
       id: "04",
       title: "Sustainable Practices",
       desc: "Committed to sustainable practices with full environmental compliance at every stage.",
-      image: "/sustainable_practices.webp",
-      icon: Recycle
+      image: "/sustainable-practices-v2.png"
+    },
+    {
+      id: "05",
+      title: "Global Reach, Ground Level Expertise",
+      desc: "We connect Global recycling supply chain, delivering seamless logistics from local deliveries to global shipping, all under one trusted partner.",
+      image: "/global-reach-v2.png"
+    },
+    {
+      id: "06",
+      title: "Trusted Partnerships",
+      desc: "We focus on long-term relationships built on transparency, reliability, and mutual growth.",
+      image: "/trusted-partnerships.png"
     }
   ];
 
@@ -52,10 +60,9 @@ export default function WhyChooseUs() {
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#dc2626]/5 blur-[150px] rounded-full opacity-60" />
       </div>
 
-      {/* Cinematic Hero Banner */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/40 z-10" />
+          <div className="absolute inset-0 bg-black/30 z-10" />
           <motion.img 
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
@@ -71,9 +78,9 @@ export default function WhyChooseUs() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-7xl font-black text-white uppercase tracking-tightest"
+            className="text-5xl sm:text-7xl font-black text-white tracking-tightest"
           >
-            Why Us
+            Why <span className="text-[#dc2626]">Us</span>
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0 }}
@@ -88,27 +95,27 @@ export default function WhyChooseUs() {
         </div>
       </section>
 
-      <section id="why-choose-us" className="bg-slate-50 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-px bg-slate-200" />
-        
-        <div className="max-w-7xl mx-auto px-8 py-24 sm:py-32">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {pillars.map((pillar, idx) => (
-              <motion.div 
+      <section id="why-choose-us" className="relative py-24 bg-white overflow-hidden">
+        {/* VVIP White Atmospheric System */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#dc2626]/5 blur-[120px] rounded-full" />
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-slate-100 blur-[120px] rounded-full" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {pillars.map((pillar, index) => (
+              <motion.div
                 key={pillar.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.8 }}
-                className="group flex flex-col bg-white border border-slate-200 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1"
+                transition={{ delay: index * 0.15, duration: 0.8 }}
+                className="group flex flex-col bg-white border border-slate-200 shadow-sm transition-all hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
               >
                 {/* Top Section: Industrial Visual - Maximized Proportions */}
                 <div className="relative aspect-[3/4] overflow-hidden bg-slate-100">
-                  <div className="absolute top-4 left-4 z-20">
-                    <div className="bg-white/90 backdrop-blur-md px-3 py-1 border border-slate-200 shadow-sm text-[8px] font-bold uppercase tracking-widest text-slate-900">
-                      PILLAR {pillar.id}
-                    </div>
-                  </div>
                   <img 
                     src={pillar.image} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -120,7 +127,7 @@ export default function WhyChooseUs() {
                 {/* Bottom Section: Strategic Content - 1:1 Product Card Parity */}
                 <div className="p-8 flex-1 flex flex-col bg-white">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter mb-2 group-hover:text-[#991b1b] transition-colors">
+                    <h3 className="text-2xl font-black text-slate-900 tracking-tighter mb-2 group-hover:text-[#991b1b] transition-colors">
                       {pillar.title}
                     </h3>
                     <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -129,7 +136,7 @@ export default function WhyChooseUs() {
                   </div>
                   
                   <div className="mt-auto">
-                    <button className="w-full py-4 bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#991b1b] transition-colors flex items-center justify-between px-6 px-4 group/btn">
+                    <button className="w-full py-4 bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#991b1b] transition-colors flex items-center justify-between px-6 group/btn">
                       <span>Excellence Standard</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </button>
@@ -150,7 +157,7 @@ export default function WhyChooseUs() {
             className="mt-16 text-center flex flex-col items-center"
           >
             <div className="h-px w-16 bg-[#dc2626] mb-8" />
-            <p className="text-xl sm:text-3xl font-black text-slate-900 tracking-tightest max-w-4xl leading-[1.3] uppercase">
+            <p className="text-xl sm:text-3xl font-black text-slate-900 tracking-tightest max-w-4xl leading-[1.3]">
               When you work with Prasmi Steel, <br />
               you’re not just choosing a dependable supplier or buyer— <br />
               you’re choosing a <span className="text-[#dc2626]">smarter</span>, <span className="text-[#dc2626]">more sustainable</span> way of doing business.

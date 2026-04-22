@@ -136,9 +136,9 @@ export default function History() {
                   whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)', skewY: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 1.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                  className="text-5xl sm:text-7xl font-black text-white tracking-widest leading-[0.8] uppercase"
+                  className="text-5xl sm:text-7xl font-black text-white tracking-widest leading-[0.8]"
                 >
-                  A WASTE-FREE <br className="hidden sm:block" /> FUTURE
+                  A Waste-Free <br className="hidden sm:block" /> Future
                 </motion.h2>
 
                 <div className="flex items-center justify-center gap-10 py-12">
@@ -147,7 +147,7 @@ export default function History() {
                     whileInView={{ opacity: 0.6, x: 0, filter: 'blur(0px)' }}
                     viewport={{ once: true }}
                     transition={{ duration: 1.2, delay: 1.2, ease: "easeOut" }}
-                    className="text-2xl sm:text-4xl font-light text-white tracking-[0.5em] uppercase italic"
+                    className="text-2xl sm:text-4xl font-light text-white tracking-[0.5em] italic"
                   >
                     WHERE
                   </motion.h2>
@@ -165,7 +165,7 @@ export default function History() {
                       delay: 1.5,
                       filter: { repeat: Infinity, duration: 4, ease: "easeInOut" }
                     }}
-                    className="text-5xl sm:text-7xl font-black text-[#dc2626] tracking-tightest leading-none uppercase"
+                    className="text-5xl sm:text-7xl font-black text-[#dc2626] tracking-tightest leading-none"
                   >
                     WASTE
                   </motion.h2>
@@ -176,11 +176,11 @@ export default function History() {
                   whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)', skewY: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 1.8, delay: 2.2, ease: [0.16, 1, 0.3, 1] }}
-                  className="text-5xl sm:text-7xl font-black text-white tracking-widest leading-[0.8] uppercase"
+                  className="text-5xl sm:text-7xl font-black text-white tracking-widest leading-[0.8]"
                 >
-                  BECOMES <br className="hidden sm:block" />
+                  Becomes <br className="hidden sm:block" />
                   <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#fff,#dc2626,#fff)] bg-[length:200%_auto] animate-gradient-slow outline-none">
-                    RESOURCES
+                    Resources
                   </span>
                 </motion.h2>
               </div>
@@ -198,16 +198,15 @@ export default function History() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-24 items-start">
             <div className="space-y-10">
-              <div className="flex flex-col gap-4">
+              <div className="flex items-center justify-center mb-10">
                 <span className="text-[#dc2626] font-black tracking-[0.8em] text-[12px] uppercase">OUR MISSION</span>
-                <div className="h-1.5 w-24 bg-[#dc2626]" />
               </div>
-              <h3 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tightest leading-[0.9] uppercase">
+              <h3 className="text-5xl sm:text-7xl font-black text-slate-900 tracking-tightest leading-[0.9]">
                 Definitive <br /> 
                 <span className="text-[#dc2626] italic font-light">Solutions</span> <br />
                 for the globe
               </h3>
-              <p className="text-slate-500 text-lg sm:text-xl font-light leading-relaxed max-w-sm tracking-wide uppercase">
+              <p className="text-slate-500 text-lg sm:text-xl font-light leading-relaxed max-w-sm tracking-wide">
                 Forging long-term partnerships through absolute transparency and material excellence.
               </p>
             </div>
@@ -235,7 +234,7 @@ export default function History() {
                   <div className="flex gap-10 items-start">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#dc2626] mt-4" />
                     <div className="space-y-5 flex-1">
-                      <p className="text-slate-800 font-black text-xl sm:text-3xl leading-tight tracking-tight group-hover:text-slate-900 transition-all uppercase">
+                      <p className="text-slate-800 font-black text-xl sm:text-3xl leading-tight tracking-tight group-hover:text-slate-900 transition-all">
                         {text}
                       </p>
                       <motion.div 
@@ -265,7 +264,7 @@ export default function History() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
           <div className="h-px w-24 bg-[#dc2626] mb-12" />
-          <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tightest leading-[1.1] uppercase max-w-4xl mb-16">
+          <h2 className="text-4xl sm:text-6xl font-black text-white tracking-tightest leading-[1.1] max-w-4xl mb-16">
             Let's Build a <br />
             <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#fff,#dc2626)]">strong and sustainable</span> <br />
             edge in metal recycling.

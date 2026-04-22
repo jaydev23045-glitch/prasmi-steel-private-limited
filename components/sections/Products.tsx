@@ -3,45 +3,45 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowLeft, Box, Target, Award, Zap, Shield, Factory, Warehouse } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const categories = ['All Materials', 'Ferrous Metal', 'Non-Ferrous'];
+const categories = ['All Materials', 'Ferrous', 'Non-Ferrous'];
 
 const products = [
   {
     id: 1,
     name: 'HMS 1 & 2',
-    category: 'Ferrous Metal',
+    category: 'Ferrous',
     description: 'Heavy Melting Steel (80:20 Mix). Premium industrial grade scrap for high-efficiency melting.',
     specs: ['ISRI: 200-206', 'Thickness: 1/4 inch+', 'Density: 70kg/cu.ft'],
     image: '/hms-1-2.webp'
   },
   {
     id: 2,
-    name: 'ROTOR-DRUM / DISKBREAK SCRAP',
-    category: 'Ferrous Metal',
+    name: 'Rotor-Drum / Diskbreak Scrap',
+    category: 'Ferrous',
     description: 'Clean machinery cast iron and plate/structural components for foundry use. High-quality brake rotors and drums.',
     specs: ['Graphite Grade: GS', 'Phosphorus: Low', 'Sulfur: <0.1%'],
     image: '/c.webp'
   },
   {
     id: 7,
-    name: 'MIXED CAST',
-    category: 'Ferrous Metal',
+    name: 'Mixed Cast',
+    category: 'Ferrous',
     description: 'General grade mixed cast iron scrap. Primarily sourced from industrial machinery and structural components.',
     specs: ['Grade: Mixed', 'Cleanliness: High', 'Processing: Sorted'],
     image: '/mix-cast.webp'
   },
   {
     id: 8,
-    name: 'unprepared cast',
-    category: 'Ferrous Metal',
+    name: 'Unprepared Cast',
+    category: 'Ferrous',
     description: 'Oversized cast iron components requiring preparation. Bulk industrial scrap from large-scale demolition and manufacturing.',
     specs: ['Size: Oversized', 'Type: Heavy Cast', 'Origin: Industrial'],
     image: '/unprepare-cast.webp'
   },
   {
     id: 9,
-    name: 'Oversized cast',
-    category: 'Ferrous Metal',
+    name: 'Oversized Cast',
+    category: 'Ferrous',
     description: 'Extra-large cast iron sections and structural elements. High-density scrap primarily from industrial infrastructure.',
     specs: ['Grade: Industrial', 'Category: Oversized', 'Loading: Bulk'],
     image: '/oversized-cast.webp'
@@ -49,7 +49,7 @@ const products = [
   {
     id: 10,
     name: 'Manganese Steel',
-    category: 'Ferrous Metal',
+    category: 'Ferrous',
     description: 'High-alloy manganese steel scrap (Hadfield steel). Meticulously sorted from industrial crusher and mining equipment.',
     specs: ['Manganese: 11-14%', 'Type: Work-hardened', 'Purity: Solid'],
     image: '/manganese-steel.webp'
@@ -145,34 +145,25 @@ export function Products() {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Back Nav */}
-      <div className="sticky top-16 md:top-20 z-40 bg-white/80 backdrop-blur-sm border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-4">
-          <Link 
-            to="/" 
-            className="inline-flex items-center gap-2 text-slate-500 hover:text-[#991b1b] transition-colors font-bold uppercase tracking-widest text-[10px] group"
-          >
-            <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
-            HOME
-          </Link>
-        </div>
-      </div>
-
-
-      {/* Catalog Filter */}
-      <section className="py-6 md:py-12 border-b border-slate-100 sticky top-[104px] md:top-[128px] z-30 bg-white/95 backdrop-blur-md">
+      {/* Catalog Header & Filter */}
+      <section className="pt-6 md:pt-8 pb-12 bg-white transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-4 md:gap-8">
-            <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Filter:</span>
-            <div className="flex gap-4">
+          <div className="flex flex-col items-center gap-8">
+             {/* Main Title Synchronized - Refined Size */}
+            <h1 className="text-3xl md:text-4xl font-black text-slate-900 text-center tracking-tight">
+              Product <span className="text-[#dc2626]">Catalog</span>
+            </h1>
+
+            {/* Enhanced Pill Filters - Refined Size */}
+            <div className="flex flex-wrap justify-center gap-3">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-6 py-2 text-[10px] font-black uppercase tracking-widest transition-all ${
+                  className={`px-6 md:px-8 py-2.5 text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] transition-all rounded-full border ${
                     activeCategory === cat 
-                      ? 'bg-[#991b1b] text-white shadow-xl shadow-[#991b1b]/20' 
-                      : 'bg-slate-50 text-slate-500 hover:bg-slate-100 border border-slate-100'
+                      ? 'bg-[#dc2626] text-white border-[#dc2626] shadow-lg shadow-[#dc2626]/20 scale-105' 
+                      : 'bg-white text-slate-400 hover:text-slate-900 border-slate-100 hover:border-slate-300'
                   }`}
                 >
                   {cat}
@@ -184,12 +175,8 @@ export function Products() {
       </section>
 
       {/* Product Grid */}
-      <section className="py-24 bg-slate-50/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4 mb-16">
-            <div className="h-px w-12 bg-slate-200"></div>
-            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-slate-400">Primary Ferrous & Non-Ferrous Material Catalog</h2>
-          </div>
+      <section className="pb-24 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             <AnimatePresence mode="popLayout">
               {filteredProducts.map((product) => (

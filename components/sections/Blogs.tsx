@@ -75,27 +75,9 @@ const blogPosts = [
 export function Blogs() {
   return (
     <div className="bg-white min-h-screen">
-      {/* Back Nav */}
-      <div className="sticky top-16 md:top-20 z-40 bg-white/80 backdrop-blur-sm border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 md:py-4">
-          <Link 
-            to="/" 
-            className="inline-flex items-center gap-2 text-slate-500 hover:text-[#991b1b] transition-colors font-bold uppercase tracking-widest text-[10px] group"
-          >
-            <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-1" />
-            HOME
-          </Link>
-        </div>
-      </div>
-
       {/* Blog Grid */}
-      <section className="py-24 bg-mesh bg-grid relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-px bg-slate-200" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex items-center gap-4 mb-16">
-            <div className="h-px w-12 bg-slate-200"></div>
-            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-slate-400">Industrial Steel Recycling & Global Market Archive</h2>
-          </div>
+      <section className="pt-24 pb-24 bg-mesh bg-grid relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {blogPosts.map((post, index) => (
               <motion.article 
@@ -116,7 +98,7 @@ export function Blogs() {
                       {post.category}
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-10">
-                       <span className="text-white font-black text-xs uppercase tracking-[0.3em] flex items-center gap-3">
+                       <span className="text-white font-black text-xs tracking-[0.3em] flex items-center gap-3">
                           Read Analysis <ArrowUpRight className="w-4 h-4" />
                        </span>
                     </div>
@@ -135,7 +117,7 @@ export function Blogs() {
                     <p className="text-slate-500 text-sm font-light leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
-                    <div className="pt-4 flex items-center gap-2 text-slate-900 font-black text-[10px] uppercase tracking-[0.2em] group-hover:gap-4 transition-all">
+                    <div className="pt-4 flex items-center gap-2 text-slate-900 font-black text-[10px] tracking-[0.2em] group-hover:gap-4 transition-all">
                       Full Analysis <ChevronRight className="w-4 h-4 text-[#991b1b]" />
                     </div>
                   </div>

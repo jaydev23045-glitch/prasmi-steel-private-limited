@@ -6,7 +6,7 @@ export default function WhatWeDo() {
   const processes = [
     {
       id: "proc_01",
-      title: "WE BUY",
+      title: "We Buy",
       description: "We buy ferrous and non-ferrous metal scrap, managing a high-density network of acquisition across international markets with absolute transparency.",
       icon: Package,
       image: "/webuy.webp",
@@ -14,7 +14,7 @@ export default function WhatWeDo() {
     },
     {
       id: "proc_02",
-      title: "WE PROCESS",
+      title: "We Process",
       description: "We do sizing, segregation, and precision sorting to ensure maximum purity, delivering high-fidelity recycling solutions for global foundries.",
       icon: Layers,
       image: "/weprocess.webp",
@@ -22,7 +22,7 @@ export default function WhatWeDo() {
     },
     {
       id: "proc_03",
-      title: "WE SELL",
+      title: "We Sell",
       description: "We sell ferrous and non-ferrous materials, leveraging market intelligence to provide our partners with a definitive edge.",
       icon: BarChart3,
       image: "/wesell.webp",
@@ -66,9 +66,9 @@ export default function WhatWeDo() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-7xl font-black text-white uppercase tracking-tightest"
+            className="text-5xl sm:text-7xl font-black text-white tracking-tightest"
           >
-            What We Do
+            What <span className="text-[#dc2626]">We Do</span>
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0 }}
@@ -97,11 +97,6 @@ export default function WhatWeDo() {
             >
             {/* Top Section: Operational Visual - Matched with Product Theme */}
             <div className="relative aspect-[3/4] overflow-hidden bg-slate-100">
-              <div className="absolute top-4 left-4 z-20">
-                <div className="bg-white/90 backdrop-blur-md px-3 py-1 border border-slate-200 shadow-sm text-[8px] font-bold uppercase tracking-widest text-slate-900">
-                  PROCESS 0{index + 1}
-                </div>
-              </div>
               <img 
                 src={process.image} 
                 alt={process.title}
@@ -113,7 +108,7 @@ export default function WhatWeDo() {
             {/* Bottom Section: Operational Content - 1:1 Product Card Parity */}
             <div className="p-8 flex-1 flex flex-col bg-white">
               <div className="mb-6">
-                <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter mb-2 group-hover:text-[#991b1b] transition-colors">
+                <h3 className="text-2xl font-black text-slate-900 tracking-tighter mb-2 group-hover:text-[#991b1b] transition-colors">
                   {process.title}
                 </h3>
                 <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -132,15 +127,13 @@ export default function WhatWeDo() {
           ))}
         </div>
 
-        {/* Dynamic Supply Chain Mission Statement */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
           className="mt-32 text-center flex flex-col items-center"
         >
-          <div className="h-px w-16 bg-[#dc2626] mb-8" />
+          <div className="h-px w-12 bg-[#dc2626] mb-8" />
           <p className="text-xl sm:text-3xl font-black text-slate-900 tracking-tightest max-w-4xl leading-[1.3]">
             We don’t just move material — <br />
             we <span className="text-[#dc2626]">manage relationships</span> and <span className="text-[#dc2626]">optimize</span> the entire supply chain.

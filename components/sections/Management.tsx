@@ -36,7 +36,7 @@ export default function Leadership() {
                 </div>
                 
                 <div className="space-y-12">
-                  <p className="text-slate-900 text-3xl sm:text-4xl font-black leading-tight tracking-tight uppercase">
+                  <p className="text-slate-900 text-3xl sm:text-4xl font-black leading-tight tracking-tight">
                     PRACTICAL KNOWLEDGE <br />
                     <span className="text-[#dc2626]">MEETS GLOBAL SCALE</span>
                   </p>

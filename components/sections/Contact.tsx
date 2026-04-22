@@ -4,98 +4,59 @@ import { Phone, Mail, MapPin, Globe, Shield, Clock, Building2 } from 'lucide-rea
 
 export function Contact() {
   return (
-    <div className="bg-mesh bg-grid min-h-screen relative overflow-hidden">
-      {/* Decorative Background Element */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full opacity-[0.03] pointer-events-none -z-10 rotate-12 scale-150">
-        <img src="/favicon.png" alt="Prasmi Steel Contact Watermark" className="w-full h-full object-contain" />
-      </div>
-      
-      {/* Header Space */}
-      <div className="h-20" />
-
-      {/* Hero Section */}
-      <section className="py-24 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter text-center mb-24 uppercase">
-            Contact <span className="text-[#991b1b]">Us</span>
+    <div className="bg-white min-h-screen relative flex flex-col">
+      {/* Main Content Section */}
+      <section className="pt-12 md:pt-16 flex-1 flex flex-col pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          {/* Main Title Synchronized - Refined Size */}
+          <h1 className="text-3xl md:text-4xl font-black text-slate-900 text-center mb-10 tracking-tight">
+            Contact <span className="text-[#dc2626]">Us</span>
           </h1>
 
-          <div className="grid lg:grid-cols-2 gap-20 items-start">
-
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left Column: Contact Details */}
-            <motion.div 
-               initial={{ opacity: 0, x: -30 }}
-               animate={{ opacity: 1, x: 0 }}
-               className="space-y-16"
-            >
-              {/* Regional Offices */}
-              <div className="grid sm:grid-cols-2 gap-12">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-[#991b1b] mb-4">
-                    <Globe className="w-5 h-5" />
-                    <span className="text-xs font-black uppercase tracking-[0.3em]">Registered Office & Works:</span>
-                  </div>
-                  <h3 className="text-xl font-black text-slate-900 tracking-tight underline decoration-[#991b1b]/30 decoration-4 underline-offset-8 mb-6 uppercase">Rajkot</h3>
-                  <address className="not-italic text-sm text-slate-600 font-bold leading-relaxed uppercase tracking-wider" itemScope itemType="https://schema.org/PostalAddress">
-                    <span itemProp="streetAddress">VISHAL INDUSTRIAL, PLOT NO. 16,</span><br />
-                    <span itemProp="addressLocality">KOTDA SANGANI, Piplana,</span><br />
-                    <span itemProp="addressRegion">Gujarat</span> <span itemProp="postalCode">360020</span>
+            <div className="space-y-14">
+              {/* India Section */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <h2 className="text-3xl font-black text-slate-900 tracking-tight">India</h2>
+                  <div className="h-px flex-1 bg-slate-100" />
+                </div>
+                <div className="space-y-3">
+                  <p className="text-[#dc2626] font-bold text-sm uppercase tracking-[0.2em]">Registered Office & Works</p>
+                  <address className="not-italic text-lg text-slate-600 leading-relaxed max-w-md font-medium">
+                    Prasmi Steel Private Limited.<br />
+                    Vishal Industrial, Plot No. 16, Kotda Sangani, Piplana, Rajkot 360020, Gujarat, India.
                   </address>
                 </div>
               </div>
 
-              {/* Direct Communication */}
-              <div className="space-y-12 pt-12 border-t border-slate-50">
-                <div className="group">
-                  <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4">Direct Line</h4>
-                  <div className="flex items-center gap-6">
-                    <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-[#991b1b] transition-all duration-500">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                    <a href="tel:+919586633799" className="text-2xl font-black text-slate-900 tracking-tighter hover:text-[#991b1b] transition-colors" itemProp="telephone">
-                      +91 9586633799
-                    </a>
-                  </div>
+              {/* Communication Hub */}
+              <div className="grid sm:grid-cols-2 gap-12 pt-12 border-t border-slate-100">
+                {/* Call Us */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-black text-slate-900 tracking-tight">
+                    Call <span className="text-[#dc2626]">Us</span>
+                  </h2>
+                  <a href="tel:+919586633799" className="inline-block text-xl font-bold text-slate-700 hover:text-[#dc2626] transition-colors tracking-tight">
+                    +91 9586633799
+                  </a>
                 </div>
 
-                <div className="flex flex-col gap-12 pt-12 border-t border-slate-50">
-                  <div className="group">
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4">Official Email</h4>
-                    <div className="flex items-center gap-6">
-                      <div className="w-12 h-12 bg-slate-900 flex items-center justify-center text-white scale-90 group-hover:scale-100 group-hover:bg-[#991b1b] transition-all duration-500">
-                        <Mail className="w-5 h-5" />
-                      </div>
-                      <a href="mailto:prasmisteel@gmail.com" className="text-xl sm:text-2xl font-black text-slate-900 tracking-tighter hover:text-[#991b1b] transition-colors break-all">
-                        prasmisteel@gmail.com
-                      </a>
-                    </div>
-                  </div>
+                {/* Email Us */}
+                <div className="space-y-4">
+                  <h2 className="text-2xl font-black text-slate-900 tracking-tight">
+                    Email <span className="text-[#dc2626]">Us</span>
+                  </h2>
+                  <a href="mailto:prasmisteel@gmail.com" className="inline-block text-lg font-bold text-slate-700 hover:text-[#dc2626] transition-colors break-all tracking-tight">
+                    prasmisteel@gmail.com
+                  </a>
                 </div>
               </div>
+            </div>
 
-              {/* Operational Status */}
-              <div className="grid sm:grid-cols-3 gap-8 pt-12 border-t border-slate-50">
-                <div className="flex items-center gap-3">
-                  <Clock className="w-4 h-4 text-[#991b1b]" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">24/7 Logistics</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Shield className="w-4 h-4 text-[#991b1b]" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">ISRI Compliant</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Building2 className="w-4 h-4 text-[#991b1b]" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-slate-900">Grade Verified</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right Column: Map */}
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="relative aspect-square lg:aspect-auto lg:h-[700px] bg-slate-100 overflow-hidden shadow-2xl border border-slate-200"
-            >
+            {/* Right Column: Map - Clean Rectangle without Overlay */}
+            <div className="relative aspect-square lg:aspect-auto lg:h-[500px] bg-slate-50 overflow-hidden shadow-2xl border border-slate-200">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2174.586197048526!2d70.86041946882847!3d22.147834272495352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2baf0857bfae69a9%3A0xe01851a10b7c13!2sPRASMI%20STEEL%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1776176080364!5m2!1sen!2sin" 
                 width="100%" 
@@ -104,13 +65,9 @@ export function Contact() {
                 allowFullScreen={true} 
                 loading="lazy" 
                 referrerPolicy="no-referrer-when-downgrade"
-                className="grayscale hover:grayscale-0 transition-all duration-700"
+                className="brightness-[1.02] contrast-[1.05]"
               />
-              <div className="absolute bottom-10 left-10 bg-slate-900/90 backdrop-blur-md px-8 py-6 text-white border border-white/10 hidden sm:block">
-                <div className="text-[8px] font-black uppercase tracking-[0.3em] text-[#991b1b] mb-2">Visit Our Yard</div>
-                <div className="text-xl font-black tracking-tighter">Kotda Sangani Area</div>
-              </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
