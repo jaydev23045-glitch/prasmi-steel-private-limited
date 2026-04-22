@@ -76,7 +76,7 @@ export function Blogs() {
   return (
     <div className="bg-white min-h-screen">
       {/* Blog Grid */}
-      <section className="pt-24 pb-24 bg-mesh bg-grid relative overflow-hidden">
+      <section className="pt-12 pb-24 bg-mesh bg-grid relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {blogPosts.map((post, index) => (

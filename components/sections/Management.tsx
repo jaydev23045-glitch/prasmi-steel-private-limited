@@ -5,21 +5,25 @@ import { Link } from 'react-router-dom';
 export default function Leadership() {
   return (
     <div className="bg-white min-h-screen selection:bg-[#dc2626] selection:text-white overflow-x-hidden">
-      {/* VVIP White Atmospheric System */}
-      <div className="fixed inset-0 pointer-events-none -z-10">
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#dc2626]/5 blur-[150px] rounded-full opacity-60" />
-        <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-slate-100/50 blur-[150px] rounded-full" />
-        {/* Subtle Technical Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.4]" 
-             style={{ backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
-      </div>
 
 
 
-      {/* Executive Spotlight Section (VVIP Smooth White Architecture) */}
-      <section className="relative py-48 bg-[#f8fafc] overflow-hidden">
+
+      {/* Leadership Profile Header - Synchronized with Product/Contact */}
+      <section className="pt-6 md:pt-8 pb-12 bg-white transition-all duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center">
+            <h1 className="text-3xl md:text-4xl font-black text-slate-900 text-center tracking-tight">
+              Leadership <span className="text-[#dc2626]">Profile</span>
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Profile Grid Section */}
+      <section className="relative pb-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-32 items-center">
+          <div className="grid lg:grid-cols-2 gap-20 lg:gap-32 items-start">
             
             {/* Left Column: Semantic Content Block */}
             <motion.div 
@@ -27,19 +31,13 @@ export default function Leadership() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1.2 }}
-              className="space-y-16"
+              className="space-y-12"
             >
-              <div className="space-y-8">
-                <div className="flex items-center gap-4">
-                  <span className="text-slate-900 font-black tracking-[0.6em] text-[10px] uppercase">MANAGING_DIRECTOR_PROFILE</span>
-                  <div className="h-px flex-1 bg-slate-200" />
-                </div>
-                
-                <div className="space-y-12">
-                  <p className="text-slate-900 text-3xl sm:text-4xl font-black leading-tight tracking-tight">
-                    PRACTICAL KNOWLEDGE <br />
-                    <span className="text-[#dc2626]">MEETS GLOBAL SCALE</span>
-                  </p>
+              <div className="space-y-12">
+                <p className="text-slate-900 text-3xl sm:text-4xl font-black leading-tight tracking-tight">
+                  Practical Knowledge <br />
+                  <span className="text-[#dc2626]">Meets Global Scale</span>
+                </p>
                   
                   <div className="space-y-8 border-l border-[#dc2626]/20 pl-10">
                     <p className="text-slate-900 text-lg leading-relaxed tracking-wide font-bold">
@@ -55,8 +53,6 @@ export default function Leadership() {
                     </p>
                   </div>
                 </div>
-              </div>
-
             </motion.div>
 
             {/* Right Column: High-Fidelity HARSHIL Portrait Asset */}

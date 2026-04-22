@@ -83,7 +83,7 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         {/* Process Grid */}
         <div className="grid lg:grid-cols-3 gap-12">
           {processes.map((process, index) => (
@@ -133,7 +133,7 @@ export default function WhatWeDo() {
           viewport={{ once: true }}
           className="mt-32 text-center flex flex-col items-center"
         >
-          <div className="h-px w-12 bg-[#dc2626] mb-8" />
+          <div className="h-px w-16 bg-[#dc2626] mb-8" />
           <p className="text-xl sm:text-3xl font-black text-slate-900 tracking-tightest max-w-4xl leading-[1.3]">
             We don’t just move material — <br />
             we <span className="text-[#dc2626]">manage relationships</span> and <span className="text-[#dc2626]">optimize</span> the entire supply chain.
