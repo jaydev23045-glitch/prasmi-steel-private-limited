@@ -127,7 +127,7 @@ export default function WhyChooseUs() {
                 {/* Bottom Section: Strategic Content - 1:1 Product Card Parity */}
                 <div className="p-8 flex-1 flex flex-col bg-white">
                   <div className="mb-6">
-                    <h3 className="text-2xl font-black text-slate-900 tracking-tighter mb-2 group-hover:text-[#991b1b] transition-colors">
+                    <h3 className="text-2xl font-black text-slate-900 tracking-tighter mb-2 group-hover:text-[#dc2626] transition-colors">
                       {pillar.title}
                     </h3>
                     <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -136,7 +136,7 @@ export default function WhyChooseUs() {
                   </div>
                   
                   <div className="mt-auto">
-                    <button className="w-full py-4 bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#991b1b] transition-colors flex items-center justify-between px-6 group/btn">
+                    <button className="w-full py-4 bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#dc2626] transition-colors flex items-center justify-between px-6 group/btn">
                       <span>Excellence Standard</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
                     </button>

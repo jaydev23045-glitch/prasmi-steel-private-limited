@@ -13,7 +13,7 @@ const blogPosts = [
     date: "April 14, 2026",
     readTime: "7 min read",
     image: "/industrial-growth.webp",
-    color: "bg-[#991b1b]"
+    color: "bg-[#dc2626]"
   },
   {
     id: 2,
@@ -35,7 +35,7 @@ const blogPosts = [
     date: "March 12, 2026",
     readTime: "6 min read",
     image: "/smelting-efficiency.webp",
-    color: "bg-[#991b1b]"
+    color: "bg-[#dc2626]"
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ const blogPosts = [
     date: "February 10, 2026",
     readTime: "6 min read",
     image: "/c.webp",
-    color: "bg-[#991b1b]"
+    color: "bg-[#dc2626]"
   },
   {
     id: 6,
@@ -92,29 +92,33 @@ export function Blogs() {
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-110"
+                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors duration-700" />
                     <div className={`absolute top-0 right-0 ${post.color} text-white px-6 py-3 font-black text-[10px] uppercase tracking-widest`}>
                       {post.category}
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-10">
+                       <span className="text-white font-black text-xs tracking-[0.3em] flex items-center gap-3">
+                          Read Analysis <ArrowUpRight className="w-4 h-4" />
+                       </span>
                     </div>
                   </div>
 
                   <div className="space-y-4">
                     <div className="flex items-center gap-6 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                       <span className="flex items-center gap-2">
-                         <Clock className="w-3 h-3 text-[#991b1b]" /> {post.readTime}
+                         <Clock className="w-3 h-3 text-[#dc2626]" /> {post.readTime}
                       </span>
                       <span>{post.date}</span>
                     </div>
-                    <h3 className="text-2xl font-black text-slate-900 tracking-tight leading-tight group-hover:text-[#991b1b] transition-colors">
+                    <h3 className="text-2xl font-black text-slate-900 tracking-tight leading-tight group-hover:text-[#dc2626] transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-slate-500 text-sm font-light leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
                     <div className="pt-4 flex items-center gap-2 text-slate-900 font-black text-[10px] tracking-[0.2em] group-hover:gap-4 transition-all">
-                      Full Analysis <ChevronRight className="w-4 h-4 text-[#991b1b]" />
+                      Full Analysis <ChevronRight className="w-4 h-4 text-[#dc2626]" />
                     </div>
                   </div>
                 </Link>

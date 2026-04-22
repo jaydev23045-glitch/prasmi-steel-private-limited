@@ -206,7 +206,7 @@ export function Products() {
                   {/* Content */}
                   <div className="p-8 space-y-6">
                     <div>
-                      <h3 className="text-2xl font-black text-slate-900 tracking-tighter mb-2 group-hover:text-[#991b1b] transition-colors">
+                      <h3 className="text-2xl font-black text-slate-900 tracking-tighter mb-2 group-hover:text-[#dc2626] transition-colors">
                         {product.name}
                       </h3>
                       <p className="text-sm text-slate-500 font-light leading-relaxed">
@@ -217,7 +217,7 @@ export function Products() {
 
                     <button 
                       onClick={() => handleRequestQuote(product)}
-                      className="w-full py-4 bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#991b1b] transition-colors flex items-center justify-center gap-2 group/btn"
+                      className="w-full py-4 bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#dc2626] transition-colors flex items-center justify-center gap-2 group/btn"
                     >
                       Request Quote
                       <Zap className="w-3 h-3 transition-transform group-hover/btn:translate-x-1" />

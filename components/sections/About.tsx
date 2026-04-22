@@ -18,8 +18,19 @@ export function About() {
               Right Scrap, <br/> Right Composition, <br/> Right Results.
             </h2>
             
+            <h3 className="text-sm font-black uppercase tracking-[0.4em] text-slate-500 mb-6 group-hover:text-[#dc2626] transition-colors">
+              One <span className="text-[#dc2626]">Right Way</span>:
+            </h3>
+
+            <motion.div 
+              initial={{ opacity: 0, width: 0 }}
+              whileInView={{ opacity: 1, width: 64 }}
+              viewport={{ once: true }}
+              className="h-1.5 bg-[#dc2626] mb-12"
+            />
+
             <div className="space-y-6 text-xl text-slate-600 leading-relaxed font-normal max-w-xl">
-              <p className="border-l-4 border-slate-200 pl-6 py-2">
+              <p className="border-l-4 border-[#dc2626] pl-6 py-2">
                 With expertise in sizing, sorting, segregation, and cleaning, our experienced team delivers a reliable supply that you can trust for all your needs.
               </p>
             </div>
