@@ -89,51 +89,45 @@ export default function WhatWeDo() {
           {processes.map((process, index) => (
             <motion.div
               key={process.id}
-              initial={{ opacity: 0, y: 50, rotateX: -10 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 1 }}
-              className="group relative h-[650px] overflow-hidden bg-[#f8fafc] border border-slate-100 shadow-sm"
+              transition={{ delay: index * 0.2, duration: 0.8 }}
+              className="group flex flex-col bg-white border border-slate-200 shadow-sm transition-all hover:shadow-xl hover:-translate-y-1"
             >
-              {/* Background Reveal Logic - Visceral Blood Reveal */}
-              <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#991b1b] via-[#991b1b]/95 to-[#991b1b]/60 opacity-0 group-hover:opacity-100 z-10 transition-all duration-700 mix-blend-multiply" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/60 z-20 transition-colors duration-700" />
-                <img 
-                  src={process.image} 
-                  alt={process.title}
-                  className="w-full h-full object-cover grayscale transition-all duration-1000 scale-100 group-hover:scale-110 group-hover:grayscale-0"
-                />
-              </div>
-
-              {/* High-Impact Content Overlay */}
-              <div className="relative z-30 h-full p-12 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-12">
-                    <process.icon className="w-8 h-8 text-[#991b1b] group-hover:text-white transition-colors duration-500" />
-                    <span className="text-slate-200 text-6xl font-black group-hover:text-white/20 transition-colors">0{index + 1}</span>
-                  </div>
-                  
-                  <div className="space-y-6">
-                    <h3 className="text-5xl font-black text-slate-900 group-hover:text-white mb-6 uppercase tracking-tightest leading-none transition-colors duration-500">
-                      {process.title.split(' ')[0]} <br />
-                      <span className="text-[#991b1b] group-hover:text-white">{process.title.split(' ')[1]}</span>
-                    </h3>
-                    
-                    <div className="h-1.5 w-16 bg-[#991b1b] group-hover:bg-white transition-all duration-500" />
-                    
-                    <p className="text-slate-500 group-hover:text-white max-w-[280px] text-[15px] font-normal leading-relaxed tracking-wide opacity-100 transition-colors duration-500">
-                      {process.description}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4 text-slate-900 group-hover:text-white transition-colors">
-                  <span className="text-[10px] font-black uppercase tracking-[0.4em]">Operational Pillar</span>
-                  <div className="h-px flex-1 bg-slate-900/10 group-hover:bg-white/30 transition-colors" />
-                  <ArrowRight className="w-4 h-4 transform group-hover:translate-x-2 transition-transform" />
+            {/* Top Section: Operational Visual - Matched with Product Theme */}
+            <div className="relative aspect-[3/4] overflow-hidden bg-slate-100">
+              <div className="absolute top-4 left-4 z-20">
+                <div className="bg-white/90 backdrop-blur-md px-3 py-1 border border-slate-200 shadow-sm text-[8px] font-bold uppercase tracking-widest text-slate-900">
+                  PROCESS 0{index + 1}
                 </div>
               </div>
+              <img 
+                src={process.image} 
+                alt={process.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors" />
+            </div>
+
+            {/* Bottom Section: Operational Content - 1:1 Product Card Parity */}
+            <div className="p-8 flex-1 flex flex-col bg-white">
+              <div className="mb-6">
+                <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter mb-2 group-hover:text-[#991b1b] transition-colors">
+                  {process.title}
+                </h3>
+                <p className="text-sm text-slate-500 font-light leading-relaxed">
+                  {process.description}
+                </p>
+              </div>
+              
+              <div className="mt-auto">
+                <button className="w-full py-4 bg-slate-900 text-white font-black uppercase tracking-[0.2em] text-[10px] hover:bg-[#991b1b] transition-colors flex items-center justify-between px-6 group/btn">
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em]">Operational Pillar</span>
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                </button>
+              </div>
+            </div>
             </motion.div>
           ))}
         </div>
