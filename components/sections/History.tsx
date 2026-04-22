@@ -75,7 +75,7 @@ export default function History() {
               {
                 id: "vision",
                 title: "Our Vision",
-                desc: "A waste-free future where scrap becomes sustainable resources for global manufacturing.",
+                desc: "A waste-free future where scrap becomes sustainable resources.",
                 icon: Globe,
                 image: "/vision.png"
               },
@@ -87,9 +87,9 @@ export default function History() {
                 image: "/mission.png"
               },
               {
-                id: "values",
-                title: "Our Values",
-                desc: "Building long-term relationships through trust, reliability, and continuous industry innovation.",
+                id: "believe",
+                title: "Our Believe",
+                desc: "Build long-term relationships through trust, reliability, and continuous industry innovation.",
                 icon: ShieldCheck,
                 image: "/values.png"
               }

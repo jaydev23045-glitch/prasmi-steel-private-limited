@@ -116,7 +116,7 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
           <div className="hidden lg:flex items-center">
             <button 
               onClick={handleWhatsAppInquiry}
-              className="bg-slate-800 hover:bg-slate-900 text-white rounded px-8 py-3 text-[11px] font-black uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-md"
+              className="bg-slate-900 hover:bg-[#dc2626] text-white rounded-full px-10 py-3.5 text-[10px] font-black uppercase tracking-[0.2em] transition-all hover:scale-105 active:scale-95 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.3)] shadow-[#dc2626]/20 group"
             >
               Get In Touch
             </button>

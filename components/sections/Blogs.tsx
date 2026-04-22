@@ -92,15 +92,11 @@ export function Blogs() {
                     <img 
                       src={post.image} 
                       alt={post.title}
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-110"
                     />
+                    <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors duration-700" />
                     <div className={`absolute top-0 right-0 ${post.color} text-white px-6 py-3 font-black text-[10px] uppercase tracking-widest`}>
                       {post.category}
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-10">
-                       <span className="text-white font-black text-xs tracking-[0.3em] flex items-center gap-3">
-                          Read Analysis <ArrowUpRight className="w-4 h-4" />
-                       </span>
                     </div>
                   </div>
 

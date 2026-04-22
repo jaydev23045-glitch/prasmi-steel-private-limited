@@ -25,26 +25,25 @@ export function About() {
             </div>
           </motion.div>
           
-          {/* Right Media Column */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1 }}
             className="relative"
           >
-            <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-2xl group cursor-pointer bg-slate-900">
+            <div className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-[0_40px_80px_-15px_rgba(0,0,0,0.3)] group cursor-pointer bg-slate-900 border-[8px] border-white">
               <img
                 src="/a.webp"
                 alt="Industrial Metallurgy"
-                className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105 group-hover:opacity-100"
+                className="w-full h-full object-cover brightness-110 contrast-105 transition-transform duration-1000 group-hover:scale-110"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-60 group-hover:opacity-30 transition-opacity"></div>
             </div>
             
-            {/* Subtle Gradient Glow behind video */}
-            <div className="absolute -inset-4 bg-blue-500/10 blur-3xl -z-10 rounded-full"></div>
+            {/* Subtle Industrial Glow behind image */}
+            <div className="absolute -inset-10 bg-[#dc2626]/5 blur-[100px] -z-10 rounded-full animate-pulse-soft"></div>
           </motion.div>
         </div>
       </div>
