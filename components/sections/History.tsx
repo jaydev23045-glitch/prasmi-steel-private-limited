@@ -57,9 +57,9 @@ export default function History() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="pl-8 py-6 border-l-4 border-slate-900 bg-slate-900 shadow-xl"
+                  className="pl-8 py-4 border-l-4 border-[#dc2626] bg-slate-50 shadow-sm"
                 >
-                  <p className="text-white font-bold text-lg italic leading-relaxed">
+                  <p className="text-slate-900 font-bold text-xl leading-relaxed">
                     "At our core, we’re more than just Buyer, Recycler, or Supplier — we’re sustainability enablers"
                   </p>
                 </motion.div>

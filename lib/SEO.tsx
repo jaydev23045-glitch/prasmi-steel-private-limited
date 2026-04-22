@@ -203,6 +203,9 @@ export function SEO() {
     const pageTitles: Record<string, string> = {
       '/': 'Prasmi Steel Private Limited | Ferrous, Non-Ferrous & Cast Iron Metal Scrap Supply',
       '/about': 'About Prasmi Steel | Leading Industrial Scrap Supplier',
+      '/management': 'Leadership & Vision | Prasmi Steel Management Team',
+      '/what-we-do': 'Our Operations | Industrial Metal Scrap Solutions',
+      '/why-choose-us': 'Why Choose Prasmi Steel | Premium Quality & Reliability',
       '/products': 'Prasmi Steel | Premium Ferrous & Non-Ferrous Catalog',
       '/blogs': 'Prasmi Steel Journal | Industrial Insights & Reports',
       '/contact': 'Contact Prasmi Steel | Global Logistics & Support',
@@ -211,6 +214,9 @@ export function SEO() {
     const pageDescriptions: Record<string, string> = {
       '/': 'Prasmi Steel Private Limited is a global leader in industrial material sourcing, providing a premium supply of ferrous, non-ferrous, and cast iron metal scrap solutions.',
       '/about': 'Learn about Prasmi Steel Private Limited, our industrial heritage, and our commitment to supplying high-quality metal scrap to global partners.',
+      '/management': 'Meet the leadership team at Prasmi Steel Private Limited, dedicated to industrial excellence and global metal trade innovation.',
+      '/what-we-do': 'Discover our comprehensive industrial operations, from material sourcing and grading to global logistics and sustainable recycling.',
+      '/why-choose-us': 'Understand why Prasmi Steel is the preferred partner for high-grade metal scrap, focusing on grading precision and supply chain reliability.',
       '/products': 'Explore the Prasmi Steel material catalog featuring premium ferrous and non-ferrous scrap, including HMS 1 & 2, Manganese Steel, and Aluminum.',
       '/blogs': 'Read industrial insights and market reports on metal scrap recycling, smelting efficiency, and global trade trends from Prasmi Steel experts.',
       '/contact': 'Contact Prasmi Steel Private Limited for global logistics support and inquiries about our ferrous and non-ferrous metal scrap supply chains.',

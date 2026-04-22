@@ -9,28 +9,28 @@ export default function WhyChooseUs() {
       id: "01",
       title: "Bulk Scrap Trading",
       desc: "Always ready to Buy & sell scrap materials in bulk.",
-      image: "/strategic_partnership_png_1776690083855.png",
+      image: "/bulk_scrap_trading.webp",
       icon: Handshake
     },
     {
       id: "02",
       title: "End-to-End Logistics",
       desc: "Seamless end-to-end logistics—from local deliveries to global shipping, all under one trusted partner.",
-      image: "/logistics_excellence_png_1776684229894.png", // Corrected image route
+      image: "/logistics_excellence.webp", // Corrected image route
       icon: Globe
     },
     {
       id: "03",
       title: "Material Grading & Sorting",
       desc: "Accurate grading and expertly sorted materials ensure consistent quality you can rely on.",
-      image: "/grading_precision_png_1776688737238.png",
+      image: "/material_grading.webp",
       icon: ShieldCheck
     },
     {
       id: "04",
       title: "Sustainable Practices",
       desc: "Committed to sustainable practices with full environmental compliance at every stage.",
-      image: "/sustainability_scrap_png_1776688756276.png",
+      image: "/sustainable_practices.webp",
       icon: Recycle
     }
   ];
@@ -38,6 +38,20 @@ export default function WhyChooseUs() {
   return (
     <div className="bg-white min-h-screen selection:bg-[#dc2626] selection:text-white overflow-x-hidden">
       
+      {/* VVIP Atmospheric System - Light Mode */}
+      <div className="fixed inset-0 pointer-events-none -z-10">
+        <div className="absolute inset-0 bg-white" />
+        <div className="absolute inset-0 opacity-[0.03] grayscale contrast-125 transition-opacity duration-1000 mix-blend-multiply">
+          <img 
+            src="/Users/jaydevnakum/.gemini/antigravity/brain/aa351030-9f4c-46dc-a127-b00d16354305/industrial_terminal_aerial_background_1776511188576_1776513150152.png" 
+            className="w-full h-full object-cover"
+            alt="Atmospheric Core"
+          />
+        </div>
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-slate-100/50 blur-[150px] rounded-full" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#dc2626]/5 blur-[150px] rounded-full opacity-60" />
+      </div>
+
       {/* Cinematic Hero Banner */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
