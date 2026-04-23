@@ -41,6 +41,10 @@ export function CorporateDetails() {
             Our operational strength lies in our deep understanding of the global metal market's logistical complexities. Connecting high-volume scrap generation hubs with strategic consumption points, we maintain a reputation for absolute reliability worldwide.
           </p>
 
+          <p>
+            The core of our success is our dedicated team of Metallurgy Professionals and Skilled Labourers. Their collective expertise allows us to process hundreds of metric tons of specialized scrap annually, maintaining high purity levels even in complex multi-alloy streams. By leveraging advanced segregation techniques, we help our clients boost their scrap turnaround efficiency, reducing the reliance on virgin ores.
+          </p>
+
           <p className="font-bold text-slate-900 border-l-2 border-[#dc2626] pl-8 py-6 bg-slate-50 shadow-sm italic">
             "The core of our success is our dedicated team and high-precision processing standards."
           </p>
