@@ -56,6 +56,8 @@ export default function WhatWeDo() {
             animate={{ scale: 1 }}
             transition={{ duration: 1.5, ease: "easeOut" }}
             src="/OP.webp" 
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover brightness-110 contrast-115 saturate-[1.1]"
             alt="Operational Infrastructure"
           />
@@ -100,6 +102,8 @@ export default function WhatWeDo() {
               <img 
                 src={process.image} 
                 alt={process.title}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors" />

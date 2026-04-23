@@ -54,7 +54,14 @@ export function Header({ isMobileMenuOpen, setIsMobileMenuOpen, navLinks }: Head
             className="flex-shrink-0 flex items-center gap-3 cursor-pointer group"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <img src="/logo-premium.png" alt="Prasmi Steel Logo" className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform group-hover:scale-110 duration-300" />
+            <img 
+              src="/logo-premium.png" 
+              alt="Prasmi Steel Logo" 
+              width={112}
+              height={112}
+              decoding="async"
+              className="w-12 h-12 md:w-14 md:h-14 object-contain transition-transform group-hover:scale-110 duration-300" 
+            />
             <div className="flex flex-col">
               <span className="font-black text-2xl md:text-3xl tracking-tighter text-slate-900 leading-none">
                 Prasmi<span className="text-[#dc2626]">Steel</span>

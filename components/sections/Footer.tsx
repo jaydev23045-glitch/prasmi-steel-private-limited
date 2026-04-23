@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { MapPin, Mail, Globe, Phone } from 'lucide-react';
 import { LegalModal } from '@/components/ui/LegalModal';
 import { Link } from 'react-router-dom';
+import { EmailLink } from '@/components/ui/EmailLink';
 
 export function Footer() {
   const [modal, setModal] = useState<'privacy' | 'terms' | null>(null);
@@ -13,7 +14,14 @@ export function Footer() {
           <div className="grid md:grid-cols-12 gap-16 mb-20">
             <div className="md:col-span-5">
               <Link to="/#home" onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })} className="flex items-center gap-4 mb-8 cursor-pointer group">
-                <img src="/logo-premium.png" alt="Prasmi Steel Logo" className="w-12 h-12 object-contain grayscale-0 brightness-110 transition-transform group-hover:scale-110" />
+                <img 
+                  src="/logo-premium.png" 
+                  alt="Prasmi Steel Logo" 
+                  width={96}
+                  height={96}
+                  decoding="async"
+                  className="w-12 h-12 object-contain grayscale-0 brightness-110 transition-transform group-hover:scale-110" 
+                />
                 <div className="flex flex-col text-left">
                   <span className="font-black text-2xl md:text-3xl tracking-tighter text-white leading-none">
                     Prasmi<span className="text-[#dc2626]">Steel</span>
@@ -68,7 +76,7 @@ export function Footer() {
                 </li>
                 <li className="flex items-center gap-4">
                   <Mail className="w-5 h-5 text-slate-700 flex-shrink-0" />
-                  <span className="text-sm">prasmisteel@gmail.com</span>
+                  <EmailLink className="text-sm" />
                 </li>
                 <li className="flex items-center gap-4">
                   <Phone className="w-5 h-5 text-slate-700 flex-shrink-0" />
@@ -126,7 +134,7 @@ export function Footer() {
         </section>
         <section>
           <h3 className="text-white font-bold text-base mb-2">5. Your Rights</h3>
-          <p>You have the right to request access to, correction of, or deletion of the personal information we hold about you. To exercise these rights, please contact us at <span className="text-[#dc2626]">prasmisteel@gmail.com</span>.</p>
+          <p>You have the right to request access to, correction of, or deletion of the personal information we hold about you. To exercise these rights, please contact us at <span className="text-[#dc2626]"><EmailLink /></span>.</p>
         </section>
         <section>
           <h3 className="text-white font-bold text-base mb-2">6. International Transfers</h3>
@@ -141,7 +149,7 @@ export function Footer() {
           <p>For any questions regarding this Privacy Policy, contact us at:<br />
           <span className="text-white font-medium">Prasmi Steel Private Limited</span><br />
           Vishal Industrial, Plot No. 16, Kotda Sangani, Piplana, Gujarat 360020, India<br />
-          Email: <span className="text-[#dc2626]">prasmisteel@gmail.com</span><br />
+          Email: <span className="text-[#dc2626]"><EmailLink /></span><br />
           Phone: +91 9586633799</p>
         </section>
       </LegalModal>
@@ -192,7 +200,7 @@ export function Footer() {
           <h3 className="text-white font-bold text-base mb-2">10. Contact</h3>
           <p>For queries regarding these Terms, contact us at:<br />
           <span className="text-white font-medium">Prasmi Steel Private Limited</span><br />
-          Email: <span className="text-[#dc2626]">prasmisteel@gmail.com</span> &nbsp;|&nbsp; Phone: +91 9586633799</p>
+          Email: <span className="text-[#dc2626]"><EmailLink /></span> &nbsp;|&nbsp; Phone: +91 9586633799</p>
         </section>
       </LegalModal>
     </>

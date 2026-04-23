@@ -118,6 +118,8 @@ export default function WhyChooseUs() {
                 <div className="relative aspect-[3/4] overflow-hidden bg-slate-100">
                   <img 
                     src={pillar.image} 
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     alt={pillar.title}
                   />

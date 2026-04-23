@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ArrowLeft, Clock, Calendar, Quote, ChevronRight, ArrowUpRight } from 'lucide-react';
+import { EmailLink } from '@/components/ui/EmailLink';
 
 const fullPosts = {
   "scrap-metal-industry-growth": {
@@ -253,7 +254,7 @@ export function BlogPost() {
                 <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">Logistics Contact</h2>
                 <div className="space-y-4">
                   <p className="text-sm font-bold text-slate-900 tracking-tight">Prasmi Steel Private Limited</p>
-                  <a href="mailto:prasmisteel@gmail.com" className="text-sm text-[#dc2626] font-black tracking-widest hover:underline">prasmisteel@gmail.com</a>
+                  <EmailLink className="text-sm text-[#dc2626] font-black tracking-widest hover:underline" />
                 </div>
               </div>
             </div>

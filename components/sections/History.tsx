@@ -55,6 +55,8 @@ export default function History() {
               <img 
                 src="/about-hero.webp" 
                 alt="Industrial Integrity" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent" />
@@ -107,6 +109,8 @@ export default function History() {
                   <img 
                     src={pillar.image} 
                     alt={pillar.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors z-10" />

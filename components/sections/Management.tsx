@@ -69,6 +69,8 @@ export default function Leadership() {
               <img 
                 src="/HARSHIL.webp" 
                 alt="Prasmi Steel Leadership" 
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-[30s] ease-linear group-hover:scale-110"
               />
 

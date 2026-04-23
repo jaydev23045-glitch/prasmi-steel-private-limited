@@ -25,6 +25,7 @@ export function Hero() {
           alt="Prasmi Steel Global Metal Scrap Supply Chain"
           className="w-full h-full object-cover brightness-125 contrast-110 saturate-[1.1]"
           loading="eager"
+          decoding="async"
           // @ts-ignore
           fetchpriority="high"
         />

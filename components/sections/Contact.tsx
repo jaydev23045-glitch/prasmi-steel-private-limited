@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Phone, Mail, MapPin, Globe, Shield, Clock, Building2 } from 'lucide-react';
+import { EmailLink } from '@/components/ui/EmailLink';
 
 export function Contact() {
   return (
@@ -48,9 +49,9 @@ export function Contact() {
                   <h2 className="text-2xl font-black text-slate-900 tracking-tight">
                     Email <span className="text-[#dc2626]">Us</span>
                   </h2>
-                  <a href="mailto:prasmisteel@gmail.com" className="inline-block text-lg font-bold text-slate-700 hover:text-[#dc2626] transition-colors break-all tracking-tight">
-                    prasmisteel@gmail.com
-                  </a>
+                  <div className="inline-block text-lg font-bold text-slate-700 hover:text-[#dc2626] transition-colors break-all tracking-tight">
+                    <EmailLink />
+                  </div>
                 </div>
               </div>
             </div>
