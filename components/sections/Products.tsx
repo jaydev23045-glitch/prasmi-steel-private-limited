@@ -150,8 +150,8 @@ export function Products() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center gap-8">
              {/* Main Title Synchronized - Refined Size */}
-            <h1 className="text-3xl md:text-4xl font-black text-slate-900 text-center tracking-tight">
-              Product <span className="text-[#dc2626]">Catalog</span>
+            <h1 className="text-3xl md:text-4xl font-black text-slate-900 text-center tracking-tight uppercase">
+              WE DEAL <span className="text-[#dc2626]">IN</span>
             </h1>
 
             {/* Enhanced Pill Filters - Refined Size */}

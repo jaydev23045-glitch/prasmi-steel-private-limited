@@ -32,7 +32,7 @@ export default function WhyChooseUs() {
     {
       id: "05",
       title: "Global Reach, Ground Level Expertise",
-      desc: "We connect Global recycling supply chain, delivering seamless logistics from local deliveries to global shipping, all under one trusted partner.",
+      desc: "Leading the Future of Sustainable Metal Recycling, delivering seamless logistics from local deliveries to global shipping.",
       image: "/global-reach-v2.png"
     },
     {

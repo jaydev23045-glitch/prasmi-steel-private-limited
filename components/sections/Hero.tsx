@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export function Hero() {
   const handleWhatsAppInquiry = () => {
     const phoneNumber = '919586633799';
-    const message = "Hello, I'm interested in requesting a quote for your materials. Please provide more details on pricing and availability.";
+    const message = "Hello, I'm interested in becoming a supplier for Prasmi Steel. Please provide more details on how we can collaborate.";
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
   };
@@ -38,14 +38,15 @@ export function Hero() {
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-7xl mx-auto"
         >
-          <h1 className="text-[clamp(1.5rem,5.5vw,64px)] font-black text-white tracking-tightest leading-[1.1] mb-10 max-w-5xl mx-auto drop-shadow-2xl">
-            Your Trusted Partner in the <br className="hidden md:block" />
-            <span className="text-[#dc2626]">Global Recycling</span> Supply Chain
+          <h1 className="text-[clamp(1.5rem,5.5vw,64px)] font-black text-white tracking-tightest leading-[1.1] mb-10 max-w-5xl mx-auto drop-shadow-2xl uppercase">
+            Leading the Future of <br className="hidden md:block" />
+            <span className="text-[#dc2626]">Sustainable Metal</span> Recycling
           </h1>
           
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed font-light tracking-wide drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
-            From Quote to Closure – <span className="font-bold text-white italic underline decoration-[#dc2626]/40 underline-offset-8">We Stand for What We Commit.</span>
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed font-light tracking-wide drop-shadow-[0_4px_10px_rgba(0,0,0,0.8)]">
+            Delivering <span className="font-bold text-white italic underline decoration-[#dc2626]/40 underline-offset-8">consistent quality, verified materials, and reliable logistics</span> to buyers and suppliers across international markets.
           </p>
+
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
@@ -53,7 +54,7 @@ export function Hero() {
               asChild
               className="bg-[#dc2626] hover:bg-white hover:text-slate-900 text-white rounded-full px-10 h-14 text-sm font-black uppercase tracking-[0.2em] transition-all hover:scale-105 shadow-xl w-full sm:w-auto"
             >
-              <Link to="/products">Explore Products</Link>
+              <Link to="/products">Request a Quote</Link>
             </Button>
             <Button 
               size="lg" 
@@ -61,7 +62,7 @@ export function Hero() {
               onClick={handleWhatsAppInquiry}
               className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border-white/20 rounded-full px-10 h-14 text-sm font-black uppercase tracking-[0.2em] transition-all hover:scale-105 w-full sm:w-auto shadow-lg"
             >
-              Connect Now
+              Become a Supplier
             </Button>
           </div>
         </motion.div>

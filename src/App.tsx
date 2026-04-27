@@ -2,8 +2,11 @@ import { useState, lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
-import { About } from '@/components/sections/About';
 import { CorporateDetails } from '@/components/sections/CorporateDetails';
+import { NavigationGrid } from '@/components/sections/NavigationGrid';
+import { WhoWeServe } from '@/components/sections/WhoWeServe';
+import { WhatWeOfferMini } from '@/components/sections/WhatWeOfferMini';
+import { WhyUsMini } from '@/components/sections/WhyUsMini';
 import { Footer } from '@/components/sections/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { SEO } from '@/lib/SEO';
@@ -31,10 +34,11 @@ function HomePage() {
     <>
       <Hero />
       <div className="section-lazy">
-        <About />
-      </div>
-      <div className="section-lazy">
         <CorporateDetails />
+        <NavigationGrid />
+        <WhoWeServe />
+        <WhatWeOfferMini />
+        <WhyUsMini />
       </div>
     </>
   );
@@ -67,18 +71,11 @@ function AppContent() {
       name: 'About Us', 
       href: '/about',
       sublinks: [
-        { name: 'Our Story', href: '/about' },
+        { name: 'About Us', href: '/about' },
         { name: 'Leadership', href: '/management' }
       ]
     },
-    { 
-      name: 'What We Do', 
-      href: '/what-we-do',
-      sublinks: [
-        { name: 'What We Do', href: '/what-we-do' },
-        { name: 'Why Us', href: '/why-choose-us' }
-      ]
-    },
+
     { name: 'Products', href: '/products' },
     { name: 'Blogs', href: '/blogs' },
     { name: 'Contact Us', href: '/contact' },
