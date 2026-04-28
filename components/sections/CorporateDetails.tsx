@@ -1,87 +1,91 @@
 import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function CorporateDetails() {
+  const categories = [
+    { name: "Ferrous Scrap", active: true },
+    { name: "Non-ferrous Scrap", active: false },
+    { name: "Bulk Commodities", active: false },
+    { name: "Ferro Alloys", active: false },
+    { name: "Base & Minor Metals", active: false },
+    { name: "Other Scrap", active: false },
+  ];
+
   return (
-    <section className="pb-24 pt-4 bg-white relative overflow-hidden">
-      {/* Subtle Background Industrial Mesh Overlay */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none z-0" 
-           style={{ backgroundImage: 'url("/story-bg.png")', backgroundSize: 'cover', backgroundPosition: 'center' }} />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Short & Thick Marker Accent */}
-        <motion.div 
-          initial={{ opacity: 0, width: 0 }}
-          whileInView={{ opacity: 1, width: 64 }}
-          viewport={{ once: true }}
-          className="h-1.5 bg-[#dc2626] mb-8"
-        />
+    <section className="py-20 lg:py-32 bg-[#f4f5f6] relative overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-start">
+          
+          {/* Left Side: Text Content (Col 1-3) */}
+          <div className="lg:col-span-3 pt-4">
+            <h2 className="text-3xl md:text-[42px] font-black text-slate-900 mb-8 tracking-tighter">
+              What we do
+            </h2>
+            <p className="text-slate-800 leading-relaxed font-medium text-[15px]">
+              We strive to make a significant contribution towards resource management and conservation by providing raw material, in the form of scrap, to recycling industries in India and across the globe.
+            </p>
+          </div>
 
-        {/* Authoritative Headline - Title Case */}
-        <h2 className="text-3xl md:text-[44px] font-black text-slate-900 mb-12 leading-[1.1] tracking-tight max-w-none w-full uppercase"> 
-          Prasmi Steel - An Emerging Leader In <br className="hidden md:block" /> Global Recycling Supply Chain
-        </h2>
-
-        {/* Narrative Content - Premium Weights */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="group space-y-10 text-[20px] text-slate-500 leading-relaxed font-light max-w-6xl"
-        >
-          <p>
-            Prasmi Steel is a fast-growing scrap trading company focused on sourcing and supplying ferrous and non-ferrous metal scrap across domestic and international markets.
-          </p>
-
-          <p>
-            With years of specialized experience, we have refined our procurement and processing workflows to deliver precise scrap solutions that meet the requirements of foundries, smelters, and global traders. Every metric ton of material is subjected to rigorous sorting and cleaning.
-          </p>
-
-          <p>
-            We operate with a clear objective — to create a reliable, transparent, and efficient scrap supply chain that connects suppliers and buyers with confidence.
-          </p>
-
-        </motion.div>
-
-        {/* Key Metrics Row - Relocated with Original Styling */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-12"
-        >
-          {[
-            { value: "1200+", label: "Tons Processing", sub: "Annually Since last 2 Years" },
-            { value: "4.9", label: "Reliability Rate", sub: "Average Rating (out of 5)" },
-            { value: "95%", label: "Repeat Customers", sub: "Measured Over the Past 2 Years" },
-            { value: "07+", label: "Years Of", sub: "Proven Industry Expertise" }
-          ].map((stat, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center group">
-              <span className="text-5xl sm:text-7xl font-black text-slate-900 mb-4 tracking-tighter group-hover:text-[#dc2626] transition-colors duration-500">
-                {stat.value}
-              </span>
-              <span className="text-base font-bold text-slate-900 uppercase tracking-widest mb-2 text-center w-full">
-                {stat.label}
-              </span>
-              <span className="text-xs text-slate-400 font-medium uppercase tracking-[0.2em] text-center w-full">
-                {stat.sub}
-              </span>
+          {/* Middle: Links (Col 4-5) */}
+          <div className="lg:col-span-3 lg:pt-16">
+            <div className="flex flex-col gap-3">
+              {categories.map((category) => (
+                <div 
+                  key={category.name}
+                  className={`flex items-center justify-between pb-3 border-b transition-colors cursor-pointer group ${
+                    category.active ? 'border-[#38bdf8]' : 'border-slate-300 hover:border-slate-500'
+                  }`}
+                >
+                  <span className={`text-[15px] font-semibold transition-colors ${
+                    category.active ? 'text-[#38bdf8]' : 'text-slate-700 group-hover:text-slate-900'
+                  }`}>
+                    {category.name}
+                  </span>
+                  {category.active && (
+                    <ArrowRight className="w-4 h-4 text-[#38bdf8]" strokeWidth={3} />
+                  )}
+                </div>
+              ))}
             </div>
-          ))}
-        </motion.div>
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="mt-24"
-        >
-          <p className="font-bold text-slate-900 border-l-2 border-[#dc2626] pl-8 py-6 bg-slate-50 shadow-sm italic">
-            GET IN TOUCH WITH US TODAY to learn how your organization can benefit from PRASMI STEEL'S services and products.
-          </p>
-        </motion.div>
+          {/* Right Side: Image with Floating Box (Col 6-12) */}
+          <div className="lg:col-span-6 relative mt-10 lg:mt-0">
+            <div className="w-full aspect-[4/3] lg:aspect-[16/10] overflow-hidden">
+              <img 
+                src="/weprocess.webp" 
+                alt="Prasmi Steel Metal Scrap Processing" 
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            {/* Floating White Box */}
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white p-8 md:p-12 lg:absolute lg:-bottom-16 lg:-left-20 lg:w-[110%] max-w-[500px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] z-20 mt-[-20px] lg:mt-0 relative"
+            >
+              <p className="text-slate-700 text-sm md:text-[15px] leading-relaxed font-medium mb-10">
+                Prasmi Steel is a fast-growing scrap trading company focused on sourcing and supplying ferrous and non-ferrous metal scrap across domestic and international markets.
+              </p>
+              
+              <div className="flex items-center justify-end">
+                <Link to="/about" className="group flex items-center gap-4">
+                  <div className="w-16 h-[2px] bg-[#38bdf8] transition-all duration-300 group-hover:w-24" />
+                  <span className="text-[13px] font-bold text-slate-900 tracking-[0.1em] uppercase">
+                    Know More
+                  </span>
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+
+        </div>
       </div>
     </section>
   );
