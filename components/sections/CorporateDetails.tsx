@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 
 export function CorporateDetails() {
   const categories = [
-    { name: "Ferrous Scrap", active: true },
-    { name: "Non-ferrous Scrap", active: false },
-    { name: "Bulk Commodities", active: false },
-    { name: "Ferro Alloys", active: false },
-    { name: "Base & Minor Metals", active: false },
-    { name: "Other Scrap", active: false },
+    { name: "We Buy Scrap", active: true },
+    { name: "We Process Scrap", active: false },
+    { name: "We Sell Scrap", active: false },
+    { name: "Manage Logistics & Transport", active: false },
   ];
 
   return (
@@ -23,7 +21,7 @@ export function CorporateDetails() {
               What we do
             </h2>
             <p className="text-slate-800 leading-relaxed font-medium text-[15px]">
-              We strive to make a significant contribution towards resource management and conservation by providing raw material, in the form of scrap, to recycling industries in India and across the globe.
+              Driving the future of sustainability, we deliver reliable scrap resources to recycling industries, supporting efficient resource management across India and worldwide.
             </p>
           </div>
 
@@ -71,7 +69,7 @@ export function CorporateDetails() {
               className="bg-white p-8 md:p-12 lg:absolute lg:-bottom-16 lg:-left-20 lg:w-[110%] max-w-[500px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] z-20 mt-[-20px] lg:mt-0 relative"
             >
               <p className="text-slate-700 text-sm md:text-[15px] leading-relaxed font-medium mb-10">
-                Prasmi Steel is a fast-growing scrap trading company focused on sourcing and supplying ferrous and non-ferrous metal scrap across domestic and international markets.
+                Prasmi Steel Private Limited is an emerging leader in the global scrap industry, specializing in the sourcing, processing and supply of best-quality ferrous and non-ferrous metal scrap.
               </p>
               
               <div className="flex items-center justify-end">

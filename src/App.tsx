@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
 import { CorporateDetails } from '@/components/sections/CorporateDetails';
+import { BusinessSegments } from '@/components/sections/BusinessSegments';
 import { NavigationGrid } from '@/components/sections/NavigationGrid';
 import { WhoWeServe } from '@/components/sections/WhoWeServe';
 import { WhatWeOfferMini } from '@/components/sections/WhatWeOfferMini';
@@ -35,6 +36,7 @@ function HomePage() {
       <Hero />
       <div className="section-lazy">
         <CorporateDetails />
+        <BusinessSegments />
         <NavigationGrid />
         <WhoWeServe />
         <WhatWeOfferMini />
