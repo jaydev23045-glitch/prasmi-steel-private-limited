@@ -4,6 +4,7 @@ import { Header } from '@/components/sections/Header';
 import { Hero } from '@/components/sections/Hero';
 import { CorporateDetails } from '@/components/sections/CorporateDetails';
 import { BusinessSegments } from '@/components/sections/BusinessSegments';
+import { CSRSection } from '@/components/sections/CSRSection';
 import { NavigationGrid } from '@/components/sections/NavigationGrid';
 import { WhoWeServe } from '@/components/sections/WhoWeServe';
 import { WhatWeOfferMini } from '@/components/sections/WhatWeOfferMini';
@@ -37,6 +38,7 @@ function HomePage() {
       <div className="section-lazy">
         <CorporateDetails />
         <BusinessSegments />
+        <CSRSection />
         <NavigationGrid />
         <WhoWeServe />
         <WhatWeOfferMini />
