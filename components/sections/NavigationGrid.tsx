@@ -1,99 +1,134 @@
-import { motion } from 'motion/react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+const sections = [
+  {
+    id: 'buy',
+    title: "We Buy Scrap",
+    message: "Prasmi Steel specializes in the systematic procurement of high-quality ferrous and non-ferrous scrap from global and local industrial sources.",
+    image: "/bulk_scrap_trading.webp",
+    link: "/products"
+  },
+  {
+    id: 'process',
+    title: "We Process Scrap",
+    message: "Our facilities utilize advanced sorting and grading technologies to transform industrial waste into premium, high-purity metal resources.",
+    image: "/weprocess.webp",
+    link: "/what-we-do"
+  },
+  {
+    id: 'sell',
+    title: "We Sell Scrap",
+    message: "We supply a wide range of graded metal scrap to foundries and mills worldwide, ensuring consistent quality and competitive industrial pricing.",
+    image: "/wesell.webp",
+    link: "/products"
+  },
+  {
+    id: 'logistics',
+    title: "Manage Logistics & Transport",
+    message: "With our global network of shipping partners, we ensure seamless, on-time delivery of metal resources across borders with complete transparency.",
+    image: "/logistics_excellence.webp",
+    link: "/contact"
+  }
+];
+
 export function NavigationGrid() {
-  const sections = [
-    {
-      title: "WE BUY SCRAP",
-      desc: "We purchase bulk quantities of ferrous and non-ferrous scrap, including iron, steel, copper, aluminum, brass, and MANGANESE steel.— from trusted & RELIABLE suppliers",
-      link: "/products",
-      image: "/bulk_scrap_trading.webp",
-      label: "PROCUREMENT"
-    },
-    {
-      title: "Processing & SORTING",
-      desc: "Systematic segregation, cleaning, GRADING and processing of metals to ensure MAXIMUM quality and usability for recycling or resale.",
-      link: "/what-we-do",
-      image: "/weprocess.webp",
-      label: "Operations"
-    },
-    {
-      title: "WE SELL SCRAP",
-      desc: "WE SELL IN Bulk QUANTITIES of metal scrap to foundries, mills, and industrial buyers with FAIR pricing and reliable delivery.",
-      link: "/why-choose-us",
-      image: "/global-reach-v2.png",
-      label: "SUPPLYING"
-    },
-    {
-      title: "Logistics & Transport",
-      desc: "We coordinate secure, on-time delivery for both local and international shipments. From container loads to custom freight solutions, we make moving material simple and seamless.",
-      link: "/why-choose-us",
-      image: "/global-reach-v2.png",
-      label: "GLOBAL SHIPMENTS"
-    }
-  ];
+  const [activeTab, setActiveTab] = useState(sections[0]);
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Reference-Matched Header Section */}
-        <div className="text-center mb-20 flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight uppercase">
-            What <span className="text-[#dc2626]">We Do</span>
-          </h2>
-          <div className="h-1.5 w-16 bg-[#dc2626] mb-8" />
-          <p className="text-slate-500 font-light max-w-2xl text-lg leading-relaxed">
-            From buying to processing and selling, we manage the complete scrap lifecycle.
-          </p>
-        </div>
-
-        {/* 4-Column Reference-Matched Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {sections.map((section, idx) => (
+    <section className="py-24 lg:py-32 bg-[#f8f9fa] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-3 gap-12 lg:gap-16 items-start">
+          
+          {/* Column 1: Static Heading & Intro (Left) */}
+          <div className="flex flex-col pt-4">
             <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: idx * 0.15 }}
-              className="group bg-white border border-slate-100 shadow-sm transition-all duration-500 hover:shadow-2xl flex flex-col h-full overflow-hidden"
+              transition={{ duration: 0.8 }}
             >
-              {/* Image Frame */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
-                <img 
-                  src={section.image} 
-                  alt={section.title}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-500" />
-              </div>
-
-              {/* Content Body */}
-              <div className="p-8 flex-1 flex flex-col">
-                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4 block">
-                  {section.label}
-                </span>
-                <h3 className="text-xl font-black text-[#dc2626] mb-4 tracking-tight group-hover:text-slate-900 transition-colors duration-300">
-                  {section.title}
-                </h3>
-                <p className="text-slate-500 font-light leading-relaxed mb-8 text-sm flex-1">
-                  {section.desc}
-                </p>
-
-                <Link 
-                  to={section.link}
-                  className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.25em] text-slate-900 hover:text-[#dc2626] transition-colors"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
+              <h2 className="text-6xl font-black text-slate-900 mb-8 tracking-tight">
+                What we do
+              </h2>
+              <p className="text-slate-600 text-lg leading-relaxed font-medium max-w-sm">
+                Driving the future of sustainability, we deliver reliable scrap resources to recycling industries, supporting efficient resource management across India and worldwide.
+              </p>
             </motion.div>
-          ))}
+          </div>
+
+          {/* Column 2: Interactive Menu (Middle) */}
+          <div className="flex flex-col border-t border-slate-200">
+            {sections.map((section) => (
+              <button
+                key={section.id}
+                onClick={() => setActiveTab(section)}
+                className={`w-full group flex items-center justify-between py-10 border-b border-slate-200 transition-all duration-300 text-left ${
+                  activeTab.id === section.id ? 'pl-4' : 'hover:pl-4'
+                }`}
+              >
+                <span className={`text-xl md:text-2xl font-bold transition-colors duration-300 ${
+                  activeTab.id === section.id ? 'text-[#38bdf8]' : 'text-slate-500 group-hover:text-slate-900'
+                }`}>
+                  {section.title}
+                </span>
+                <ArrowRight className={`w-6 h-6 transition-all duration-300 ${
+                  activeTab.id === section.id 
+                    ? 'text-[#38bdf8] translate-x-0 opacity-100' 
+                    : 'text-slate-400 -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100'
+                }`} />
+              </button>
+            ))}
+          </div>
+
+          {/* Column 3: Dynamic Image & Info Card (Right) */}
+          <div className="relative pt-4">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab.id}
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="relative aspect-[4/3] rounded-sm overflow-hidden shadow-2xl z-0"
+              >
+                <img 
+                  src={activeTab.image} 
+                  alt={activeTab.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-slate-900/10" />
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Floating Info Card */}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeTab.id + "-card"}
+                initial={{ opacity: 0, y: 30, x: 20 }}
+                animate={{ opacity: 1, y: 0, x: 0 }}
+                exit={{ opacity: 0, y: 20, x: 10 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="absolute -bottom-12 -left-6 md:-left-12 bg-white p-10 md:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.15)] max-w-md z-10 border border-slate-50"
+              >
+                <p className="text-slate-600 text-lg leading-relaxed mb-10 font-medium">
+                  {activeTab.message}
+                </p>
+                <Link 
+                  to={activeTab.link}
+                  className="group flex items-center gap-6"
+                >
+                  <div className="w-12 h-[1.5px] bg-[#38bdf8] transition-all duration-300 group-hover:w-20" />
+                  <span className="text-xs font-black text-slate-900 tracking-[0.25em] uppercase">
+                    Know More
+                  </span>
+                </Link>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
         </div>
       </div>
     </section>

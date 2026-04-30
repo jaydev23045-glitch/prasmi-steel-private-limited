@@ -5,105 +5,48 @@ import { Link } from 'react-router-dom';
 import { EmailLink } from '@/components/ui/EmailLink';
 
 export function Footer() {
-  const [modal, setModal] = useState<'privacy' | 'terms' | null>(null);
+  const [modal, setModal] = useState<'privacy' | 'terms' | 'safety' | null>(null);
 
   return (
     <>
-      <footer className="bg-[#0a0a0b] text-slate-500 py-24 border-t border-white/5">
+      <footer className="bg-[#1a1a1b] text-white py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-12 gap-16 mb-20">
-            <div className="md:col-span-5">
-              <Link to="/#home" onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })} className="flex items-center gap-4 mb-8 cursor-pointer group">
-                <img 
-                  src="/logo-premium.png" 
-                  alt="Prasmi Steel Logo" 
-                  width={96}
-                  height={96}
-                  decoding="async"
-                  className="w-12 h-12 object-contain grayscale-0 brightness-110 transition-transform group-hover:scale-110" 
-                />
-                <div className="flex flex-col text-left">
-                  <span className="font-black text-2xl md:text-3xl tracking-tighter text-white leading-none">
-                    Prasmi<span className="text-[#dc2626]">Steel</span>
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-slate-500 font-bold mt-1.5 whitespace-nowrap">Private Limited</span>
-                </div>
-              </Link>
-              <p className="text-slate-500 max-w-sm leading-relaxed mb-10 text-lg font-light">
-                Leading the Future of Sustainable Metal Recycling. Supplying best material solutions since 2024.
-              </p>
-              <div className="flex gap-5">
-                {[
-                  { name: 'LinkedIn', icon: <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/> },
-                ].map((social) => (
-                  <a
-                    key={social.name}
-                    href="https://www.linkedin.com/company/prasmisteel-private-limited/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-none bg-white/5 border border-white/10 hover:bg-white hover:border-white transition-all duration-300 group flex items-center justify-center"
-                  >
-                    <span className="sr-only">{social.name}</span>
-                    <svg className="w-5 h-5 fill-current text-slate-500 group-hover:text-slate-900 transition-colors" viewBox="0 0 24 24">
-                      {social.icon}
-                    </svg>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="md:col-span-3">
-              <h2 className="text-white font-black mb-8 uppercase tracking-[0.2em] text-[10px]">Prasmi Steel: Quick Navigation</h2>
-              <ul className="space-y-4 text-sm font-medium">
-                <li><Link to="/#home" onClick={() => document.querySelector('#home')?.scrollIntoView({ behavior: 'smooth' })} className="hover:text-white transition-colors">Home</Link></li>
-                <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                <li><Link to="/products" className="hover:text-white transition-colors">Our Products</Link></li>
-                <li><Link to="/blogs" className="hover:text-white transition-colors">Industrial Journal</Link></li>
-                <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
-              </ul>
-            </div>
-
-            <div className="md:col-span-4">
-              <h2 className="text-white font-black mb-8 uppercase tracking-[0.2em] text-[10px]">Global Scrap Metal Operations</h2>
-              <ul className="space-y-6">
-                <li className="flex items-start gap-4">
-                  <MapPin className="w-5 h-5 text-slate-700 flex-shrink-0 mt-0.5" />
-                  <address className="not-italic flex flex-col text-sm leading-relaxed font-bold uppercase tracking-wider" itemScope itemType="https://schema.org/PostalAddress">
-                    <span itemProp="streetAddress">VISHAL INDUSTRIAL, PLOT NO. 16,</span>
-                    <span itemProp="addressLocality">KOTDA SANGANI, Piplana</span>
-                    <span itemProp="addressRegion">Gujarat</span> <span itemProp="postalCode">360020</span>
-                  </address>
-                </li>
-                <li className="flex items-center gap-4">
-                  <Mail className="w-5 h-5 text-slate-700 flex-shrink-0" />
-                  <EmailLink className="text-sm" />
-                </li>
-                <li className="flex items-center gap-4">
-                  <Phone className="w-5 h-5 text-slate-700 flex-shrink-0" />
-                  <span className="text-sm" itemProp="telephone">+91 9586633799</span>
-                </li>
-                <li className="flex items-center gap-4">
-                  <Globe className="w-5 h-5 text-slate-700 flex-shrink-0" />
-                  <span className="text-sm">prasmisteel.com</span>
-                </li>
-              </ul>
-            </div>
+          
+          {/* Top Links Bar */}
+          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4 mb-12 text-[13px] font-medium text-slate-300">
+            <Link to="/about" className="hover:text-white transition-colors">About Us</Link>
+            <span className="text-slate-700">|</span>
+            <Link to="/what-we-do" className="hover:text-white transition-colors">What We Do</Link>
+            <span className="text-slate-700">|</span>
+            <Link to="/products" className="hover:text-white transition-colors">Industries We Serve</Link>
+            <span className="text-slate-700">|</span>
+            <Link to="/about#csr" className="hover:text-white transition-colors">CSR</Link>
+            <span className="text-slate-700">|</span>
+            <Link to="/blogs" className="hover:text-white transition-colors">Blogs</Link>
+            <span className="text-slate-700">|</span>
+            <button onClick={() => setModal('safety')} className="hover:text-white transition-colors">Safety Policy</button>
+            <span className="text-slate-700">|</span>
+            <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+            <span className="text-slate-700">|</span>
+            <button onClick={() => setModal('privacy')} className="hover:text-white transition-colors">Privacy Policy</button>
           </div>
 
-          <div className="pt-10 border-t border-white/5 text-xs font-bold uppercase tracking-widest flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-slate-600">&copy; {new Date().getFullYear()} Prasmi Steel Private Limited</p>
-            <div className="flex gap-10">
-              <button
-                onClick={() => setModal('privacy')}
-                className="hover:text-white transition-colors text-slate-700 cursor-pointer"
+          {/* Bottom Bar */}
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 relative">
+            <div className="text-[13px] text-slate-400">
+              Copyright &copy; {new Date().getFullYear()} Prasmi Steel Private Limited
+            </div>
+
+            <div className="flex items-center gap-8">
+              {/* Scroll to Top */}
+              <button 
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="bg-[#38bdf8] hover:bg-[#0ea5e9] text-white p-3 shadow-lg transition-all active:scale-95"
+                aria-label="Back to top"
               >
-                Privacy Policy
-              </button>
-              <button
-                onClick={() => setModal('terms')}
-                className="hover:text-white transition-colors text-slate-700 cursor-pointer"
-              >
-                Terms of Service
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-none stroke-current stroke-2">
+                  <path d="M18 15l-6-6-6 6" />
+                </svg>
               </button>
             </div>
           </div>
@@ -201,6 +144,107 @@ export function Footer() {
           <p>For queries regarding these Terms, contact us at:<br />
           <span className="text-white font-medium">Prasmi Steel Private Limited</span><br />
           Email: <span className="text-[#dc2626]"><EmailLink /></span> &nbsp;|&nbsp; Phone: +91 9586633799</p>
+        </section>
+      </LegalModal>
+      {/* Safety Policy Modal */}
+      <LegalModal
+        isOpen={modal === 'safety'}
+        onClose={() => setModal(null)}
+        title="Environment, Health, Safety & Sustainability Commitment"
+      >
+        <section>
+          <p className="mb-6">At Prasmi Steel, our commitment to environmental stewardship, health, safety, and security forms the foundation of everything we do. We uphold this responsibility to all our stakeholders—employees, partners, customers, and the communities we serve.</p>
+          
+          <h3 className="text-white font-bold text-base mb-4 uppercase tracking-wider">Our Commitments</h3>
+          <ul className="space-y-4 mb-8">
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8] font-bold">•</span>
+              <p><span className="text-white font-semibold">Zero Harm Workplace:</span> We believe that all injuries, occupational illnesses, and incidents are preventable, and we strive to achieve a zero-incident environment.</p>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8] font-bold">•</span>
+              <p><span className="text-white font-semibold">Resource Responsibility:</span> We are dedicated to minimizing waste and maximizing resource efficiency through responsible operations and recycling practices.</p>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8] font-bold">•</span>
+              <p><span className="text-white font-semibold">Safe Operations:</span> Our facilities are designed, operated, and maintained to effectively manage risks, ensure process safety, and minimize environmental impact.</p>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8] font-bold">•</span>
+              <p><span className="text-white font-semibold">Security & Integrity:</span> We safeguard the physical and digital integrity of our operations while collaborating with our value chain to uphold the same standards.</p>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8] font-bold">•</span>
+              <p><span className="text-white font-semibold">Sustainable Solutions:</span> We deliver products and services that contribute to a safer, cleaner, and more sustainable future.</p>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8] font-bold">•</span>
+              <p><span className="text-white font-semibold">Accountability & Compliance:</span> We adhere strictly to all applicable laws, regulations, and internal standards, with every employee and partner sharing this responsibility.</p>
+            </li>
+          </ul>
+          <p className="italic text-slate-400 mb-8 text-sm">We continuously review and improve our practices to enhance performance across environmental, health, safety, and security parameters.</p>
+        </section>
+
+        <section className="border-t border-white/5 pt-8 mt-8">
+          <h3 className="text-white font-bold text-base mb-2 uppercase tracking-wider">Our Safety Philosophy</h3>
+          <p className="text-[#38bdf8] font-black text-lg mb-4">Every Injury is Preventable.</p>
+          <p className="mb-6">At Prasmi Steel, safety is not just a policy—it is a core value embedded in our culture. We prioritize the well-being of our people and integrate safety into every aspect of our operations.</p>
+        </section>
+
+        <section className="border-t border-white/5 pt-8 mt-8">
+          <h3 className="text-white font-bold text-base mb-4 uppercase tracking-wider">Driving Safety Excellence</h3>
+          <p className="mb-6">We have established robust systems including safety policies, standard operating procedures, work permits, and safe work practices. However, we recognize that systems alone are not enough. Sustainable safety performance requires consistent behavior and mindset transformation.</p>
+          
+          <h4 className="text-white font-semibold mb-4">Our Approach:</h4>
+          <ul className="space-y-3 mb-6">
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8]">•</span>
+              <span>Continuous training and awareness programs</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8]">•</span>
+              <span>Behaviour-based safety practices</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8]">•</span>
+              <span>Reinforcement of safe work habits</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8]">•</span>
+              <span>Active participation from employees, workers, and partners</span>
+            </li>
+          </ul>
+          <p className="font-medium text-white italic">Our goal is to build a workplace where safety becomes instinctive—not just instructed.</p>
+        </section>
+
+        <section className="border-t border-white/5 pt-8 mt-8 pb-4">
+          <h3 className="text-white font-bold text-base mb-4 uppercase tracking-wider">Environmental & Energy Responsibility</h3>
+          <p className="mb-6">We are deeply committed to protecting natural resources and promoting sustainability in every aspect of our operations.</p>
+          
+          <h4 className="text-white font-semibold mb-4">Our Initiatives:</h4>
+          <ul className="space-y-3 mb-8">
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8]">•</span>
+              <span>Efficient use of energy and water</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8]">•</span>
+              <span>Adoption of energy-efficient technologies and machinery</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8]">•</span>
+              <span>Waste reduction and recycling practices</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8]">•</span>
+              <span>Tree plantation and environmental conservation efforts</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-[#38bdf8]">•</span>
+              <span>Ongoing training to build awareness and responsibility among employees and stakeholders</span>
+            </li>
+          </ul>
+          <p className="text-white font-bold border-l-2 border-[#38bdf8] pl-4 italic">We believe that responsible actions today ensure a sustainable tomorrow.</p>
         </section>
       </LegalModal>
     </>

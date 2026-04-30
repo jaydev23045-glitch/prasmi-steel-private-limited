@@ -5,10 +5,10 @@ import { Hero } from '@/components/sections/Hero';
 import { CorporateDetails } from '@/components/sections/CorporateDetails';
 import { BusinessSegments } from '@/components/sections/BusinessSegments';
 import { CSRSection } from '@/components/sections/CSRSection';
-import { NavigationGrid } from '@/components/sections/NavigationGrid';
-import { WhoWeServe } from '@/components/sections/WhoWeServe';
-import { WhatWeOfferMini } from '@/components/sections/WhatWeOfferMini';
-import { WhyUsMini } from '@/components/sections/WhyUsMini';
+import { PartnerSection } from '@/components/sections/PartnerSection';
+
+
+
 import { Footer } from '@/components/sections/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { SEO } from '@/lib/SEO';
@@ -39,10 +39,7 @@ function HomePage() {
         <CorporateDetails />
         <BusinessSegments />
         <CSRSection />
-        <NavigationGrid />
-        <WhoWeServe />
-        <WhatWeOfferMini />
-        <WhyUsMini />
+        <PartnerSection />
       </div>
     </>
   );

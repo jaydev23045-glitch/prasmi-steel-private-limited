@@ -53,11 +53,11 @@ export function CSRSection() {
         transition={{ duration: 1, delay: 0.3 }}
         className="w-full h-[250px] md:h-[350px] lg:h-[450px] mt-12 overflow-hidden relative"
       >
-        {/* We use sustainable_practices.webp as a beautiful thematic bottom banner */}
+        {/* Sustainability Greenery Banner */}
         <img 
-          src="/sustainable_practices.webp" 
+          src="/sustainable-practices-v2.png" 
           alt="Sustainability and Environmental Protection" 
-          className="w-full h-full object-cover object-center mix-blend-multiply opacity-90"
+          className="w-full h-full object-cover object-center"
           loading="lazy"
         />
         {/* Optional gradient overlay to blend the image perfectly into the top background */}
